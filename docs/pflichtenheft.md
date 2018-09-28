@@ -1,5 +1,5 @@
 # **Pflichtenheft**
-____
+
 Projektbezeichnung: MusicVote <Br>
 Projektleiter:  Mario Lengauer <Br>
 Erstellt am:    28/09/2018 <Br>

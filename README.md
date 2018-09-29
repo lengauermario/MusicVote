@@ -1,5 +1,5 @@
 # MusicVote
-von: Lukas Feck-Melzer, Lukas Erhart, Mario Lengauer, Jonas Schürz 
+von: Leon Kuchinka, Mario Lengauer, Jonas Schürz
 
 Mit dieser Applikation wird es möglich sein, über die Musik abzustimmen. 
 

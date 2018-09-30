@@ -45,7 +45,7 @@ Dieses Projekt wird im Rahmen des Gegenstandes "SYP" durchgeführt. Es soll das 
 Jede Person muss zum DJ gehen und ihren Musikwunsch äußern.
 
 #### 2.1.1 Beschreibung des Problembereichs
-Die derzeitige Version des Musikwunsches erforder einen Dj der möglicherweiße Musikwünsche vergisst oder Musik spielt die der Veranstalter nicht hören will. Außerdem muss man, wenn man einen Musikwunsch hat von den Freunden trennen, die man nacher möglicherweise nicht mehr findet.
+Die derzeitige Version des Musikwunsches erforder einen Dj der möglicherweiße Musikwünsche vergisst oder Musik spielt die der Veranstalter nicht hören will. Außerdem muss man, wenn man einen Musikwunsch hat sich von den Freunden trennen, die man nacher möglicherweise nicht mehr findet.
 
 #### 2.1.2 Aufgabenstellung
 Die Website soll es ermöglichen ein Smartphone oder einen PC an die Lautsprecher zu koppeln und die meist gevoteste Musik abzuspielen.

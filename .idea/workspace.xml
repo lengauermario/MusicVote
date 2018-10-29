@@ -1,15 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5128a340-6c0f-469f-9f98-3c86474f96fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SearchSongs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+    <list default="true" id="5128a340-6c0f-469f-9f98-3c86474f96fa" name="Default Changelist" comment="update gitignore and systemspecification">
+      <change afterPath="$PROJECT_DIR$/docs/projektspezifikation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pflichtenheft.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/.github/CODEOWNERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/demo/lit-element.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/demo/ts-element.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/demo/ts-element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/demo/ts-element.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lib/decorators.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lib/decorators.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lib/decorators.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lib/render-helpers.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lib/render-helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lib/render-helpers.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lib/updating-element.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lib/updating-element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lib/updating-element.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lit-element.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lit-element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/lit-element.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/src/demo/ts-element.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/src/lib/decorators.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/src/lib/updating-element.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/src/lit-element.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/src/test/lib/decorators_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/src/test/lit-element_styling_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/src/test/lit-element_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/src/test/test-helpers.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/lib/decorators_test.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/lib/decorators_test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/lib/decorators_test.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/lit-element_styling_test.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/lit-element_styling_test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/lit-element_styling_test.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/lit-element_test.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/lit-element_test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/lit-element_test.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/render-helpers_test.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/render-helpers_test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/render-helpers_test.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/runner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/test-helpers.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/test-helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/test/test-helpers.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/wct.conf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/async-append.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/async-append.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/async-append.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/async-append.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/async-replace.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/async-replace.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/async-replace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/async-replace.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/classMap.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/classMap.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/classMap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/classMap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/guard.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/guard.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/guard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/guard.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/if-defined.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/if-defined.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/if-defined.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/if-defined.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/repeat.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/repeat.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/repeat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/repeat.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/styleMap.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/styleMap.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/styleMap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/styleMap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/unsafe-html.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/unsafe-html.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/unsafe-html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/unsafe-html.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/until.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/until.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/until.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/until.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/when.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/when.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/when.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/directives/when.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/default-template-processor.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/default-template-processor.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/default-template-processor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/default-template-processor.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/directive.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/directive.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/directive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/directive.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/dom.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/dom.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/dom.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/modify-template.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/modify-template.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/modify-template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/modify-template.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/part.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/part.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/part.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/part.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/parts.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/parts.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/parts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/parts.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/render-options.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/render-options.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/render-options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/render-options.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/render.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/render.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/render.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/render.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/shady-render.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/shady-render.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/shady-render.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/shady-render.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-factory.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-factory.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-factory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-factory.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-instance.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-instance.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-instance.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-instance.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-processor.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-processor.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-processor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-processor.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-result.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-result.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-result.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template-result.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lib/template.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lit-html.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lit-html.d.ts.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lit-html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/lit-html.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/directives/async-append.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/directives/async-replace.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/directives/classMap.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/directives/guard.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/directives/if-defined.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/directives/repeat.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/directives/styleMap.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/directives/unsafe-html.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/directives/until.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/directives/when.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/default-template-processor.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/directive.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/dom.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/modify-template.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/part.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/parts.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/render-options.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/render.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/shady-render.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/template-factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/template-instance.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/template-processor.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/template-result.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lib/template.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lit-html/src/lit-html.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-538291278">
@@ -19,33 +224,49 @@
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="1" />
-          <entry key="js" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="4" />
+          <entry key="ico" value="1" />
+          <entry key="js" value="17" />
+          <entry key="json" value="8" />
+          <entry key="md" value="3" />
+          <entry key="png" value="6" />
+          <entry key="sql" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="1" />
+          <entry key="HTML" value="4" />
+          <entry key="Image" value="7" />
+          <entry key="JSON" value="8" />
+          <entry key="JavaScript" value="17" />
+          <entry key="Markdown" value="3" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="SQL" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="55" />
-          <entry key="js" value="480" />
+          <entry key="html" value="414" />
+          <entry key="js" value="739" />
+          <entry key="md" value="328" />
+          <entry key="txt" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="55" />
-          <entry key="JavaScript" value="480" />
+          <entry key="HTML" value="414" />
+          <entry key="JavaScript" value="739" />
+          <entry key="Markdown" value="328" />
+          <entry key="PLAIN_TEXT" value="49" />
         </counts>
       </usages-collector>
     </session>
@@ -53,10 +274,47 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MyApp.js">
+        <entry file="file://$PROJECT_DIR$/docs/projektspezifikation.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="153">
+                <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-precache-config.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service-worker.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/polymer.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manifest.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+            <state relative-caret-position="35">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
             </state>
           </provider>
         </entry>
@@ -71,15 +329,28 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>node_modules</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/SearchSongs.js" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/MyApp.js" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
+        <option value="$PROJECT_DIR$/.idea/index.html" />
+        <option value="$PROJECT_DIR$/dist/index.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/webpack.config.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/docs/pflichtenheft.md" />
       </list>
     </option>
   </component>
@@ -89,24 +360,27 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/node_modules/@polymer/lit-element/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/@webcomponents/webcomponentsjs/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/lit-html/package.json" />
+      <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,21 +388,37 @@
               <item name="MusicVote" type="b2602c69:ProjectViewProjectNode" />
               <item name="MusicVote" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MusicVote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicVote" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MusicVote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicVote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539676157809" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540817837470" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NVS/Projects/Vehicle-jdbc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario\Google Drive\School\4BHIF\SYP\MusicVote" />
+      <recent name="C:\Users\Mario\Google Drive\School\4BHIF\SYP\MusicVote\.idea" />
+      <recent name="C:\Users\Mario\Google Drive\School\4BHIF\SYP\MusicVote\dist" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -157,16 +447,18 @@
       <workItem from="1539681885567" duration="609000" />
       <workItem from="1539863409503" duration="343000" />
       <workItem from="1539864787280" duration="1512000" />
+      <workItem from="1540806202380" duration="9284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6739000" />
+    <option name="totallyTimeSpent" value="16023000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29212254" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14552239" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -174,18 +466,18 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289183" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32968238" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3264642" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -201,25 +493,163 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SearchSongs.js">
+    <entry file="file://$PROJECT_DIR$/SearchSongs.js" />
+    <entry file="file://$PROJECT_DIR$/start-polymer3/src/lazy-element.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        <state relative-caret-position="340">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start-polymer3/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start-polymer3/src/start-polymer3.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-view2.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-view3.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-view404.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shared-styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="68" lean-forward="true" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1122" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-icons.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-view1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#534#609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+        <state relative-caret-position="562">
+          <caret line="79" column="59" lean-forward="true" selection-start-line="79" selection-start-column="59" selection-end-line="79" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyApp.js">
+    <entry file="file://$PROJECT_DIR$/CreateTables.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        <state relative-caret-position="323">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/manifest/icon-48x48.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/manifest/icon-72x72.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/manifest/icon-96x96.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/manifest/icon-144x144.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/manifest/icon-192x192.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/manifest/icon-512x512.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-precache-config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-worker.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polymer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/projektspezifikation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

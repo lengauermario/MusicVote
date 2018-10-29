@@ -1,0 +1,22 @@
+{
+  "name": "polymer",
+  "description": "Level Up Polymer test",
+  "main": "index .html",
+  "authors": [
+    "Jonas Schürz"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/lengauermario/MusicVote",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^3.1.0",
+    "platform": "Polymer/platform#^0.4.2",
+    "core-component-page": "Polymer/core-component-page#^0.5.6"
+  }
+}

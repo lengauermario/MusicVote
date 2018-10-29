@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5128a340-6c0f-469f-9f98-3c86474f96fa" name="Default Changelist" comment="update gitignore and systemspecification">
-      <change afterPath="$PROJECT_DIR$/docs/projektspezifikation.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyApp.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pflichtenheft.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/.github/CODEOWNERS" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/@polymer/lit-element/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
@@ -220,7 +216,7 @@
     <session id="-538291278">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -258,7 +254,7 @@
           <entry key="html" value="414" />
           <entry key="js" value="739" />
           <entry key="md" value="328" />
-          <entry key="txt" value="49" />
+          <entry key="txt" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -266,7 +262,7 @@
           <entry key="HTML" value="414" />
           <entry key="JavaScript" value="739" />
           <entry key="Markdown" value="328" />
-          <entry key="PLAIN_TEXT" value="49" />
+          <entry key="PLAIN_TEXT" value="50" />
         </counts>
       </usages-collector>
     </session>
@@ -277,7 +273,7 @@
         <entry file="file://$PROJECT_DIR$/docs/projektspezifikation.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="153">
+              <first_editor relative-caret-position="64">
                 <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
               </first_editor>
               <second_editor />
@@ -408,7 +404,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540817837470" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540818311390" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NVS/Projects/Vehicle-jdbc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -447,16 +443,23 @@
       <workItem from="1539681885567" duration="609000" />
       <workItem from="1539863409503" duration="343000" />
       <workItem from="1539864787280" duration="1512000" />
-      <workItem from="1540806202380" duration="9284000" />
+      <workItem from="1540806202380" duration="9931000" />
     </task>
+    <task id="LOCAL-00001" summary="update gitignore and projektspezifikation">
+      <created>1540817912875</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1540817912875</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16023000" />
+    <option name="totallyTimeSpent" value="16670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14552239" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -492,6 +495,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update gitignore and projektspezifikation" />
+    <option name="LAST_COMMIT_MESSAGE" value="update gitignore and projektspezifikation" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -646,7 +653,7 @@
     <entry file="file://$PROJECT_DIR$/docs/projektspezifikation.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
+          <first_editor relative-caret-position="64">
             <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           </first_editor>
           <second_editor />

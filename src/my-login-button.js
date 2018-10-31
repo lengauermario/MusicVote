@@ -2,6 +2,7 @@ import {LitElement, html} from "@polymer/lit-element";
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/paper-button/paper-button.js';
 import './shared-styles.js';
+import './my-preview';
 
 class MyLoginButton extends LitElement {
     render() {
@@ -17,7 +18,6 @@ class MyLoginButton extends LitElement {
 
     handleClick() {
         console.log("clicked login buttton");
-        //implement your login you need
     }
 }
 

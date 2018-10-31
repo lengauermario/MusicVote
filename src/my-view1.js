@@ -11,6 +11,7 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import './my-search';
+import './my-preview';
 
 class MyView1 extends PolymerElement {
   static get template() {
@@ -27,7 +28,7 @@ class MyView1 extends PolymerElement {
         <my-search></my-search>
       </div>
       <div class="card">
-        <my-preview></my-preview>
+        <my-preview name="my-first-preview"></my-preview>
       </div>
     `;
   }

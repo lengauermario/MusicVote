@@ -14,14 +14,14 @@ Zustand: in Bearbeitung <Br>
 - 5 Zielsetzung...
 
 ## 1 Ausgangssituation
-Jede Person muss zum DJ gehen und ihren Musikwunsch äußern. <br>
-Der DJ sucht das Lied und spielt es als nächstes.
+Jede Person muss zum Gastgeber gehen und ihren Musikwunsch äußern. <br>
+Der Gastgeber sucht das Lied und spielt es als nächstes.
 
 ## 2  Ist- Zustand
-Jede Person muss zum DJ gehen und ihren Musikwunsch äußern.
+Jede Person muss zum Gastgeber gehen und ihren Musikwunsch äußern. Oftmals ist der Gastgeber mit anderen Dingen beschäftigt, nicht aufzufinden oder vergisst einen Musikwunsch. Viele Besucher probieren es deshalb überhaupt erst nicht.
 
 ## 3 Problemstellung
-Die derzeitige Version des Musikwunsches erforder einen Dj der möglicherweiße Musikwünsche vergisst oder Musik spielt die der Veranstalter nicht hören will. Außerdem muss man, wenn man einen Musikwunsch hat sich von den Freunden trennen, die man nacher möglicherweise nicht mehr findet.
+Der Gastgeber hat möglicherweise andere Sachen zu tun, als sich um die einzelnen Musikwünsche zu kümmern oder vergisst diese. Extra den Gastgeber zu suchen um seinen Musikwunsch zu äußern ist mühsam, da man bei großen Veranstaltungen sich von seinen Gesprächspartnern entfernen muss, die man später möglicherweise wieder suchen muss.
 
 ## 4 Aufgabenstellung
 Die Website soll es ermöglichen ein Smartphone oder einen PC an die Lautsprecher zu koppeln und die meist gevoteste Musik abzuspielen.

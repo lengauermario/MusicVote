@@ -1,35 +1,25 @@
-# Spotify Accounts Authentication Examples
+# Spotify - Prototyp
 
-This project contains basic demos showing the different OAuth 2.0 flows for [authenticating against the Spotify Web API](https://developer.spotify.com/web-api/authorization-guide/).
+Dies ist ein Prototyp mit dem die Authentifizierung, das Abfragen und Abspielen von Songs beschränkt möglich ist. Bei der Realisierung
+wurde die [Spotify Web API](https://developer.spotify.com/documentation/web-api/) verwendet, die die Authentifizierung bereitgestellt. 
+Für das Abspielen der Musik wurde die [Spotify Web Playback SDK](https://developer.spotify.com/documentation/web-playback-sdk/quick-start/) verwendet, wo es aktuell noch Probleme gibt.  
 
-These examples cover:
+### Fazit zur Web API und zum Web Playback SDK
+Zum jetzigen Zeitpunkt ist es möglich sich mit seinem Spotify Premium Account einzuloggen
+und mit einem anderen Gerät den Browser als aktuelles Gerät festzulegen, um dann Musik abspielen zu lassen.
+Leider habe ich dafür noch keine Lösung gefunden, dass sich der Browser selbst als aktuelles Gerät festlegt.  
+Ein bereits gelöstes Problem war, dass das Anmelden und Abspielen der Musik nur dann von Spotify
+bewilligt wird, wenn man den Login-Request per Server schickt. Deshalb läuft der Prototyp einstweilen auf node.js
+    
+### Entwickler des Prototyps:
+Mario Lengauer
 
-* Authorization Code flow
-* Client Credentials flow
-* Implicit Grant flow
 
-## Installation
 
-These examples run on Node.js. On [its website](http://www.nodejs.org/download/) you can find instructions on how to install it. You can also follow [this gist](https://gist.github.com/isaacs/579814) for a quick and easy way to install Node.js and npm.
-
-Once installed, clone the repository and install its dependencies running:
-
-    $ npm install
-
-### Using your own credentials
-You will need to register your app and get your own credentials from the Spotify for Developers Dashboard.
-
-To do so, go to [your Spotify for Developers Dashboard](https://beta.developer.spotify.com/dashboard) and create your application. For the examples, we registered these Redirect URIs:
-
-* http://localhost:8888 (needed for the implicit grant flow)
-* http://localhost:8888/callback
-
-Once you have created your app, replace the `client_id`, `redirect_uri` and `client_secret` in the examples with the ones you get from My Applications.
-
-## Running the examples
-In order to run the different examples, open the folder with the name of the flow you want to try out, and run its `app.js` file. For instance, to run the Authorization Code example do:
+## Prototyp starten
+Da der Login bzw. das Abspilen der Musik nur über abfragen des Servers bewilligt wird, wird ein node.js Server benötigt
 
     $ cd authorization_code
     $ node app.js
 
-Then, open `http://localhost:8888` in a browser.
+Öffne `http://localhost:8888`

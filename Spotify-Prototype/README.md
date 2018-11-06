@@ -5,8 +5,7 @@ wurde die [Spotify Web API](https://developer.spotify.com/documentation/web-api/
 Für das Abspielen der Musik wurde die [Spotify Web Playback SDK](https://developer.spotify.com/documentation/web-playback-sdk/quick-start/) verwendet, wo es aktuell noch Probleme gibt.  
 
 ### Fazit zur Web API und zum Web Playback SDK
-Zum jetzigen Zeitpunkt ist es möglich sich mit seinem Spotify Premium Account einzuloggen
-und mit einem anderen Gerät den Browser als aktuelles Gerät festzulegen, um dann Musik abspielen zu lassen.
+Zum jetzigen Zeitpunkt ist diese API/SDK leider noch in der BETA, somit kann es schnell zu änderungen kommen die Angepasst werden müssen. </br> Zur Zeit ist es möglich sich mit seinem Spotify Premium Account einzuloggen und mit einem anderen Gerät den Browser als aktuelles Gerät festzulegen, um dann Musik abspielen zu lassen.
 Leider habe ich dafür noch keine Lösung gefunden, dass sich der Browser selbst als aktuelles Gerät festlegt.  
 Ein bereits gelöstes Problem war, dass das Anmelden und Abspielen der Musik nur dann von Spotify
 bewilligt wird, wenn man den Login-Request per Server schickt. Deshalb läuft der Prototyp einstweilen auf node.js

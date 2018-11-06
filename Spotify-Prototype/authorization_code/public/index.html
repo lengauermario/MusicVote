@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Example of the Authorization Code flow with Spotify</title>
+      <title>Spotify Prototype</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <style type="text/css">
       #login, #loggedin {
@@ -19,8 +19,8 @@
   <body>
     <div class="container">
       <div id="login">
-        <h1>This is an example of the Authorization Code flow</h1>
-        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+          <h1>Spotify Prototype</h1>
+          <a href="/login" class="btn btn-primary">Log In</a>
       </div>
       <div id="loggedin">
         <div id="user-profile">
@@ -29,7 +29,7 @@
         </div>
        <div id="oauth">
         </div>
-        <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
+          <!--<button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>-->
       </div>
     </div>
 
@@ -53,14 +53,14 @@
       </div>
     </script>
 
-    <script id="oauth-template" type="text/x-handlebars-template">
-      <h2>oAuth info</h2>
-      <dl class="dl-horizontal">
-        <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
-        <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd>
-      </dl>
-    </script>
-  
+    <!--    <script id="oauth-template" type="text/x-handlebars-template">
+          <h2>oAuth info</h2>
+          <dl class="dl-horizontal">
+            <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
+            <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd>
+          </dl>
+        </script>
+    -->
   <script id="spotify-template" type="text/x-handlebars-template">
     <h1>Song Information</h1>
     <div class="media">
@@ -72,9 +72,18 @@
         <dl class="dl-horizontal">
           <dt>Title ID</dt><dd class="clearfix">{{track_window.current_track.id}}</dd>
           <dt>Title Name</dt><dd>{{track_window.current_track.name}}</dd>
-          <dt>Title Artist</dt><dd>{{track_window.current_track.1.name}}</dd>
-          <dt>Next Track</dt><dd><a href="{{external_urls.spotify}}">{{track_window.next_tracks.1.name}}</a></dd>
-          <dt>Paused</dt><dd>{{paused}}</dd>
+
+            <dt>Title Artist</dt>
+            <dd>{{track_window.current_track.artists.0.name}}, {{track_window.current_track.artists.1.name}}</dd>
+            <dt>Title Length</dt>
+            <dd>{{duration}}</dd>
+            <dt>Title Position</dt>
+            <dd>{{position}}</dd>
+            <dt>Next Track</dt>
+            <dd><a href="{{external_urls.spotify}}">{{track_window.next_tracks.0.name}} von
+                {{track_window.next_tracks.0.artists.0.name}}, {{track_window.next_tracks.0.artists.1.name}}</a></dd>
+            <dt>Paused</dt>
+            <dd>{{paused}}</dd>
         </dl>
       </div>
     </div>
@@ -105,9 +114,9 @@
             userProfileTemplate = Handlebars.compile(userProfileSource),
             userProfilePlaceholder = document.getElementById('user-profile');
 
-        var oauthSource = document.getElementById('oauth-template').innerHTML,
-            oauthTemplate = Handlebars.compile(oauthSource),
-            oauthPlaceholder = document.getElementById('oauth');
+          // var oauthSource = document.getElementById('oauth-template').innerHTML,
+          //     oauthTemplate = Handlebars.compile(oauthSource),
+          //     oauthPlaceholder = document.getElementById('oauth');
 
         var spotifyTrackSource = document.getElementById('spotify-template').innerHTML,
             spotifyTrackTemplate = Handlebars.compile(spotifyTrackSource),
@@ -124,10 +133,10 @@
         } else {
           if (access_token) {
             // render oauth info
-            oauthPlaceholder.innerHTML = oauthTemplate({
-              access_token: access_token,
-              refresh_token: refresh_token
-            });
+              // oauthPlaceholder.innerHTML = oauthTemplate({
+              //   access_token: access_token,
+              //   refresh_token: refresh_token
+              // });
 
             $.ajax({
                 url: 'https://api.spotify.com/v1/me',
@@ -198,20 +207,20 @@
               $('#loggedin').hide();
           }
 
-          document.getElementById('obtain-new-token').addEventListener('click', function() {
-            $.ajax({
-              url: '/refresh_token',
-              data: {
-                'refresh_token': refresh_token
-              }
-            }).done(function(data) {
-              access_token = data.access_token;
-              oauthPlaceholder.innerHTML = oauthTemplate({
-                access_token: access_token,
-                refresh_token: refresh_token
-              });
-            });
-          }, false);
+            // document.getElementById('obtain-new-token').addEventListener('click', function() {
+            //   $.ajax({
+            //     url: '/refresh_token',
+            //     data: {
+            //       'refresh_token': refresh_token
+            //     }
+            //   }).done(function(data) {
+            //     access_token = data.access_token;
+            //     oauthPlaceholder.innerHTML = oauthTemplate({
+            //       access_token: access_token,
+            //       refresh_token: refresh_token
+            //     });
+            //   });
+            // }, false);
         }
       })();
       function play(){

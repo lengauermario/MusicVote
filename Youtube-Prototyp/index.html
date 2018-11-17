@@ -207,10 +207,13 @@
         function getFirstVideo(searchPattern) {
             buildApiRequest('GET',
                     '/youtube/v3/search',
-                    {'maxResults': '25',
+                    {'chart': 'mostPopular',
+                    'regionCode': 'AT',
+                    'maxResults': '25',
                     'part': 'snippet',
                     'q': searchPattern,
-                    'type': ''});
+                    'type': 'video',
+                    'videoCategoryId': 10});
             document.getElementById("searchPattern").value = '';
                         
         }

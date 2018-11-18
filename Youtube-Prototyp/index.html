@@ -198,7 +198,7 @@
             document.getElementById("title").text = title;
             document.getElementById("channel").text = channel;
             document.getElementById("thumbnail").src = thumbnailsrc;
-
+            console.log(video.snippet.categoryId);
             if(player.getPlayerState() != YT.PlayerState.PLAYING)
                 playNextSong();
             
@@ -213,7 +213,7 @@
                     'part': 'snippet',
                     'q': searchPattern,
                     'type': 'video',
-                    'videoCategoryId': 10});
+                    'videoCategoryId': '10'});
             document.getElementById("searchPattern").value = '';
                         
         }

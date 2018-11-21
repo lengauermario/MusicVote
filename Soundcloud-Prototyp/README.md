@@ -13,6 +13,8 @@ Aufgrund der hohen Anzahl der kürzlich eingegangenen Anforderungen werden derze
 
 ![Response](https://github.com/lengauermario/MusicVote/blob/master/Soundcloud-Prototyp/images/soundCloudClientProblem.png)
 
+![Response](https://github.com/lengauermario/MusicVote/blob/master/Soundcloud-Prototyp/images/website.png)
+
 ##### Ersteller:
 Jonas Schürz
 

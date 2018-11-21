@@ -11,5 +11,5 @@ Due to the high amount of requests recently received, we will no longer be proce
 Übersetzung:
 Aufgrund der hohen Anzahl der kürzlich eingegangenen Anforderungen werden derzeit keine API-Anwendungsanforderungen verarbeitet. Wir arbeiten daran, unseren Prozess neu zu bewerten, um ihn effizienter zu machen.
 
-![Response](https://github.com/lengauermario/MusicVote/blob/master/Soundcloud-Prototyp/images/soundCloudClientProblem.PNG)
+![Response](https://github.com/lengauermario/MusicVote/blob/master/Soundcloud-Prototyp/images/soundCloudClientProblem.png)
 

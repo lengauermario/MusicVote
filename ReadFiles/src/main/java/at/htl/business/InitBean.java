@@ -31,7 +31,7 @@ public class InitBean {
 
     @PostConstruct
     private void init() throws InvalidDataException, IOException, UnsupportedTagException {
-        File folder = new File("/home/jonas/Schreibtisch/Jonas/Schule/4BHIF/SYP/Projekt/ReadFiles/src/main/resources/mp3");
+        File folder = new File("/home/jonas/Schreibtisch/Jonas/Schule/4BHIF/SYP/Projekt/MusicVote/ReadFiles/src/main/resources/mp3");
         if(folder.exists() && folder.isDirectory()){
             File arr[] = folder.listFiles();
             RecursiveRead(arr,0);
@@ -40,6 +40,7 @@ public class InitBean {
 
 
     }
+
 
     private void RecursiveRead(File[] arr, int level) throws InvalidDataException, IOException, UnsupportedTagException {
         for (File f : arr){
@@ -63,8 +64,25 @@ public class InitBean {
                     mp3file.getId3v2Tag().getAlbum(), Integer.parseInt(mp3file.getId3v2Tag().getYear()), mp3file.getId3v2Tag().getGenre(), mp3file.getId3v2Tag().getComment(),
                     mp3file.getId3v2Tag().getComposer(), mp3file.getId3v2Tag().getPublisher(), mp3file.getId3v2Tag().getOriginalArtist(), mp3file.getId3v2Tag().getAlbumArtist(),
                     mp3file.getId3v2Tag().getCopyright(), mp3file.getId3v2Tag().getUrl(), mp3file.getId3v2Tag().getEncoder(),0);
-        em.persist(newSong);
-        songs.add(newSong);
+        if(!containsSong(newSong)){
+            em.persist(newSong);
+            songs.add(newSong);
+        }
+    }
+
+    private boolean containsSong(Song newSong) {
+        for (Song song : songs) {
+            if (song.getTitle().equalsIgnoreCase(newSong.getTitle())){
+                if (song.getBitrate() > newSong.getBitrate()){
+                    return true;
+                }
+                else{
+                    em.remove(song);
+                    return false;
+                }
+            }
+        }
+        return false;
     }
 
     public static String getFileExtension(String fullName) {

@@ -31,7 +31,7 @@ public class InitBean {
 
     @PostConstruct
     private void init() throws InvalidDataException, IOException, UnsupportedTagException {
-        File folder = new File("/home/jonas/Schreibtisch/Jonas/Schule/4BHIF/SYP/Projekt/MusicVote/ReadFiles/src/main/resources/mp3");
+        File folder = new File("C:\\Users\\Mario\\Google Drive\\Privat");
         if(folder.exists() && folder.isDirectory()){
             File arr[] = folder.listFiles();
             RecursiveRead(arr,0);
@@ -61,7 +61,7 @@ public class InitBean {
         Mp3File mp3file = new Mp3File(path);
         Song newSong = new Song(path, mp3file.getLengthInSeconds(), mp3file.getBitrate(), mp3file.isVbr(), mp3file.getSampleRate(), mp3file.hasId3v1Tag(),
                     mp3file.hasId3v2Tag(), mp3file.hasCustomTag(), mp3file.getId3v2Tag().getTrack(), mp3file.getId3v2Tag().getArtist(), mp3file.getId3v2Tag().getTitle(),
-                    mp3file.getId3v2Tag().getAlbum(), Integer.parseInt(mp3file.getId3v2Tag().getYear()), mp3file.getId3v2Tag().getGenre(), mp3file.getId3v2Tag().getComment(),
+                mp3file.getId3v2Tag().getAlbum(), mp3file.getId3v2Tag().getYear(), mp3file.getId3v2Tag().getGenre(), mp3file.getId3v2Tag().getComment(),
                     mp3file.getId3v2Tag().getComposer(), mp3file.getId3v2Tag().getPublisher(), mp3file.getId3v2Tag().getOriginalArtist(), mp3file.getId3v2Tag().getAlbumArtist(),
                     mp3file.getId3v2Tag().getCopyright(), mp3file.getId3v2Tag().getUrl(), mp3file.getId3v2Tag().getEncoder(),0);
         if(!containsSong(newSong)){

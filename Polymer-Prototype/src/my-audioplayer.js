@@ -7,25 +7,17 @@ import './my-preview';
 
 class MyLoginButton extends LitElement {
     render() {
-        return html`
-          <style>
-            paper-button{
-                line-height: 80%;
-            }
-           </style>
-         <paper-button raised  @click="${this.handleLogin}" id="login">Login</paper-button>
-         <paper-button raised  @click="${this.handleLogout}" id="logout">Logout</paper-button>
-        `;
+        return html``;
     }
 
     constructor() {
         super();
     }
 
-    handleLogin() {
-        console.log("clicked login buttton");
-        const event = new CustomEvent('login', { bubbles: true, composed: true });
-        this.dispatchEvent(event);
+    start() {
+        console.log("clicked Start buttton");
+        var path = "";
+
     }
     handleLogout(){
         console.log("clicked logout buttton");

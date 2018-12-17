@@ -1,3 +1,6 @@
+import 'https://sdk.scdn.co/spotify-player.js';
+import 'http://localhost:8888/node_modules/spotify-web-api-js/src/spotify-web-api.js'
+
 var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
 var cors = require('cors');
@@ -37,7 +40,7 @@ app.get('/login', function(req, res) {
   res.cookie(stateKey, state);
 
   // your application requests authorization
-  var scope = 'streaming user-read-birthdate user-read-private user-read-email';
+  var scope = 'streaming user-read-birthdate user-read-private user-read-email user-read-playback-state';
   res.redirect('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
       response_type: 'code',

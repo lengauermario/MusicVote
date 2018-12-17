@@ -14,7 +14,7 @@ class MyPreview extends LitElement {
                 <td>
                     <table>
                         <tr>
-                            <td><a id="title">Here will be the title</a></td>
+                            <td><a id="title" name="[[title]]">as</a></td>
                         </tr>
                         <tr>
                             <td><a id="channel">Here will be the channel</a></td>
@@ -25,10 +25,21 @@ class MyPreview extends LitElement {
             </table>
         `;
     }
-
+    constructor(){
+        super();
+        this.setTitle("Hey")
+    }
 
     setTitle(title) {
-        console.log(title);
+        this.title = title;
+    }
+
+    static get properties () {
+        return {
+            title: {
+                type: String
+            }
+        };
     }
 }
 window.customElements.define('my-preview', MyPreview);

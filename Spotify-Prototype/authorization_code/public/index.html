@@ -88,7 +88,7 @@
       </div>
     </div>
   </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
@@ -201,6 +201,18 @@
                         console.log('Toggled playback!');
                       });
                   };
+              var device = ["15900e6636a58646eeb596386e171771d7e97d79"];
+              console.log(access_token);
+              $.ajax({
+                  url: 'https://api.spotify.com/v1/me/player',
+                  type: 'PUT',
+                  header: {
+                      'Authorization': 'Bearer ' + access_token,
+                  },
+                  success: function(data) {
+                      alert('Load was performed.');
+                  }
+              });
           } else {
               // render initial screen
               $('#login').show();
@@ -223,9 +235,6 @@
             // }, false);
         }
       })();
-      function play(){
-        player.togglePlay();
-      }
     </script>
   </body>
 </html>

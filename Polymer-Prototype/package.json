@@ -24,10 +24,13 @@
     "@polymer/iron-selector": "^3.0.0-pre.15",
     "@polymer/lit-element": "^0.6.2",
     "@polymer/paper-button": "^3.0.1",
-    "@polymer/paper-icon-button": "^3.0.0-pre.15",
+    "@polymer/paper-icon-button": "^3.0.1",
     "@polymer/paper-input": "^3.0.1",
+    "@polymer/paper-progress": "^3.0.1",
+    "@polymer/paper-ripple": "^3.0.1",
     "@polymer/polymer": "^3.0.0",
-    "@webcomponents/webcomponentsjs": "^2.0.0"
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "paper-audio-player": "0.0.2"
   },
   "devDependencies": {
     "polymer-cli": "^1.8.1",

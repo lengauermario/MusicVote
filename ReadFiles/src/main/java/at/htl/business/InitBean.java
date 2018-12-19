@@ -31,7 +31,7 @@ public class InitBean {
 
     @PostConstruct
     private void init() throws InvalidDataException, IOException, UnsupportedTagException {
-        File folder = new File("C:\\Users\\Mario\\Google Drive\\Privat");
+        File folder = new File("C:\\Users\\Mario\\Google Drive\\School\\4BHIF\\SYP\\MusicVote\\Polymer-Prototype\\MP3");
         if(folder.exists() && folder.isDirectory()){
             File arr[] = folder.listFiles();
             RecursiveRead(arr,0);

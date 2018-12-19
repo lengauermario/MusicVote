@@ -12,9 +12,13 @@ import '@polymer/iron-pages/iron-pages.js';
 import '@polymer/iron-selector/iron-selector.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
 import '@polymer/iron-icon/iron-icon.js';
+import '@polymer/iron-icons/iron-icons.js';
+import '@polymer/paper-progress/paper-progress.js';
+import '@polymer/paper-ripple/paper-ripple.js';
 import './my-login-button.js';
 import './my-icons.js';
-import YouTube from './YouTube/youTube.js'
+import './my-audioplayer';
+//import YouTube from './YouTube/youTube.js'
 
 
 // Gesture events like tap and track generated from touch will not be

@@ -77,8 +77,8 @@ class MyApp extends PolymerElement {
       <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
       </app-route>
 
-      <app-drawer-layout fullbleed="" narrow="{{narrow}}">
-        <!-- Drawer content -->
+  <!--    <app-drawer-layout fullbleed="" narrow="{{narrow}}">
+        <!- Drawer content ->
         <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
           <app-toolbar>Menu</app-toolbar>
           <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
@@ -86,7 +86,7 @@ class MyApp extends PolymerElement {
           </iron-selector>
         </app-drawer>
 
-        <!-- Main content -->
+        <!- Main content ->
         <app-header-layout has-scrolling-region="">
 
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
@@ -102,11 +102,11 @@ class MyApp extends PolymerElement {
             <my-view404 name="view404"></my-view404>
           </iron-pages>
         </app-header-layout>
-      </app-drawer-layout>
+      </app-drawer-layout> -->
     `;
   }
 
-  static get properties() {
+ /* static get properties() {
     return {
       page: {
         type: String,
@@ -156,7 +156,7 @@ class MyApp extends PolymerElement {
         import('./my-view404.js');
         break;
     }
-  }
+  }*/
 }
 
 window.customElements.define('my-app', MyApp);

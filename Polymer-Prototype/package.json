@@ -30,6 +30,7 @@
     "@polymer/paper-ripple": "^3.0.1",
     "@polymer/polymer": "^3.0.0",
     "@webcomponents/webcomponentsjs": "^2.0.0",
+    "bootstrap": "^4.2.1",
     "paper-audio-player": "0.0.2"
   },
   "devDependencies": {

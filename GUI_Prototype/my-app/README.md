@@ -1,11 +1,11 @@
 ## 🛠 Status: In Development
 
 ## :bookmark_tabs: Inhaltsverzeichnis
-- [Einleitung](#arrow_forward-einleitung)
+- [Beschreibung](#beschreibung)
 - [Vorschau](#iphone-vorschau)
 - [Quickstart](#rocket-quickstart)
 
-# :arrow_forward: Einleitung
+# Beschreibung
 Was wäre das perfekte System ohne einem modernen aber auch zugleich praktischen Design?
 Genau das versuchen wir hier bestmöglichst umzusetzen. Für Feedback sind wir offen.
 

@@ -1,10 +1,17 @@
 # MusicVoting :notes:
 
 ## :bookmark_tabs: Inhaltsverzeichnis
-- [Einleitung](#arrow-forward-einleitung)
+- [Einleitung](#arrow_forward-einleitung)
+- [Aktueller Stand](#hammer-aktueller-stand)
+  - [GUI](#iphone-gui)
+  - [Youtube-Einbindung](#musical_note-youtube-einbindung)
+  - Server
+- [Dokumente](#closed_book-dokumente)
+- [Entwickler](#guardsman-entwickler)
+- [Technologien](#wrench-technologien)
+- [Lizenz](#lock-lizenz)
 
 ## System Architektur
-![alt text]()
 
 
 ## :arrow_forward: Einleitung
@@ -13,12 +20,15 @@ Was ist nerviger als schlechte Musik auf einer Party? Und weil wir auch finden, 
 ## :hammer: Aktueller Stand
 
 ### :iphone: GUI
-Die GUI befindet sich momentan noch in Entwicklung. Alles zum aktuellen GUI-Prototypem finden Sie (hier)[/GUI_Prototype/my-app].
+#### 🛠 Status: In Arbeit
+Die GUI befindet sich momentan noch in Entwicklung. Alles zum aktuellen GUI-Prototypem finden Sie [hier](/GUI_Prototype/my-app).
 
 ### :musical_note: Youtube-Einbindung
-Die vollständige Abwicklung der Youtube abfragen und der Download der entsprechenden Audiodatei funktioniert derzeit nur im Rahmen eines Prototypen in dem die Machbarkeit der Youtube-Suche ohne Authentifikation des jeweiligen Users bestätigt wurde. Alle weiteren Informationen sind (hier)[/Youtube-Server-Prototyp].
+#### 🛠 Status: In Arbeit
+Die vollständige Abwicklung der Youtube abfragen und der Download der entsprechenden Audiodatei funktioniert derzeit nur im Rahmen eines Prototypen in dem die Machbarkeit der Youtube-Suche ohne Authentifikation des jeweiligen Users bestätigt wurde. Alle weiteren Informationen sind [hier](/Youtube-Server-Prototyp).
 
 ### Server
+#### 🛠 Status: In Arbeit
 ...
 
 ##  :closed_book: Dokumente:
@@ -28,7 +38,7 @@ Die vollständige Abwicklung der Youtube abfragen und der Download der entsprech
 - [Systemarchitektur](docs/Systemarchitektur.jpeg)
 
 
-### :guardsman: Developers:
+### :guardsman: Entwickler:
 - [Kuchinka Leon](https://github.com/leonkuchinka)
 - [Mario Lengauer](https://github.com/lengauermario)
 - [Jonas Schürz](https://github.com/jonasschuerz)
@@ -46,25 +56,10 @@ Die vollständige Abwicklung der Youtube abfragen und der Download der entsprech
 
 ## :lock: Lizenz:
 
-[MIT License](LICENSE)
+Copyright (c) 2019 MusicVoting
+Hiermit wird unentgeltlich jeder Person, die eine Kopie der Software und der zugehörigen Dokumentationen (die "Software") erhält, die Erlaubnis erteilt, sie uneingeschränkt zu nutzen, inklusive und ohne Ausnahme mit dem Recht, sie zu verwenden, zu kopieren, zu verändern, zusammenzufügen, zu veröffentlichen, zu verbreiten, zu unterlizenzieren und/oder zu verkaufen, und Personen, denen diese Software überlassen wird, diese Rechte zu verschaffen, unter den folgenden Bedingungen:
 
-Copyright (c) 2018 MusicVoting
+Der obige Urheberrechtsvermerk und dieser Erlaubnisvermerk sind in allen Kopien oder Teilkopien der Software beizulegen.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+DIE SOFTWARE WIRD OHNE JEDE AUSDRÜCKLICHE ODER IMPLIZIERTE GARANTIE BEREITGESTELLT, EINSCHLIEẞLICH DER GARANTIE ZUR BENUTZUNG FÜR DEN VORGESEHENEN ODER EINEM BESTIMMTEN ZWECK SOWIE JEGLICHER RECHTSVERLETZUNG, JEDOCH NICHT DARAUF BESCHRÄNKT. IN KEINEM FALL SIND DIE AUTOREN ODER COPYRIGHTINHABER FÜR JEGLICHEN SCHADEN ODER SONSTIGE ANSPRÜCHE HAFTBAR ZU MACHEN, OB INFOLGE DER ERFÜLLUNG EINES VERTRAGES, EINES DELIKTES ODER ANDERS IM ZUSAMMENHANG MIT DER SOFTWARE ODER SONSTIGER VERWENDUNG DER SOFTWARE ENTSTANDEN.
 

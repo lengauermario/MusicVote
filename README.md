@@ -38,7 +38,7 @@ Die vollständige Abwicklung der Youtube abfragen und der Download der entsprech
 - [Systemarchitektur](docs/Systemarchitektur.jpeg)
 
 
-### :guardsman: Entwickler:
+## :guardsman: Entwickler:
 - [Kuchinka Leon](https://github.com/leonkuchinka)
 - [Mario Lengauer](https://github.com/lengauermario)
 - [Jonas Schürz](https://github.com/jonasschuerz)

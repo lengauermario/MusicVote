@@ -36,7 +36,7 @@ Die vollständige Abwicklung der Youtube abfragen und der Download der entsprech
 
 - [Projektantrag](docs/Projektantrag.pdf)
 - [Projektspezifikation](docs/projektspezifikation.md)
-- [Systemarchitektur](docs/Systemarchitektur.jpeg)
+- [Systemarchitektur](/img/systemarchitektur.png)
 
 
 ## :guardsman: Entwickler:

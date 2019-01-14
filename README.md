@@ -11,6 +11,8 @@
 - [Technologien](#wrench-technologien)
 - [Lizenz](#lock-lizenz)
 
+## Einleitung
+Eine der nervigsten Sachen einer Party kann doch die störende Musik sein. Doch was kann man dagegen tun? Den Gastgeber suchen der anderweitigsbeschäftigt ist und nur genervt von deinem Musikwunsch ist. Da wäre es doch praktisch, wenn man den Musikwunsch online eintragen kann und wenn ihn mehrere gut finden wird er abgespielt. Genau für das Online Voten und abspielen der Musik ist unsere Lösung die Beste.
 
 ## :arrow_forward: Einleitung
 Was ist nerviger als schlechte Musik auf einer Party? Und weil wir auch finden, dass es nichts Schlimmeres gibt, entwickeln wir MusicVoting. MusicVoting ermöglicht jedem Partygast ganz einfach mittels Smartphone mitzubestimmen welche Musik gespielt werden soll.

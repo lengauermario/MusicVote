@@ -2,8 +2,8 @@
 
 ## :bookmark_tabs: Inhaltsverzeichnis
 - [Einleitung](#arrow_forward-einleitung)
-- [Vorschau](#hammer-aktueller-stand)
-- [Quickstart](#hammer-aktueller-stand)
+- [Vorschau](#iphone-vorschau)
+- [Quickstart](#rocket-quickstart)
 
 # :arrow_forward: Einleitung
 Was wäre das perfekte System ohne einem modernen aber auch zugleich praktischen Design?
@@ -12,7 +12,7 @@ Genau das versuchen wir hier bestmöglichst umzusetzen. Für Feedback sind wir o
 # :iphone: Vorschau
 Dies ist eine aktuelle Vorschau.
 
-![Actual Pic](./img/previewMobile.jpg)
+![Actual Pic](./images/ReadMe/prototypeMobile.png)
 
 # :rocket: Quickstart
 

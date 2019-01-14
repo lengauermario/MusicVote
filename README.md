@@ -11,11 +11,13 @@
 - [Technologien](#wrench-technologien)
 - [Lizenz](#lock-lizenz)
 
-## System Architektur
-
 
 ## :arrow_forward: Einleitung
 Was ist nerviger als schlechte Musik auf einer Party? Und weil wir auch finden, dass es nichts Schlimmeres gibt, entwickeln wir MusicVoting. MusicVoting ermöglicht jedem Partygast ganz einfach mittels Smartphone mitzubestimmen welche Musik gespielt werden soll.
+
+
+## System Architektur
+![sysarch](/img/systemarchitektur.png)
 
 ## :hammer: Aktueller Stand
 

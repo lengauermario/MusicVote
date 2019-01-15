@@ -2,6 +2,7 @@
 
 ## :bookmark_tabs: Inhaltsverzeichnis
 - [Einleitung](#arrow_forward-einleitung)
+- [System Architektur](#ferris_wheel-system-architektur)
 - [Aktueller Stand](#hammer-aktueller-stand)
   - [GUI](#iphone-gui)
   - [Youtube-Einbindung](#musical_note-youtube-einbindung)
@@ -15,7 +16,7 @@
 Was ist nerviger als schlechte Musik auf einer Party? Und weil wir auch finden, dass es nichts Schlimmeres gibt, entwickeln wir MusicVoting. MusicVoting ermöglicht jedem Partygast ganz einfach mittels Smartphone mitzubestimmen welche Musik gespielt werden soll.
 
 
-## System Architektur
+## :ferris_wheel: System Architektur
 ![sysarch](/img/systemarchitektur.png)
 
 ## :hammer: Aktueller Stand

@@ -6,7 +6,7 @@
 - [Aktueller Stand](#hammer-aktueller-stand)
   - [GUI](#iphone-gui)
   - [Youtube-Einbindung](#musical_note-youtube-einbindung)
-  - Server
+  - [Server](#computer-server)
 - [Dokumente](#closed_book-dokumente)
 - [Entwickler](#guardsman-entwickler)
 - [Technologien](#wrench-technologien)
@@ -29,7 +29,7 @@ Die GUI befindet sich momentan noch in Entwicklung. Alles zum aktuellen GUI-Prot
 #### 🛠 Status: In Arbeit
 Die vollständige Abwicklung der Youtube abfragen und der Download der entsprechenden Audiodatei funktioniert derzeit nur im Rahmen eines Prototypen in dem die Machbarkeit der Youtube-Suche ohne Authentifikation des jeweiligen Users bestätigt wurde. Alle weiteren Informationen sind [hier](/Youtube-Server-Prototyp).
 
-### Server
+### :computer: Server
 #### 🛠 Status: In Arbeit
 ...
 

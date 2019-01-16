@@ -31,7 +31,7 @@ Die vollständige Abwicklung der Youtube abfragen und der Download der entsprech
 
 ### :computer: Server
 #### 🛠 Status: In Arbeit
-Die Initialisierung der Datenbank des Servers ist bereits implementiert, siehe [hier](/Initialize_Database/Start_RF_new). Die Bereitstellung der MP3-Files mittels RESTful Service befindet sich im Prototypstadium, d.h. es existiert eine Methode die hardcoded ein bestimmtes MP3-File zur Verfügung stellst. Ein Clientprototyp der dieses MP3-File abfragt und abspielt ist auch bereits implementiert.
+Die Initialisierung der Datenbank des Servers ist bereits implementiert, siehe [hier](/Initialize_Database/Start_RF_new). Die Bereitstellung der MP3-Files mittels RESTful Service befindet sich im Prototypstadium, d.h. es existiert eine Methode die hardcoded ein bestimmtes MP3-File zur Verfügung stellst. Ein Clientprototyp der dieses MP3-File abfragt und abspielt ist auch bereits implementiert. Weiter Details befinden sich [hier](/Abspiel%20Server-Client%20Prototyp).
 
 ##  :closed_book: Dokumente:
 

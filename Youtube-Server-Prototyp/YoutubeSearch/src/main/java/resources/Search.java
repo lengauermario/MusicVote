@@ -32,6 +32,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
 
@@ -61,7 +62,7 @@ public class Search {
      */
     private YouTube youtube;
 
-    public String getVideo(String queryTerm) {
+    public List<ResponseObject> getVideos(String queryTerm) {
         try {
             youtube = new YouTube.Builder(new NetHttpTransport(), new JacksonFactory(), new HttpRequestInitializer() {
                 public void initialize(HttpRequest request) throws IOException {
@@ -74,11 +75,20 @@ public class Search {
             search.setKey(apiKey);
             search.setQ(queryTerm);
             search.setType("video");
-            search.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)");
-            search.setMaxResults(1l);
+            search.setFields("items(id/kind,id/videoId,snippet/title, snippet/channelTitle, snippet/thumbnails/default/url)");
+            search.setMaxResults(10l);
             SearchListResponse searchResponse = search.execute();
             List<SearchResult> searchResultList = searchResponse.getItems();
-            return searchResultList.get(0).getId().getVideoId();
+            List<ResponseObject> responseObjectList = new LinkedList<ResponseObject>();
+            for (SearchResult res: searchResultList) {
+                responseObjectList.add(new ResponseObject(res.getId().getVideoId(), res.getSnippet().getTitle(), res.getSnippet().getChannelTitle(), res.getSnippet().getThumbnails().getDefault().getUrl()));
+                System.out.println("-----------Video---------");
+                System.out.println("Id: " + res.getId().getVideoId());
+                System.out.println("Title: " + res.getSnippet().getTitle());
+                System.out.println("Channel: " + res.getSnippet().getChannelTitle());
+                System.out.println("Thumbnail: " + res.getSnippet().getThumbnails().getDefault().getUrl());
+            }
+            return responseObjectList;
         } catch (GoogleJsonResponseException e) {
             System.err.println("There was a service error: " + e.getDetails().getCode() + " : "
                     + e.getDetails().getMessage());
@@ -87,7 +97,7 @@ public class Search {
         } catch (Throwable t) {
             t.printStackTrace();
         }
-        return "error";
+        return new LinkedList<ResponseObject>();
     }
 
 }

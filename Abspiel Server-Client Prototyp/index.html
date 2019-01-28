@@ -1,0 +1,18 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prototyp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="\node_modules\howler\dist\howler.js"></script>
+</head>
+<body>
+    <button id="play" onclick="streamSong()">Stream Song</button>
+    <audio id="player" preload="auto " autobuffer>
+        <source src="http://localhost:8080/musicvoting/api/song/playsong"/>
+    </audio>
+</body>
+</html>

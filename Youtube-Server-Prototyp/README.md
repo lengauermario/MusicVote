@@ -18,10 +18,13 @@ in the url (/youtubesearch/api/video/[text to search for]). The first response i
 in an specified folder. The only problem is that this mp3 file does not have any mp3-tags which means we do not receive any meta data about it.
 
 ### Request Videos
-For a simple Youtube request, you have to send a GET request to http://localhost:8085/youtubesearch/api/video?queryTerm={YOUR_QUERY}. Your query has to be html-path encoded, because blanks, spaces etc. cant be send to the server. 
+For a simple Youtube request, you have to send a GET request to http://localhost:8085/youtubesearch/api/video?queryTerm={YOUR_QUERY}. Your query has to be html-path encoded, because blanks, spaces etc. cant be send to the server.
+
+For downloading a specific video, send a GET request to http://localhost:8085/youtubesearch/api/video/dl?id={YOUR_ID}.
 
 ### Problems
 Unfortunatly it is not possible to request the music-title and artist meta data, because there is no interface in the Youtube-API which returns this data. It is also described [here](https://stackoverflow.com/questions/12448523/get-the-artist-and-song-title-from-youtube-video-by-api).
+
 
 ### Creator
 Leon Kuchinka

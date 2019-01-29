@@ -19,17 +19,16 @@ public class Endpoint {
     public List<ResponseObject> getFirstVideo(@QueryParam("queryTerm") String param) throws UnsupportedEncodingException {
         String queryTerm = java.net.URLDecoder.decode(param, "UTF-8");
         List<ResponseObject> res = Search.getInstance().getVideos(queryTerm);
-
-        //YoutubedlWrapper.fetchMp3FileFromYoutube(res);
         return res;
     }
 
     @GET
     @Path("/dl")
     public Response downloadVideo(@QueryParam("id") String id){
-        YoutubedlWrapper.fetchMp3FileFromYoutube(id);
-        return Response.ok().build();
+        if(YoutubedlWrapper.fetchMp3FileFromYoutube(id)){
+            return Response.ok().build();
+        }
+        return Response.serverError().build();
     }
-
 
 }

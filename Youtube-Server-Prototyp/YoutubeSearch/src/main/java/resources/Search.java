@@ -27,14 +27,8 @@ import com.google.api.services.youtube.model.SearchResult;
 import com.google.api.services.youtube.model.Thumbnail;
 
 import javax.ejb.Stateful;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Properties;
+import java.io.*;
+import java.util.*;
 
 
 public class Search {
@@ -46,6 +40,7 @@ public class Search {
     private static final String PROPERTIES_FILENAME = "/home/leon/Desktop/YoutubeSearch/src/main/resources/youtube.properties";
 
     private static final long NUMBER_OF_VIDEOS_RETURNED = 1;
+    private static String API_KEY;
     private static Search instance;
 
     public static Search getInstance() {
@@ -55,6 +50,9 @@ public class Search {
     }
     private Search()
     {
+        String apiKey = "AIzaSyBnABJA3xX04oC3DHIUJDspuCDBGFbhQEk";
+        ResourceBundle rb = ResourceBundle.getBundle("youtube");
+        API_KEY = rb.getString("apikey");
     }
     /**
      * Define a global instance of a Youtube object, which will be used
@@ -71,8 +69,8 @@ public class Search {
 
             YouTube.Search.List search = youtube.search().list("id,snippet");
 
-            String apiKey = "AIzaSyBnABJA3xX04oC3DHIUJDspuCDBGFbhQEk";
-            search.setKey(apiKey);
+
+            search.setKey(API_KEY);
             search.setQ(queryTerm);
             search.setType("video");
             search.setFields("items(id/kind,id/videoId,snippet/title, snippet/channelTitle, snippet/thumbnails/default/url)");
@@ -82,11 +80,11 @@ public class Search {
             List<ResponseObject> responseObjectList = new LinkedList<ResponseObject>();
             for (SearchResult res: searchResultList) {
                 responseObjectList.add(new ResponseObject(res.getId().getVideoId(), res.getSnippet().getTitle(), res.getSnippet().getChannelTitle(), res.getSnippet().getThumbnails().getDefault().getUrl()));
-                System.out.println("-----------Video---------");
+                /*System.out.println("-----------Video---------");
                 System.out.println("Id: " + res.getId().getVideoId());
                 System.out.println("Title: " + res.getSnippet().getTitle());
                 System.out.println("Channel: " + res.getSnippet().getChannelTitle());
-                System.out.println("Thumbnail: " + res.getSnippet().getThumbnails().getDefault().getUrl());
+                System.out.println("Thumbnail: " + res.getSnippet().getThumbnails().getDefault().getUrl());*/
             }
             return responseObjectList;
         } catch (GoogleJsonResponseException e) {

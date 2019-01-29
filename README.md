@@ -41,7 +41,7 @@ Die Initialisierung der Datenbank des Servers ist bereits implementiert, siehe [
 
 
 ## :guardsman: Entwickler:
-- [Kuchinka Leon](https://github.com/leonkuchinka)
+- [Leon Kuchinka](https://github.com/leonkuchinka)
 - [Mario Lengauer](https://github.com/lengauermario)
 - [Jonas Schürz](https://github.com/jonasschuerz)
 

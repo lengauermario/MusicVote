@@ -43,7 +43,7 @@ The correct request to download the first video from the example above would loo
 <br />
 <br />
 The response would look like this, after the successful download of the video (it takes 9s at the moment)
-![pic](./images/sample-request-dl-correct.png)
+![pic](./images/sample-request-dl-correct-response.png)
 <br />
 <br />
 ##### Sample Invalid Request

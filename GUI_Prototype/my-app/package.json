@@ -1,11 +1,11 @@
 {
-  "name": "pwa-starter-kit",
+  "name": "musicVoting",
   "version": "0.9.0",
   "contributors": [
-    "The Polymer Authors"
+    "Music Voting Team"
   ],
   "license": "BSD-3-Clause",
-  "repository": "Polymer/pwa-starter-kit",
+  "repository": "lengauermario/musicVoting",
   "scripts": {
     "start": "polymer serve",
     "build": "npm run build:prpl-server && npm run build:static",
@@ -22,6 +22,7 @@
   "dependencies": {
     "@polymer/app-layout": "^3.0.0",
     "@polymer/iron-icon": "^3.0.1",
+    "@polymer/iron-icons": "^3.0.1",
     "@polymer/lit-element": "^0.6.5",
     "@polymer/paper-input": "^3.0.1",
     "@polymer/polymer": "^3.1.0",

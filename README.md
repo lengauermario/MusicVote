@@ -50,7 +50,7 @@ Die Initialisierung der Datenbank des Servers ist bereits implementiert, siehe [
 - Jakarta EE
 - MySQL
 - HTML5
-- SemanticUI
+- Bulma
 - CSS
 - JavaScript
 - Polymer LitElement

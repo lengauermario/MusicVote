@@ -1,8 +1,8 @@
 import { html } from '@polymer/lit-element';
 
 export const SharedStyles = html`
-<link rel="stylesheet" type="text/css" href="./libraries/SemanticUI/semantic.min.css">
-<script src="./libraries/SemanticUI/semantic.min.js"></script>
+<link rel="stylesheet" href="../../../node_modules/bulma/css/bulma.min.css">
+<link rel="stylesheet" href="../../../node_modules/bulma-extensions/bulma-divider/dist/css/bulma-divider.min.css">
 
 
 <style>

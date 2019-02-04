@@ -15,7 +15,7 @@ import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import '@polymer/app-layout/app-scroll-effects/effects/fade-background.js'
-import {menuIcon} from './my-icons.js';
+import {menuIcon} from './shared/my-icons.js';
 
 class MyApp extends connect(store)(LitElement) {
   render() {
@@ -164,25 +164,13 @@ class MyApp extends connect(store)(LitElement) {
     </style>
 
     <!-- Header -->
-    <app-header condenses fixed effects="waterfall fadeBackground">
+    <app-header condenses fixed effects="waterfall" style="z-index: 5">
       <app-toolbar class="toolbar-top">
         <button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
         <div main-title>${this.appTitle}</div>
+        
       </app-toolbar>
-
-      <!-- This gets hidden on a small screen-->
-      <nav class="toolbar-list">
-        <a ?selected="${this._page === 'view1'}" href="/view1">View One</a>
-      </nav>
     </app-header>
-
-    <!-- Drawer content -->
-    <app-drawer .opened="${this._drawerOpened}"
-        @opened-changed="${this._drawerOpenedChanged}">
-      <nav class="drawer-list">
-        <a ?selected="${this._page === 'view1'}" href="/view1">View One</a>
-      </nav>
-    </app-drawer>
 
     <!-- Main content -->
     <main role="main" class="main-content">

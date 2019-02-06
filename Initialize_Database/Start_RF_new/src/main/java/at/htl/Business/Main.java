@@ -3,7 +3,7 @@ package at.htl.Business;
 import at.htl.model.Song;
 import com.mpatric.mp3agic.Mp3File;
 import com.mpatric.mp3agic.UnsupportedTagException;
-import com.sun.media.sound.InvalidDataException;
+import com.mpatric.mp3agic.InvalidDataException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -16,7 +16,7 @@ public class Main {
     private static EntityManager em;
     private static List<Song> songs;
 
-    public static void main(String[] args) throws IOException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
+    public static void main(String[] args) throws IOException, UnsupportedTagException, InvalidDataException {
         em = Persistence.createEntityManagerFactory("myPU").createEntityManager();
         em.getTransaction().begin();
         em.persist(new Song());
@@ -26,7 +26,7 @@ public class Main {
     }
 
     private static void init() throws IOException, InvalidDataException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
-        File folder = new File("/home/jonas/Schreibtisch/Jonas/Schule/4BHIF/SYP/Projekt/ReadFiles/src/main/resources/mp3");
+        File folder = new File("C:\\mp3");
         if(folder.exists() && folder.isDirectory()){
             File arr[] = folder.listFiles();
             RecursiveRead(arr,0);
@@ -54,7 +54,7 @@ public class Main {
                 mp3file.hasId3v2Tag(), mp3file.hasCustomTag(), mp3file.getId3v2Tag().getTrack(), mp3file.getId3v2Tag().getArtist(), mp3file.getId3v2Tag().getTitle(),
                 mp3file.getId3v2Tag().getAlbum(), Integer.parseInt(mp3file.getId3v2Tag().getYear()), mp3file.getId3v2Tag().getGenre(), mp3file.getId3v2Tag().getComment(),
                 mp3file.getId3v2Tag().getComposer(), mp3file.getId3v2Tag().getPublisher(), mp3file.getId3v2Tag().getOriginalArtist(), mp3file.getId3v2Tag().getAlbumArtist(),
-                mp3file.getId3v2Tag().getCopyright(), mp3file.getId3v2Tag().getUrl(), mp3file.getId3v2Tag().getEncoder(),0);
+                mp3file.getId3v2Tag().getCopyright(), mp3file.getId3v2Tag().getUrl(), mp3file.getId3v2Tag().getEncoder());
         em.getTransaction().begin();
         em.persist(newSong);
         em.getTransaction().commit();

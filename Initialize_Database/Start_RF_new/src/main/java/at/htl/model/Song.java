@@ -11,7 +11,6 @@ public class Song {
     private Long id;
     private long lengthOfMp3;
     private int bitrate;
-    private int votes;
     private boolean bitrateVBR;
     private int sampleRate;
     private boolean hasId3v1Tag, hasId3v2Tag, hasCustomTag;
@@ -21,7 +20,7 @@ public class Song {
 
 
     //region Constructors
-    public Song(String path, long lengthOfMp3, int bitrate, boolean bitrateVBR, int sampleRate, boolean hasId3v1Tag, boolean hasId3v2Tag, boolean hasCustomTag, String track, String artist, String title, String album, int year, int genre, String comment, String composer, String publisher, String originalArtist, String albumArtist, String copyright, String url, String encoder,int votes) {
+    public Song(String path, long lengthOfMp3, int bitrate, boolean bitrateVBR, int sampleRate, boolean hasId3v1Tag, boolean hasId3v2Tag, boolean hasCustomTag, String track, String artist, String title, String album, int year, int genre, String comment, String composer, String publisher, String originalArtist, String albumArtist, String copyright, String url, String encoder) {
         this.path = path;
         this.lengthOfMp3 = lengthOfMp3;
         this.bitrate = bitrate;
@@ -44,7 +43,6 @@ public class Song {
         this.copyright = copyright;
         this.url = url;
         this.encoder = encoder;
-        this.votes = votes;
     }
 
     public Song(){
@@ -59,14 +57,6 @@ public class Song {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public int getVotes() {
-        return votes;
-    }
-
-    public void setVotes(int votes) {
-        this.votes = votes;
     }
 
     public String getPath() {

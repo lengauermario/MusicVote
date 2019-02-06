@@ -3,30 +3,43 @@ package at.htl.musicvoting.business;
 import at.htl.musicvoting.model.Song;
 
 import javax.ejb.Stateless;
-import java.util.PriorityQueue;
+import javax.inject.Inject;
+import java.time.LocalDateTime;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Stateless
 public class PlaylistHandler {
 
-    PriorityQueue<Song> playlist = new PriorityQueue<Song>();
+    /*PriorityQueue<Song> playlist = new PriorityQueue<Song>(new Comparator<Song>() {
+        @Override
+        public int compare(Song song, Song t1) {
+            return song.compareTo(t1);
+        }
+    });*/
+    SortedSet<Song> playlist = new TreeSet<>(Comparator.comparing(Song::getVotes).reversed()
+            .thenComparing(Song::getAddedToPlaylist));
 
-    public PriorityQueue getAll(){
+    public SortedSet<Song> getAll(){
         return playlist;
     }
 
     public void push(Song song){
-        if(!contains(song.getId())){
-            song.resetVotes();
-            playlist.add(song);
-        }
+        if(contains(song.getId()))
+            return;
+        song.setAddedToPlaylist(LocalDateTime.now());
+        song.resetVotes();
+        playlist.add(song);
     }
 
     public Song pop(){
-        return playlist.poll();
+        Song s = playlist.first();
+        playlist.remove(s);
+        return s;
     }
 
     public Song peek(){
-        return playlist.peek();
+        return playlist.first();
     }
 
     public boolean contains(long id){

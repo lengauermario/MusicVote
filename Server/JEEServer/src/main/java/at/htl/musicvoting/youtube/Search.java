@@ -23,7 +23,7 @@ public class Search {
      * contains the developer's API key.
      */
 
-    private static final long NUMBER_OF_VIDEOS_RETURNED = 1;
+    private static final long NUMBER_OF_VIDEOS_RETURNED = 10;
     private static String API_KEY;
     private static Search instance;
 
@@ -50,25 +50,17 @@ public class Search {
                 public void initialize(HttpRequest request) throws IOException {
                 }
             }).setApplicationName("youtube-cmdline-search-sample").build();
-
             YouTube.Search.List search = youtube.search().list("id,snippet");
-
-
             search.setKey(API_KEY);
             search.setQ(queryTerm);
             search.setType("video");
             search.setFields("items(id/kind,id/videoId,snippet/title, snippet/channelTitle, snippet/thumbnails/default/url)");
-            search.setMaxResults(10l);
+            search.setMaxResults(NUMBER_OF_VIDEOS_RETURNED);
             SearchListResponse searchResponse = search.execute();
             List<SearchResult> searchResultList = searchResponse.getItems();
             List<YoutubeResponseObject> youtubeResponseObjectList = new LinkedList<YoutubeResponseObject>();
             for (SearchResult res: searchResultList) {
                 youtubeResponseObjectList.add(new YoutubeResponseObject(res.getId().getVideoId(), res.getSnippet().getTitle(), res.getSnippet().getChannelTitle(), res.getSnippet().getThumbnails().getDefault().getUrl()));
-                /*System.out.println("-----------Video---------");
-                System.out.println("Id: " + res.getId().getVideoId());
-                System.out.println("Title: " + res.getSnippet().getTitle());
-                System.out.println("Channel: " + res.getSnippet().getChannelTitle());
-                System.out.println("Thumbnail: " + res.getSnippet().getThumbnails().getDefault().getUrl());*/
             }
             return youtubeResponseObjectList;
         } catch (GoogleJsonResponseException e) {

@@ -15,16 +15,11 @@ public class YoutubedlWrapper {
     YoutubeVideoDao dao;
 
     public synchronized void fetchMp3FileFromYoutube(YoutubeResponseObject ytvideo) {
-        //check if gets already downloaded
         if(dao.existsInDatabase(ytvideo.getVideoId()))
             return;
         final YoutubeVideo newVideo = new YoutubeVideo(ResourceBundle.getBundle("config").getString("youtubeFolder")+ "\\" + ytvideo.getTitle() + ".mp3", ytvideo.getArtist() ,ytvideo.getTitle(),ytvideo.getVideoId(), ytvideo.getThumbNail(), AvailabilityStatus.DOWNLOADING);
-
-        //write to database
         dao.persist(newVideo);
-        //Thread
-
-        YTDownloadThread thread = new YTDownloadThread(ytvideo.getVideoId(), (Integer exitCode) -> {
+        DownloadThread thread = new DownloadThread(ytvideo.getVideoId(), (Integer exitCode) -> {
             dao.updateToDownloaded(newVideo, exitCode);
             return null;
         });

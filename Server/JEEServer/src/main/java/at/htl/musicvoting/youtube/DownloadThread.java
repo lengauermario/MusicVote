@@ -5,10 +5,10 @@ import java.io.InputStreamReader;
 import java.util.ResourceBundle;
 import java.util.function.Function;
 
-public class YTDownloadThread extends Thread {
+public class DownloadThread extends Thread {
     String videoId;
     Function<Integer, Void> callback;
-    public YTDownloadThread(String id, Function<Integer, Void> callback){
+    public DownloadThread(String id, Function<Integer, Void> callback){
         videoId = id;
         this.callback = callback;
     }

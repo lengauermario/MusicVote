@@ -15,6 +15,7 @@ import javax.ws.rs.core.Response;
 import java.io.File;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.SortedSet;
 
 @Stateless
 @Path("song")
@@ -46,7 +47,7 @@ public class SongsEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("playlist")
     public Response getPlaylist(){
-        PriorityQueue<Song> songs = playlist.getAll();
+        SortedSet<Song> songs = playlist.getAll();
         return Response.ok(songs).build();
     }
 

@@ -1,6 +1,9 @@
 package at.htl.musicvoting.model;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlTransient;
+import java.time.LocalDateTime;
 
 @Entity
 @NamedQueries({
@@ -26,6 +29,12 @@ public class Song implements Comparable<Song> {
 
     @Transient
     private int votes;
+
+    @XmlTransient
+    @JsonbTransient
+    @Transient
+    private LocalDateTime addedToPlaylist;
+
     //region Constructors
     public Song(String path, long lengthOfMp3, int bitrate, boolean bitrateVBR, int sampleRate, boolean hasId3v1Tag, boolean hasId3v2Tag, boolean hasCustomTag, String track, String artist, String title, String album, int year, int genre, String comment, String composer, String publisher, String originalArtist, String albumArtist, String copyright, String url, String encoder) {
         this.path = path;
@@ -58,6 +67,15 @@ public class Song implements Comparable<Song> {
     //endregion
 
     //region Getter and Setter
+
+    public LocalDateTime getAddedToPlaylist() {
+        return addedToPlaylist;
+    }
+
+    public void setAddedToPlaylist(LocalDateTime addedToPlaylist) {
+        this.addedToPlaylist = addedToPlaylist;
+    }
+
     public Long getId() {
         return id;
     }

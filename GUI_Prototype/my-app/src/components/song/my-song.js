@@ -13,8 +13,11 @@ class MySong extends LitElement {
             likedImgSrc: {
                 type: String
             },
+            id:{
+                type: Number
+            },
             thumbnail: {
-                type: Boolean
+                type: String
             },
             title: {
                 type: String
@@ -22,12 +25,13 @@ class MySong extends LitElement {
             artist:{
                 type: String
             }
+
         }
     }
 
     constructor(){
         super();
-        this.liked = true;
+        this.liked = false;
         this.likedImgSrc = "/images/heartGrey.png";
         this.thumbnail = "/images/covers/dreamer_sunriseavenue.jpg";
         this.title = "Dreamer";

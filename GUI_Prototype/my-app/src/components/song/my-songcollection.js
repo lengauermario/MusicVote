@@ -9,7 +9,6 @@ class MySongCollection extends LitElement {
     render() {
         return html`
             ${SharedStyles}
-            <div>
                 <my-song></my-song>
                 <my-song></my-song>
                 <my-song></my-song>
@@ -18,14 +17,12 @@ class MySongCollection extends LitElement {
                 <my-song></my-song>
                 <my-song></my-song>
                 <my-song></my-song>
-            </div>
             `;
     }
 
-   /* addElement(){
-        var song = document.createElement("my-song");
-        this.$.container.appendChild(song);
-    }*/
+    static addElement(){
+
+    }
 }
 
 window.customElements.define('my-songcollection', MySongCollection);

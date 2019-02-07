@@ -12,11 +12,10 @@ class MyView1 extends PageViewElement {
       ${SharedStyles}
       <section style="position: sticky; top: 64px; z-index: 5; padding-bottom: 0.2em">
         <my-songpreview></my-songpreview>
-                <my-search></my-search>
-
+        <my-search></my-search>
       </section>
       <section style="padding-top: 0.8em;">
-        <my-songcollection></my-songcollection>
+        <my-songcollection id="songCollection"></my-songcollection>
       </section>
     `;
   }

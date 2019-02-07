@@ -24,9 +24,11 @@ public class PlaylistHandler {
         return playlist;
     }
 
-    public void push(Song song){
-        if(contains(song.getId()))
+    public synchronized void push(Song song){
+        if(contains(song.getId())){
+            addVote(song.getId());
             return;
+        }
         song.setAddedToPlaylist(LocalDateTime.now());
         song.resetVotes();
         playlist.add(song);

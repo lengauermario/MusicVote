@@ -7,9 +7,11 @@ import java.util.function.Function;
 
 public class DownloadThread extends Thread {
     String videoId;
+    String path;
     Function<Integer, Void> callback;
-    public DownloadThread(String id, Function<Integer, Void> callback){
+    public DownloadThread(String id, String path, Function<Integer, Void> callback){
         videoId = id;
+        this.path = path;
         this.callback = callback;
     }
 
@@ -19,7 +21,7 @@ public class DownloadThread extends Thread {
         Process p;
         int exitcode = 1;
         try {
-            p = Runtime.getRuntime().exec("youtube-dl -o " + ResourceBundle.getBundle("config").getString("youtubeFolder") + "\\%(title)s.mp3 https://www.youtube.com/watch?v=" + videoId + " -x -j --audio-format mp3");
+            p = Runtime.getRuntime().exec("youtube-dl -o " + path + " https://www.youtube.com/watch?v=" + videoId + " -x --audio-format mp3");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(p.getInputStream()));
             while ((s = br.readLine()) != null)

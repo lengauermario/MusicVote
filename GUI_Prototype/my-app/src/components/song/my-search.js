@@ -80,7 +80,7 @@ class MySearch extends LitElement {
             song.title = obj['title'];
             song.artist = obj['channel'];
             song.thumbnail = obj['thumbNail'];
-            dom.appendChild(song);*/
+            dom.appendChild(song);*/    
             console.log(obj);
         });
         console.log(jsonObj);

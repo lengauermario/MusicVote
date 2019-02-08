@@ -1,5 +1,7 @@
 package at.htl.musicvoting.youtube;
 
+import at.htl.musicvoting.dao.YoutubeVideoDao;
+import at.htl.musicvoting.model.AvailabilityStatus;
 import at.htl.musicvoting.model.YoutubeResponseObject;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.client.http.HttpRequest;
@@ -12,27 +14,25 @@ import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
 
 
+import javax.ejb.Stateless;
+import javax.inject.Inject;
 import java.io.*;
 import java.util.*;
 
-
+@Stateless
 public class Search {
 
     /**
      * Define a global variable that identifies the name of a file that
      * contains the developer's API key.
      */
+    @Inject
+    YoutubeVideoDao dao;
 
     private static final long NUMBER_OF_VIDEOS_RETURNED = 10;
     private static String API_KEY;
-    private static Search instance;
 
-    public static Search getInstance() {
-        if(instance == null)
-            instance = new Search();
-        return instance;
-    }
-    private Search()
+    public Search()
     {
         String apiKey = "AIzaSyBnABJA3xX04oC3DHIUJDspuCDBGFbhQEk";
         ResourceBundle rb = ResourceBundle.getBundle("youtube");
@@ -60,7 +60,16 @@ public class Search {
             List<SearchResult> searchResultList = searchResponse.getItems();
             List<YoutubeResponseObject> youtubeResponseObjectList = new LinkedList<YoutubeResponseObject>();
             for (SearchResult res: searchResultList) {
-                youtubeResponseObjectList.add(new YoutubeResponseObject(res.getId().getVideoId(), res.getSnippet().getTitle(), res.getSnippet().getChannelTitle(), res.getSnippet().getThumbnails().getDefault().getUrl()));
+                YoutubeResponseObject obj = new YoutubeResponseObject(
+                        res.getId().getVideoId(),
+                        res.getSnippet().getTitle(),
+                        res.getSnippet().getChannelTitle(),
+                        res.getSnippet().getThumbnails().getDefault().getUrl(),
+                        AvailabilityStatus.DOWNLOADABLE);
+                if(dao.existsInDatabase(obj.getVideoId())){
+                    obj.setStatus(dao.getAvailabilityStatus(obj.getVideoId()));
+                }
+                youtubeResponseObjectList.add(obj);
             }
             return youtubeResponseObjectList;
         } catch (GoogleJsonResponseException e) {

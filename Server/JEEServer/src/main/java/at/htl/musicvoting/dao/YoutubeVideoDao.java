@@ -30,4 +30,13 @@ public class YoutubeVideoDao {
             newVideo.setStatus(AvailabilityStatus.NOT_AVALABLE);
         em.merge(newVideo);
     }
+
+    public AvailabilityStatus getAvailabilityStatus(String videoId){
+        YoutubeVideo video = em.createNamedQuery("YoutubeVideo.getByVideoId", YoutubeVideo.class).setParameter("VIDEOID", videoId).getSingleResult();
+        if(video != null)
+            return video.getStatus();
+        else
+            return AvailabilityStatus.NOT_AVALABLE;
+    }
+
 }

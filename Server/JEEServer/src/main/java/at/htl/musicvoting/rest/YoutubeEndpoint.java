@@ -19,11 +19,14 @@ public class YoutubeEndpoint {
     @Inject
     YoutubedlWrapper youtubedl;
 
+    @Inject
+    Search youtubeSearch;
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<YoutubeResponseObject> getVideos(@QueryParam("queryTerm") String param) throws UnsupportedEncodingException {
         String queryTerm = java.net.URLDecoder.decode(param, "UTF-8");
-        List<YoutubeResponseObject> res = Search.getInstance().getVideos(queryTerm);
+        List<YoutubeResponseObject> res = youtubeSearch.getVideos(queryTerm);
         return res;
     }
 

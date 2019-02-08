@@ -37,9 +37,17 @@ public class SongsEndpoint {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("playlist/next")
-    public Response getHighestVoteSong(){
+    @Path("playlist/peek")
+    public Response peek(){
         Song song = playlist.peek();
+        return Response.ok(song).build();
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("playlist/pop")
+    public Response pop(){
+        Song song = playlist.pop();
         return Response.ok(song).build();
     }
 
@@ -75,6 +83,9 @@ public class SongsEndpoint {
     public Response get(@QueryParam("id")long id) {
         Song song = dao.getByID(id);
         File mp3file = new File(song.getPath());
-        return Response.ok().entity(mp3file).build();
+        return Response
+                .status(200)
+                .entity(mp3file)
+                .build();
     }
 }

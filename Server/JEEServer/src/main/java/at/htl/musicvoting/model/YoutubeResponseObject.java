@@ -8,12 +8,14 @@ public class YoutubeResponseObject {
     String title;
     String artist;
     String thumbNail;
+    AvailabilityStatus status;
 
-    public YoutubeResponseObject(String videoId, String title, String channel, String thumbNail) {
+    public YoutubeResponseObject(String videoId, String title, String channel, String thumbNail, AvailabilityStatus status) {
         this.videoId = videoId;
         this.title = title;
         this.artist = channel;
         this.thumbNail = thumbNail;
+        this.status = status;
     }
 
     public YoutubeResponseObject() {
@@ -49,5 +51,13 @@ public class YoutubeResponseObject {
 
     public void setThumbNail(String thumbNail) {
         this.thumbNail = thumbNail;
+    }
+
+    public AvailabilityStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(AvailabilityStatus status) {
+        this.status = status;
     }
 }

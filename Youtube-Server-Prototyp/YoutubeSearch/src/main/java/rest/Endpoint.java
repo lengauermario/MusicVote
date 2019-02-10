@@ -16,10 +16,15 @@ public class Endpoint {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<ResponseObject> getFirstVideo(@QueryParam("queryTerm") String param) throws UnsupportedEncodingException {
+    public Response getFirstVideo(@QueryParam("queryTerm") String param) throws UnsupportedEncodingException {
         String queryTerm = java.net.URLDecoder.decode(param, "UTF-8");
         List<ResponseObject> res = Search.getInstance().getVideos(queryTerm);
-        return res;
+
+        return Response
+            .status(200)
+                .header("Access-Control-Allow-Origin", "*")
+                .entity(res)
+                .build();
     }
 
     @GET

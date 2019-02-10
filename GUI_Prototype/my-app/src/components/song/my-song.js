@@ -33,24 +33,18 @@ class MySong extends LitElement {
         super();
         this.liked = false;
         this.likedImgSrc = "/images/heartGrey.png";
-        this.thumbnail = "/images/covers/dreamer_sunriseavenue.jpg";
-        this.title = "Dreamer";
-        this.artist = "Sunrise Avenue"
     }
 
     render() {
         return html`
             ${SharedStyles}
             <div class="columns is-mobile" style="border-bottom: 1px solid black; margin-bottom: 0.7em">
-                <div class="column is-2" style="position: relative; ">
-                    <h6 class="title is-3" style="position: absolute; top: 50%; transform: translateY(-50%);">1.</h6>
-                </div>
-                <div class="column is-3">
-                    <img src="${this.thumbnail}" class="image" style="margin: 0 auto; ">
+                <div class="column is-4">
+                    <img src="${this.thumbnail}" class="image" style="margin: auto 0; ">
                 </div>
                 <div class="column is-" style="margin: auto 0">
-                    <h5 class="title is-5" style="margin-bottom: 0">${this.title}</h5>
-                    <h6 class="title is-6" style="margin: 0 0 15px 0">${this.artist}</p>
+                    <h6 class="title is-6" style="margin-bottom: 0">${this.title}</h6>
+                    <h6 class="subtitle is-6" style="margin: 0 0 15px 0">${this.artist}</p>
                 </div>
                 <div class="column is-2" style="margin: auto auto;">
                     <img src="${this.likedImgSrc}" @click="${this.changeLikedImgSrc}" class="image" style="margin: auto 0;">

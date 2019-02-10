@@ -15,7 +15,7 @@ class MyView1 extends PageViewElement {
         <my-search></my-search>
       </section>
       <section style="padding-top: 0.8em;">
-        <my-songcollection id="songCollection"></my-songcollection>
+        <my-songcollection></my-songcollection>
       </section>
     `;
   }

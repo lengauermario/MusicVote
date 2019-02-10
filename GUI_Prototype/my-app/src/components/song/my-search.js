@@ -37,7 +37,7 @@ class MySearch extends LitElement {
                 <div class="column is-three-quarters">
                     <div class="field">
                         <p class="control has-icons-left">
-                        <input id="searchInput" class="input" type="text" @KeyUp="${this.changeInput}" placeholder="${this.searchbar}">
+                        <input id="searchInput" class="input" type="text" onkeyup="${this.changeInput}" placeholder="${this.searchbar}">
                         <span class="icon is-small is-left">
                             <i class="icon"><iron-icon icon="search" style="horiz-align: center"></iron-icon></i>
                           <i class="fas fa-envelope"></i>

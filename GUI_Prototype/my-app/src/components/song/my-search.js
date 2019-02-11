@@ -17,6 +17,9 @@ class MySearch extends LitElement {
             },
             searchbar:{
                 type: String,
+            },
+            searchInput:{
+                type: String,
             }
         }
     }
@@ -26,7 +29,7 @@ class MySearch extends LitElement {
         this.searchYt = false;
         this.imgSrc = "/images/youTubeGrey.png";
         this.searchbar = "Suche MP3";
-
+        this.searchInput= "";
         document.getElementById("searchInput")
     }
 
@@ -37,7 +40,7 @@ class MySearch extends LitElement {
                 <div class="column is-three-quarters">
                     <div class="field">
                         <p class="control has-icons-left">
-                        <input id="searchInput" class="input" type="text" onkeyup="${this.changeInput}" placeholder="${this.searchbar}">
+                        <input @input="${this.changeInput}" id="searchInput" class="input" type="text" placeholder="${this.searchbar}" value="${this.searchInput}">
                         <span class="icon is-small is-left">
                             <i class="icon"><iron-icon icon="search" style="horiz-align: center"></iron-icon></i>
                           <i class="fas fa-envelope"></i>
@@ -65,28 +68,14 @@ class MySearch extends LitElement {
         }
     }
 
-    async changeInput(){
-        var input = this.shadowRoot.querySelector("#searchInput").value;
-        //Look on server on input
-        console.log("searching");
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "GET", " http://localhost:8080/youtubesearch/api/video?queryTerm="+input, false );
-        xmlHttp.send( null );
-        var jsonObj = JSON.parse(xmlHttp.responseText);
-        var dom = document.querySelector('my-songcollection');
-        jsonObj.forEach(function (obj) {
-     /*       var song = document.createElement("my-song");
-            song.id = obj['videoId'];
-            song.title = obj['title'];
-            song.artist = obj['channel'];
-            song.thumbnail = obj['thumbNail'];
-            dom.appendChild(song);*/    
-            console.log(obj);
-        });
-        console.log(jsonObj);
-        console.log("send")
+    changeInput(event){
+        console.log(event);
+        let myEvent = new CustomEvent('my-searchEvent', {
+            detail: { text: event.currentTarget.value, searchYT: this.searchYt },
+            bubbles: true,
+            composed: true });
 
-
+        this.dispatchEvent(myEvent);
     }
 }
 

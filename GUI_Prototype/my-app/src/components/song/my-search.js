@@ -1,9 +1,9 @@
-import {LitElement, html} from "@polymer/lit-element";
+import {html, LitElement} from "@polymer/lit-element";
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/iron-icon/iron-icon.js';
 import '@polymer/iron-icons/iron-icons.js';
 import '@polymer/iron-input/iron-input.js';
-import { SharedStyles } from '../shared/shared-styles.js';
+import {SharedStyles} from '../shared/shared-styles.js';
 
 
 class MySearch extends LitElement {
@@ -30,7 +30,6 @@ class MySearch extends LitElement {
         this.imgSrc = "/images/youTubeGrey.png";
         this.searchbar = "Suche MP3";
         this.searchInput= "";
-        document.getElementById("searchInput")
     }
 
     render() {

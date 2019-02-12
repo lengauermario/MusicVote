@@ -1,7 +1,8 @@
-import {LitElement, html} from "@polymer/lit-element";
+import {html, LitElement} from "@polymer/lit-element";
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/iron-icon';
-import { SharedStyles } from '../shared/shared-styles.js';
+import {makeRequest} from "../shared/my-helper";
+import {SharedStyles} from '../shared/shared-styles.js';
 
 
 class MySong extends LitElement {
@@ -11,6 +12,9 @@ class MySong extends LitElement {
                 type: Boolean
             },
             likedImgSrc: {
+                type: String
+            },
+            plusImgSrc: {
                 type: String
             },
             id:{
@@ -24,8 +28,10 @@ class MySong extends LitElement {
             },
             artist:{
                 type: String
+            },
+            isYouTube: {
+                type: Boolean
             }
-
         }
     }
 
@@ -33,6 +39,7 @@ class MySong extends LitElement {
         super();
         this.liked = false;
         this.likedImgSrc = "/images/heartGrey.png";
+        this.plusImgSrc = "/images/plus.png";
     }
 
     render() {
@@ -47,7 +54,7 @@ class MySong extends LitElement {
                     <h6 class="subtitle is-6" style="margin: 0 0 15px 0">${this.artist}</p>
                 </div>
                 <div class="column is-2" style="margin: auto auto;">
-                    <img src="${this.likedImgSrc}" @click="${this.changeLikedImgSrc}" class="image" style="margin: auto 0;">
+                    <img src="${(this.isYouTube) ? this.plusImgSrc : this.likedImgSrc}" @click="${(this.isYouTube) ? this.addYouTubeVideo : this.changeLikedImgSrc}" class="image" style="margin: auto 0;">
                 </div>
             </div>                
             `;
@@ -64,6 +71,14 @@ class MySong extends LitElement {
             this.liked = true;
             //send request to Back-End voting plus 1
         }
+    }
+
+    async addYouTubeVideo() {
+        console.log("addYouTubeVideo");
+        this.plusImgSrc = "/images/loading.gif";
+        let url = "http://localhost:8085/youtubesearch/api/video/dl?id=" + this.id;
+        let method = "GET";
+        await makeRequest(method, url);
     }
 }
 

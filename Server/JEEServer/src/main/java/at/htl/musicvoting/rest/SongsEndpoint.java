@@ -13,6 +13,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.File;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.SortedSet;
@@ -56,7 +57,8 @@ public class SongsEndpoint {
     @Path("playlist")
     public Response getPlaylist(){
         SortedSet<Song> songs = playlist.getAll();
-        return Response.ok(songs).build();
+        List<ResponseObject> entity = Converter.SongsToResponse(new LinkedList<Song>(songs));
+        return Response.ok(entity).build();
     }
 
     @POST

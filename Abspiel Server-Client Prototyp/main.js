@@ -94,14 +94,14 @@ function play(id){
 
 
 function playNextSong(){
-    fetch("http://localhost:8085/musicvoting/api/song/playlist/peek")
+    fetch("http://localhost:8085/musicvoting/api/song/playlist/pop")
     .then(async function(response){
         let tmp = await response.json();
         play(tmp.id);
     });
 }
 
-function nextSong(){
+/*function nextSong(){
     fetch("http://localhost:8085/musicvoting/api/song/playlist/pop");
     playNextSong();
-}
+}*/

@@ -10,57 +10,50 @@ import java.util.stream.Collectors;
 
 @Stateless
 public class PlaylistHandler {
+    Song currentSong;
 
-    /*PriorityQueue<Song> playlist = new PriorityQueue<Song>(new Comparator<Song>() {
-        @Override
-        public int compare(Song song, Song t1) {
-            return song.compareTo(t1);
-        }
-    });*/
-    SortedSet<Song> playlist = new TreeSet<>(Comparator.comparing(Song::getVotes).reversed()
-            .thenComparing(Song::getAddedToPlaylist));
+    List<Song> playlist = new LinkedList<Song>();
+    Comparator<Song> comparator = Comparator.comparing(Song::getVotes).reversed()
+            .thenComparing(Song::getAddedToPlaylist);
 
-    public SortedSet<Song> getAll(){
+    public List<Song> getPlaylist(){
+        playlist.sort(comparator);
         return playlist;
     }
 
-    public synchronized void push(Song song){
-        if(contains(song.getId())){
-            addVote(song.getId());
-            return;
+    public synchronized void addSong(Song song){
+        if(get(song.getId()) == null){
+            song.setAddedToPlaylist(LocalDateTime.now());
+            song.resetVotes();
+            playlist.add(song);
         }
-        song.setAddedToPlaylist(LocalDateTime.now());
-        song.resetVotes();
-        playlist.add(song);
+        else{
+            addVote(song.getId());
+        }
     }
 
-    public Song pop(){
-        Song s = playlist.first();
+    private Song get(Long id) {
+        for (Song song: playlist) {
+            if(song.getId().equals(id))
+                return song;
+        }
+        return null;
+    }
+    public void addVote(long id){
+        Song song = get(id);
+        if(song != null){
+            song.increaseVotes();
+        }
+    }
+
+    public Song playSong(){
+        Song s = getPlaylist().get(0);
         playlist.remove(s);
-        return s;
+        currentSong = s;
+        return currentSong;
     }
 
     public Song peek(){
-        return playlist.first();
-    }
-
-    public boolean contains(long id){
-        for (Song song: playlist) {
-            if(song.getId() == id)
-                return true;
-        }
-        return false;
-    }
-
-    public void addVote(long id){
-        for (Song song: playlist) {
-            if(song.getId() == id)
-            {
-                playlist.remove(song);
-                song.increaseVotes();
-                playlist.add(song);
-                return;
-            }
-        }
+        return currentSong;
     }
 }

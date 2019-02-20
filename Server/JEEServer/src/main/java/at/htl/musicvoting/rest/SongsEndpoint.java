@@ -48,7 +48,7 @@ public class SongsEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("playlist/pop")
     public Response pop(){
-        Song song = playlist.pop();
+        Song song = playlist.playSong();
         return Response.ok(song).build();
     }
 
@@ -56,7 +56,7 @@ public class SongsEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("playlist")
     public Response getPlaylist(){
-        SortedSet<Song> songs = playlist.getAll();
+        List<Song> songs = playlist.getPlaylist();
         List<ResponseObject> entity = Converter.SongsToResponse(new LinkedList<Song>(songs));
         return Response.ok(entity).build();
     }
@@ -66,7 +66,7 @@ public class SongsEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     public Response addToPlaylist(@QueryParam("id")long id){
         Song song = dao.getByID(id);
-        playlist.push(song);
+        playlist.addSong(song);
         return Response.ok().build();
     }
 

@@ -11,7 +11,7 @@ import java.util.List;
 @Stateless
 public class SongDao {
     @PersistenceContext
-    EntityManager em;
+    public EntityManager em;
 
     public List<Song> findAll(){
         TypedQuery query = em.createNamedQuery("Song.findAll", Song.class);

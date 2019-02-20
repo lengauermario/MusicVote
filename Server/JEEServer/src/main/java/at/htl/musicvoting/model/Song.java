@@ -13,11 +13,16 @@ import java.util.Objects;
 })
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "SONG")
+@DiscriminatorColumn
 public class Song implements Comparable<Song> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "DTYPE", insertable = false, updatable = false)
+    private String dType;
+
     private long lengthOfMp3;
     private int bitrate;
     private boolean bitrateVBR;
@@ -26,6 +31,7 @@ public class Song implements Comparable<Song> {
     private String track, artist, title, album;
     private int realeaseYear, genre;
     private String comment, composer, publisher, originalArtist, albumArtist, copyright, url, encoder, path;
+
 
 
     @Transient

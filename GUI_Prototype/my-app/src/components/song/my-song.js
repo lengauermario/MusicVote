@@ -69,7 +69,7 @@ class MySong extends LitElement {
         else {
             this.likedImgSrc = "/images/heart.png";
             this.liked = true;
-            //send request to Back-End voting plus 1
+            makeRequest("POST", "http://localhost:8085/youtubesearch/api/playlist/addvote")
         }
     }
 

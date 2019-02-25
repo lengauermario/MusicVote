@@ -41,10 +41,16 @@ class MySongCollection extends LitElement {
             let method = "GET";
             let result = await makeRequest(method, url);
             console.log(result);
-         //   var oldSongs = this.songs;
             this.songs = JSON.parse(result);
         }
-      //  this.requestUpdate('songs', oldSongs)
+        else{
+            let url =  "http://localhost:8080/youtubesearch/api/video?queryTerm="+searchText;
+            let method = "GET";
+            let result = await makeRequest(method, url);
+            console.log(result);
+            //   var oldSongs = this.songs;
+            this.songs = JSON.parse(result);
+        }
     }
 }
 

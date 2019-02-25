@@ -44,7 +44,7 @@ class MySongCollection extends LitElement {
             this.songs = JSON.parse(result);
         }
         else{
-            let url =  "http://localhost:8080/youtubesearch/api/video?queryTerm="+searchText;
+            let url =  "http://localhost:8085/musicvoting/api/song/findall";
             let method = "GET";
             let result = await makeRequest(method, url);
             console.log(result);

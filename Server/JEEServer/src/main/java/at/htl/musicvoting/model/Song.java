@@ -1,14 +1,28 @@
-package at.htl.model;
+package at.htl.musicvoting.model;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlTransient;
+import java.time.LocalDateTime;
+import java.util.Objects;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name="Song.findAll" , query = "select s from Song s"),
+        @NamedQuery(name="Song.findById", query = "select s from Song s where s.id = :ID")
+})
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "SONG")
-public class Song {
+@DiscriminatorColumn
+public class Song implements Comparable<Song> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "DTYPE", insertable = false, updatable = false)
+    private String dType;
+
     private long lengthOfMp3;
     private int bitrate;
     private boolean bitrateVBR;
@@ -18,6 +32,15 @@ public class Song {
     private int realeaseYear, genre;
     private String comment, composer, publisher, originalArtist, albumArtist, copyright, url, encoder, path;
 
+
+
+    @Transient
+    private int votes;
+
+    @XmlTransient
+    @JsonbTransient
+    @Transient
+    private LocalDateTime addedToPlaylist;
 
     //region Constructors
     public Song(String path, long lengthOfMp3, int bitrate, boolean bitrateVBR, int sampleRate, boolean hasId3v1Tag, boolean hasId3v2Tag, boolean hasCustomTag, String track, String artist, String title, String album, int year, int genre, String comment, String composer, String publisher, String originalArtist, String albumArtist, String copyright, String url, String encoder) {
@@ -51,12 +74,33 @@ public class Song {
     //endregion
 
     //region Getter and Setter
+
+    public LocalDateTime getAddedToPlaylist() {
+        return addedToPlaylist;
+    }
+
+    public void setAddedToPlaylist(LocalDateTime addedToPlaylist) {
+        this.addedToPlaylist = addedToPlaylist;
+    }
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public int getVotes() {
+        return votes;
+    }
+
+    public void resetVotes(){
+        this.votes = 0;
+    }
+
+    public void increaseVotes() {
+        this.votes++;
     }
 
     public String getPath() {
@@ -234,6 +278,23 @@ public class Song {
     public void setEncoder(String encoder) {
         this.encoder = encoder;
     }
+
+    public int compareTo(Song song) {
+        return Integer.compare(song.getVotes(), this.getVotes());
+    }
     //endregion
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Song song = (Song) o;
+        return Objects.equals(id, song.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }

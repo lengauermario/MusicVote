@@ -1,0 +1,56 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jeeserver:war exploded">
+    <output-path>$PROJECT_DIR$/target/musicvoting</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>jeeserver</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jeeserver" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.apis:google-api-services-youtube:v3-rev206-1.25.0" />
+          <element id="library" level="project" name="Maven: com.google.api-client:google-api-client:1.25.0" />
+          <element id="library" level="project" name="Maven: com.google.oauth-client:google-oauth-client:1.25.0" />
+          <element id="library" level="project" name="Maven: com.google.apis:google-api-services-youtubereporting:v1-rev20190223-1.28.0" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.4" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.4" />
+          <element id="library" level="project" name="Maven: com.google.http-client:google-http-client-jackson2:1.28.0" />
+          <element id="library" level="project" name="Maven: com.google.http-client:google-http-client:1.28.0" />
+          <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:3.0.2" />
+          <element id="library" level="project" name="Maven: com.google.j2objc:j2objc-annotations:1.1" />
+          <element id="library" level="project" name="Maven: io.opencensus:opencensus-api:0.18.0" />
+          <element id="library" level="project" name="Maven: io.grpc:grpc-context:1.14.0" />
+          <element id="library" level="project" name="Maven: io.opencensus:opencensus-contrib-http-util:0.18.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.6" />
+          <element id="library" level="project" name="Maven: com.google.oauth-client:google-oauth-client-jetty:1.28.0" />
+          <element id="library" level="project" name="Maven: com.google.oauth-client:google-oauth-client-java6:1.28.0" />
+          <element id="library" level="project" name="Maven: org.mortbay.jetty:jetty:6.1.26" />
+          <element id="library" level="project" name="Maven: org.mortbay.jetty:jetty-util:6.1.26" />
+          <element id="library" level="project" name="Maven: org.mortbay.jetty:servlet-api:2.5-20081211" />
+          <element id="library" level="project" name="Maven: com.google.collections:google-collections:1.0" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:15.0" />
+          <element id="library" level="project" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0" />
+          <element id="library" level="project" name="Maven: com.mpatric:mp3agic:0.9.1" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:javax.persistence:2.2.1" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:org.eclipse.persistence.jpa:2.7.4" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:jakarta.persistence:2.2.2" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:org.eclipse.persistence.asm:2.7.4" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:org.eclipse.persistence.antlr:2.7.4" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:org.eclipse.persistence.jpa.jpql:2.7.4" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:org.eclipse.persistence.core:2.7.4" />
+          <element id="library" level="project" name="Maven: org.apache.derby:derbyclient:10.14.2.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/musicvoting/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="jeeserver/web/Web" />
+    </root>
+  </artifact>
+</component>

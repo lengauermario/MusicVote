@@ -8,20 +8,8 @@ import {SharedStyles} from '../shared/shared-styles.js';
 class MySong extends LitElement {
     static get properties(){
         return {
-            liked: {
-                type: Boolean
-            },
-            likedImgSrc: {
-                type: String
-            },
-            plusImgSrc: {
-                type: String
-            },
             id:{
                 type: Number
-            },
-            thumbnail: {
-                type: String
             },
             title: {
                 type: String
@@ -29,17 +17,25 @@ class MySong extends LitElement {
             artist:{
                 type: String
             },
-            isYouTube: {
+            status: {
+                type: String
+            },
+            liked: {
                 type: Boolean
-            }
+            },
+            rightImgSrc: {
+                type: String
+            },
+            thumbnail: {
+                type: String
+            },
         }
     }
 
     constructor(){
         super();
         this.liked = false;
-        this.likedImgSrc = "/images/heartGrey.png";
-        this.plusImgSrc = "/images/plus.png";
+        this.renderLeftImgSrc();
     }
 
     render() {
@@ -54,28 +50,40 @@ class MySong extends LitElement {
                     <h6 class="subtitle is-6" style="margin: 0 0 15px 0">${this.artist}</p>
                 </div>
                 <div class="column is-2" style="margin: auto auto;">
-                    <img src="${(this.isYouTube) ? this.plusImgSrc : this.likedImgSrc}" @click="${(this.isYouTube) ? this.addYouTubeVideo : this.changeLikedImgSrc}" class="image" style="margin: auto 0;">
+                    <img src="${this.rightImgSrc}" @click="${(this.status === "DOWNLOADABLE") ? this.addYouTubeVideo : this.changeLikedImgSrc}" class="image" style="margin: auto 0;">
                 </div>
             </div>                
             `;
     }
+    renderLeftImgSrc(){
+        console.log(this.status);
+        if(this.status === "DOWNLOADABLE"){
+            this.rightImgSrc =  "/images/plus.png";
+        }
+        else if(this.status === "DOWNLOADING"){
+            this.rightImgSrc =  "/images/loading.gif";
+        }
+        else if(this.status === "AVAILABLE"){
+            this.rightImgSrc =  "/images/heartGrey.png";
+        }
+    }
 
     changeLikedImgSrc(){
         if (this.liked){
-            this.likedImgSrc = "/images/heartGrey.png";
+            this.rightImgSrc = "/images/heartGrey.png";
             this.liked = false;
             //send request to Back-End voting minus 1
         }
         else {
-            this.likedImgSrc = "/images/heart.png";
+            this.rightImgSrc = "/images/heart.png";
             this.liked = true;
             makeRequest("POST", "http://localhost:8085/youtubesearch/api/playlist/addvote")
         }
     }
 
     async addYouTubeVideo() {
-        console.log("addYouTubeVideo");
-        this.plusImgSrc = "/images/loading.gif";
+    //    console.log("addYouTubeVideo");
+        this.rightImgSrc = "/images/loading.gif";
         let url = "http://localhost:8085/youtubesearch/api/video/dl?id=" + this.id;
         let method = "GET";
         await makeRequest(method, url);

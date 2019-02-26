@@ -68,7 +68,7 @@ class MySearch extends LitElement {
     }
 
     changeInput(event){
-        console.log(event);
+    //    console.log(event);
         let myEvent = new CustomEvent('my-searchEvent', {
             detail: { text: event.currentTarget.value, searchYT: this.searchYt },
             bubbles: true,

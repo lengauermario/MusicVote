@@ -17,8 +17,6 @@ class MySongCollection extends LitElement {
     constructor(){
         super();
         document.addEventListener('my-searchEvent', async  (e) => {
-            console.log(e.detail.text);
-            console.log(e.detail.searchYT);
             this.refresh(e.detail.text, e.detail.searchYT);
         });
       //  this.refresh("Thunder", false);
@@ -28,8 +26,9 @@ class MySongCollection extends LitElement {
 
     render() {
         if(this.songs !== undefined){
+            console.log(this.songs);
             return html`
-            ${this.songs.map(i => html`<my-song id="${i.videoId}" isYouTube="${true}" title="${i.title.substring(0, 36)}" artist="${i.channel.substring(0, 17)}" thumbnail="${i.thumbNail}"></my-song>`)}`;
+            ${this.songs.map(i => html`<my-song id="${i.videoId}" status="${i.status}" title="${i.title.substring(0, 36)}" artist="${i.artist.substring(0, 17)}" thumbnail="${i.thumbNail}"></my-song>`)}`;
         }
         return html`wird geladen`;
 
@@ -37,7 +36,7 @@ class MySongCollection extends LitElement {
 
     async refresh(searchText, searchOnYt){
         if(searchOnYt){
-            let url =  "http://localhost:8080/youtubesearch/api/video?queryTerm="+searchText;
+            let url =  "http://localhost:8080/musicvoting/api/video?queryTerm="+searchText;
             let method = "GET";
             let result = await makeRequest(method, url);
             console.log(result);
@@ -47,9 +46,9 @@ class MySongCollection extends LitElement {
             let url =  "http://localhost:8085/musicvoting/api/song/findall";
             let method = "GET";
             let result = await makeRequest(method, url);
-            console.log(result);
-            //   var oldSongs = this.songs;
-            this.songs = JSON.parse(result);
+        //    console.log(result);
+            var songs = JSON.parse(result);
+            this.songs = songs.filter( function(item){return (item.title.contains(searchText));} );
         }
     }
 }

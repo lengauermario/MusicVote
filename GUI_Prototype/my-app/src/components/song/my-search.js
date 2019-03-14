@@ -42,7 +42,7 @@ class MySearch extends LitElement {
                 <div class="column is-three-quarters">
                     <div class="field">
                         <p class="control has-icons-left">
-                        <input @input="${this.changeInput}" id="searchInput" class="input" type="text" placeholder="${this.searchbar}" value="${this.searchInput}">
+                        <input @input="${this.changeInput}" id="searchInput" class="input" type="text" placeholder="${this.searchbar}" .value="${this.searchInput}">
                         <span class="icon is-small is-left">
                             <i class="icon"><iron-icon icon="search" style="horiz-align: center"></iron-icon></i>
                           <i class="fas fa-envelope"></i>
@@ -57,7 +57,7 @@ class MySearch extends LitElement {
              `;
     }
 
-    changeYouTubeColor(){
+    changeYouTubeColor(event){
         if (!this.searchYt){
             this.imgSrc = "images/youTube.png";
             this.searchbar = "Suche auf YouTube";
@@ -68,12 +68,14 @@ class MySearch extends LitElement {
             this.searchbar = "Suche MP3-Files";
             this.searchYt = !this.searchYt;
         }
+        this.changeInput({currentTarget: {value: this.searchInput}});
     }
 
     changeInput(event){
-
+        if(event != null)
+            this.searchInput = event.currentTarget.value;
         let myEvent = new CustomEvent('my-searchEvent', {
-            detail: { text: (event=== null)? "": event.currentTarget.value, searchYT: this.searchYt },
+            detail: { text: (event=== null)? "": this.searchInput, searchYT: this.searchYt },
             bubbles: true,
             composed: true });
 

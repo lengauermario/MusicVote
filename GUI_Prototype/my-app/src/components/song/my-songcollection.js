@@ -44,17 +44,27 @@ class MySongCollection extends LitElement {
             let method = "GET";
             let result = await makeRequest(method, url);
             result = JSON.parse(result);
-            this.songs = result.map(entry => ({id: entry.videoId, status: entry.status, title: entry.title, artist: entry.artist, thumbnail: entry.thumbNail}));
-            console.log(this.songs);
+            this.songs = result.map(entry => ({
+                id: entry.videoId,
+                status: entry.status,
+                title: entry.title,
+                artist: entry.artist,
+                thumbnail: entry.thumbNail
+            }));
         }
         else{
             let url =  "http://localhost:8080/musicvoting/api/song/findall";
             let method = "GET";
             let result = await makeRequest(method, url);
             result = JSON.parse(result);
-            this.songs = result.map(entry => ({id: entry.id, status: entry.status, title: entry.title, artist: entry.artist, thumbnail: entry.thumbNail}));
-            console.log(this.songs);
-      //      this.songs = songs.filter( function(item){return (item.title.contains(searchText));} );
+            result = result.map(entry => ({
+                id: entry.id,
+                status: entry.status,
+                title: entry.title,
+                artist: entry.artist,
+                thumbnail: entry.thumbNail
+            }));
+            this.songs = result.filter( function(item){return (item.title.toUpperCase().includes(searchText.toUpperCase()));} );
         }
     }
 }

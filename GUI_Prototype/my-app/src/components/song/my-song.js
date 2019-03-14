@@ -42,7 +42,6 @@ class MySong extends LitElement {
     }
 
     updated(changedProperties) {
-        console.log(changedProperties);
         if(this.thumbnail === "undefined"){
             this.thumbnail = "/images/covers/default.png";
         }
@@ -97,11 +96,11 @@ class MySong extends LitElement {
 
     async addYouTubeVideo() {
         this.IconSrc = "/images/loading.gif";
-        let url = "http://localhost:8085/youtubesearch/api/video/dl";
+        let url = "http://localhost:8080/musicvoting/api/video/dl";
         let method = "POST";
         let data = {videoId: this.id, title: this.title, artist: this.artist, thumbNail: this.thumbnail, status: this.status};
         console.log(data);
-        await makeRequest(method, url, data);
+      //  await makeRequest(method, url, data);
     }
 }
 

@@ -31,6 +31,9 @@ class MySearch extends LitElement {
         this.searchbar = "Suche MP3";
         this.searchInput= "";
     }
+    firstUpdated(_changedProperties) {
+        this.changeInput(null);
+    }
 
     render() {
         return html`
@@ -68,14 +71,16 @@ class MySearch extends LitElement {
     }
 
     changeInput(event){
-    //    console.log(event);
+
         let myEvent = new CustomEvent('my-searchEvent', {
-            detail: { text: event.currentTarget.value, searchYT: this.searchYt },
+            detail: { text: (event=== null)? "": event.currentTarget.value, searchYT: this.searchYt },
             bubbles: true,
             composed: true });
 
         this.dispatchEvent(myEvent);
     }
+
+
 }
 
 window.customElements.define('my-search', MySearch);

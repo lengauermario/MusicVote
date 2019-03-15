@@ -98,9 +98,9 @@ class MySong extends LitElement {
         this.IconSrc = "/images/loading.gif";
         let url = "http://localhost:8080/musicvoting/api/video/dl";
         let method = "POST";
-        let data = {videoId: this.id, title: this.title, artist: this.artist, thumbNail: this.thumbnail, status: this.status};
+        let data = JSON.stringify({videoId: this.id, title: this.title, artist: this.artist, thumbNail: this.thumbnail, status: this.status}, "");
         console.log(data);
-      //  await makeRequest(method, url, data);
+        await makeRequest(method, url, data);
     }
 }
 

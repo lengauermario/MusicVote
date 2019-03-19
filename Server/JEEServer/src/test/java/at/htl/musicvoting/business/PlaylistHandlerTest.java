@@ -17,7 +17,6 @@ import static org.hamcrest.Matchers.*;
 
 public class PlaylistHandlerTest {
 
-
     static SongDao dao;
     PlaylistHandler playlistHandler;
 
@@ -76,7 +75,7 @@ public class PlaylistHandlerTest {
         playlistHandler.addSong(dao.getByID(2));
         playlistHandler.addSong(dao.getByID(3));
         playlistHandler.playSong();
-        assertThat(playlistHandler.currentSong.getId(), is(1l));
+        assertThat(playlistHandler.getCurrentSong().getId(), is(1l));
     }
     @Test
     public void test040_PlayListShouldBeSortedByTimeOfInsert(){
@@ -84,11 +83,11 @@ public class PlaylistHandlerTest {
         playlistHandler.addSong(dao.getByID(2));
         playlistHandler.addSong(dao.getByID(3));
         playlistHandler.playSong();
-        assertThat(playlistHandler.currentSong.getId(), is(1l));
+        assertThat(playlistHandler.getCurrentSong().getId(), is(1l));
         playlistHandler.playSong();
-        assertThat(playlistHandler.currentSong.getId(), is(2l));
+        assertThat(playlistHandler.getCurrentSong().getId(), is(2l));
         playlistHandler.playSong();
-        assertThat(playlistHandler.currentSong.getId(), is(3l));
+        assertThat(playlistHandler.getCurrentSong().getId(), is(3l));
     }
     @Test
     public void test041_PlayListShouldBeSortedByVotes(){
@@ -103,11 +102,11 @@ public class PlaylistHandlerTest {
         playlistHandler.addVote(1);
 
         playlistHandler.playSong();
-        assertThat(playlistHandler.currentSong.getId(), is(3l));
+        assertThat(playlistHandler.getCurrentSong().getId(), is(3l));
         playlistHandler.playSong();
-        assertThat(playlistHandler.currentSong.getId(), is(2l));
+        assertThat(playlistHandler.getCurrentSong().getId(), is(2l));
         playlistHandler.playSong();
-        assertThat(playlistHandler.currentSong.getId(), is(1l));
+        assertThat(playlistHandler.getCurrentSong().getId(), is(1l));
     }
     @Test
     public void test042_PlayListShouldBeSortedByVotesAndTimeOfInsert(){
@@ -124,13 +123,13 @@ public class PlaylistHandlerTest {
         playlistHandler.addVote(1);
 
         playlistHandler.playSong();
-        assertThat(playlistHandler.currentSong.getId(), is(3l));
+        assertThat(playlistHandler.getCurrentSong().getId(), is(3l));
         playlistHandler.playSong();
-        assertThat(playlistHandler.currentSong.getId(), is(2l));
+        assertThat(playlistHandler.getCurrentSong().getId(), is(2l));
         playlistHandler.playSong();
-        assertThat(playlistHandler.currentSong.getId(), is(1l));
+        assertThat(playlistHandler.getCurrentSong().getId(), is(1l));
         playlistHandler.playSong();
-        assertThat(playlistHandler.currentSong.getId(), is(4l));
+        assertThat(playlistHandler.getCurrentSong().getId(), is(4l));
     }
 
     @Test
@@ -157,6 +156,60 @@ public class PlaylistHandlerTest {
         Duration duration = Duration.between(time, song.getAddedToPlaylist());
         Long millis = duration.toMillis();
         assertThat(millis, lessThan(1000l));
+    }
+
+    @Test
+    public void test070_RemoveSong(){
+        Song song1 = dao.getByID(1);
+        playlistHandler.addSong(song1);
+        List<Song> playlist = playlistHandler.getPlaylist();
+        playlistHandler.removeSong(song1.getId());
+        assertThat(playlist.isEmpty(), is(true));
+        assertThat(playlist.size(), is(0));
+    }
+    @Test
+    public void test071_RemoveSongTwice(){
+        Song song1 = dao.getByID(1);
+        playlistHandler.addSong(song1);
+        List<Song> playlist = playlistHandler.getPlaylist();
+        playlistHandler.removeSong(song1.getId());
+        playlistHandler.removeSong(song1.getId());
+        assertThat(playlist.isEmpty(), is(true));
+        assertThat(playlist.size(), is(0));
+    }
+
+    @Test
+    public void test080_RemoveVote(){
+        Song song = dao.getByID(1);
+        playlistHandler.addSong(song);
+        playlistHandler.addVote(1);
+        assertThat(song.getVotes(), is(1));
+
+        playlistHandler.removeVote(1);
+        assertThat(song.getVotes(), is(0));
+    }
+    @Test
+    public void test081_RemoveVotes(){
+        playlistHandler.addSong(dao.getByID(1));
+        playlistHandler.addSong(dao.getByID(2));
+        playlistHandler.addSong(dao.getByID(3));
+        playlistHandler.addVote(3);
+        playlistHandler.addVote(3);
+        playlistHandler.addVote(3);
+        playlistHandler.addVote(2);
+        playlistHandler.addVote(2);
+        playlistHandler.addVote(1);
+
+        playlistHandler.removeVote(3);
+        playlistHandler.removeVote(3);
+        playlistHandler.removeVote(3);
+
+        playlistHandler.playSong();
+        assertThat(playlistHandler.getCurrentSong().getId(), is(2l));
+        playlistHandler.playSong();
+        assertThat(playlistHandler.getCurrentSong().getId(), is(1l));
+        playlistHandler.playSong();
+        assertThat(playlistHandler.getCurrentSong().getId(), is(3l));
     }
 
 }

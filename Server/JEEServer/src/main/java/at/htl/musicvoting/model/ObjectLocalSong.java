@@ -1,19 +1,22 @@
 package at.htl.musicvoting.model;
 
-public class ResponseObject {
-    Long id;
-    String title;
-    String artist;
-    AvailabilityStatus status;
+import javax.xml.bind.annotation.XmlRootElement;
 
-    public ResponseObject(Long id, String title, String artist, AvailabilityStatus status) {
+@XmlRootElement
+public class ObjectLocalSong {
+    private Long id;
+    private String title;
+    private String artist;
+    private AvailabilityStatus status;
+
+    public ObjectLocalSong(Long id, String title, String artist, AvailabilityStatus status) {
         this.id = id;
         this.title = title;
         this.artist = artist;
         this.status = status;
     }
 
-    public ResponseObject() {
+    public ObjectLocalSong() {
     }
 
     public Long getId() {

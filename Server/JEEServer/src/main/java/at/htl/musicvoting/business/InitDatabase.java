@@ -16,32 +16,31 @@ import java.util.ResourceBundle;
 public class InitDatabase {
 
     @Inject
-    SongDao dao;
+    private SongDao dao;
 
     public void initialize() throws IOException, InvalidDataException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
         File folder = new File(ResourceBundle.getBundle("config").getString("startFolder"));
         if(folder.exists() && folder.isDirectory()){
             File arr[] = folder.listFiles();
-            RecursiveRead(arr,0);
-
+            recursiveRead(arr,0);
         }
     }
 
-    private void RecursiveRead(File[] arr, int level) throws IOException, InvalidDataException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
+    private void recursiveRead(File[] arr, int level) throws IOException, InvalidDataException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
         for (File f : arr){
             if (f.isFile()){
                 if(getFileExtension(f.getAbsolutePath()).equalsIgnoreCase("mp3")){
-                    ReadMp3File(f.getAbsolutePath());
+                    readMp3File(f.getAbsolutePath());
                 }
             }
             else if(f.isDirectory()){
-                RecursiveRead(f.listFiles(),level + 1);
+                recursiveRead(f.listFiles(),level + 1);
             }
 
         }
     }
 
-    private void ReadMp3File(String path) throws InvalidDataException, IOException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
+    private void readMp3File(String path) throws InvalidDataException, IOException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
         Mp3File mp3file = new Mp3File(path);
         Song newSong = new Song(path, mp3file.getLengthInSeconds(), mp3file.getBitrate(), mp3file.isVbr(), mp3file.getSampleRate(), mp3file.hasId3v1Tag(),
                 mp3file.hasId3v2Tag(), mp3file.hasCustomTag(), mp3file.getId3v2Tag().getTrack(), mp3file.getId3v2Tag().getArtist(), mp3file.getId3v2Tag().getTitle(),
@@ -51,7 +50,7 @@ public class InitDatabase {
         dao.persist(newSong);
     }
 
-    public String getFileExtension(String fullName) {
+    private String getFileExtension(String fullName) {
         String fileName = new File(fullName).getName();
         int dotIndex = fileName.lastIndexOf('.');
         return (dotIndex == -1) ? "" : fileName.substring(dotIndex + 1);

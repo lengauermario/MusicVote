@@ -6,9 +6,10 @@ import java.util.ResourceBundle;
 import java.util.function.Function;
 
 public class DownloadThread extends Thread {
-    String videoId;
-    String path;
-    Function<Integer, Void> callback;
+    private String videoId;
+    private String path;
+    private Function<Integer, Void> callback;
+
     public DownloadThread(String id, String path, Function<Integer, Void> callback){
         videoId = id;
         this.path = path;

@@ -3,14 +3,14 @@ package at.htl.musicvoting.model;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class YoutubeResponseObject {
-    String videoId;
-    String title;
-    String artist;
-    String thumbNail;
-    AvailabilityStatus status;
+public class ObjectYoutubeVideo {
+    private String videoId;
+    private String title;
+    private String artist;
+    private String thumbNail;
+    private AvailabilityStatus status;
 
-    public YoutubeResponseObject(String videoId, String title, String channel, String thumbNail, AvailabilityStatus status) {
+    public ObjectYoutubeVideo(String videoId, String title, String channel, String thumbNail, AvailabilityStatus status) {
         this.videoId = videoId;
         this.title = title;
         this.artist = channel;
@@ -18,7 +18,7 @@ public class YoutubeResponseObject {
         this.status = status;
     }
 
-    public YoutubeResponseObject() {
+    public ObjectYoutubeVideo() {
     }
 
     public String getVideoId() {

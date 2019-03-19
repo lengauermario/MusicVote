@@ -4,5 +4,5 @@ public enum AvailabilityStatus {
     AVAILABLE,
     DOWNLOADING,
     DOWNLOADABLE,
-    NOT_AVALABLE
+    NOT_AVAILABLE
 }

@@ -26,12 +26,12 @@ Was ist nerviger als schlechte Musik auf einer Party? Und weil wir auch finden, 
 Die GUI befindet sich momentan noch in Entwicklung. Alles zum aktuellen GUI-Prototypem finden Sie [hier](/GUI_Prototype/my-app).
 
 ### :musical_note: Youtube-Einbindung
-#### 🛠 Status: In Arbeit
-Die vollständige Abwicklung der Youtube abfragen und der Download der entsprechenden Audiodatei funktioniert derzeit nur im Rahmen eines Prototypen in dem die Machbarkeit der Youtube-Suche ohne Authentifikation des jeweiligen Users bestätigt wurde. Alle weiteren Informationen sind [hier](/Youtube-Server-Prototyp).
+#### 🛠 Status: Fertig
+Die Einbinding von Youtube funktioniert bereits in vollem Umfang. User können nach Youtube Videos suchen und herunterladen und zur Playlist hinzufügen.
 
 ### :computer: Server
 #### 🛠 Status: In Arbeit
-Die Initialisierung der Datenbank des Servers ist bereits implementiert, siehe [hier](/Initialize_Database/Start_RF_new). Die Bereitstellung der MP3-Files mittels RESTful Service befindet sich im Prototypstadium, d.h. es existiert eine Methode die hardcoded ein bestimmtes MP3-File zur Verfügung stellst. Ein Clientprototyp der dieses MP3-File abfragt und abspielt ist auch bereits implementiert. Weiter Details befinden sich [hier](/Abspiel%20Server-Client%20Prototyp).
+Der Server befindet sich bereits in einem fortgeschrittenen Stadium. Clients können sich beim Server conntected, werden dann von Änderungen der Playlist per SSE informiert. Weitere Informationen befinden sich [hier](/Server).
 
 ##  :closed_book: Dokumente:
 
@@ -48,7 +48,7 @@ Die Initialisierung der Datenbank des Servers ist bereits implementiert, siehe [
 ## :wrench: Technologien:
 
 - Jakarta EE
-- MySQL
+- Derby
 - HTML5
 - CSS
 - JavaScript

@@ -11,7 +11,7 @@ import javax.persistence.TypedQuery;
 @Stateless
 public class YoutubeVideoDao {
     @PersistenceContext
-    EntityManager em;
+    private EntityManager em;
 
 
     public void persist(YoutubeVideo newVideo) {
@@ -27,7 +27,7 @@ public class YoutubeVideoDao {
         if(exitCode == 0)
             newVideo.setStatus(AvailabilityStatus.AVAILABLE);
         else
-            newVideo.setStatus(AvailabilityStatus.NOT_AVALABLE);
+            newVideo.setStatus(AvailabilityStatus.NOT_AVAILABLE);
         em.merge(newVideo);
     }
 
@@ -36,7 +36,7 @@ public class YoutubeVideoDao {
         if(video != null)
             return video.getStatus();
         else
-            return AvailabilityStatus.NOT_AVALABLE;
+            return AvailabilityStatus.NOT_AVAILABLE;
     }
 
 }

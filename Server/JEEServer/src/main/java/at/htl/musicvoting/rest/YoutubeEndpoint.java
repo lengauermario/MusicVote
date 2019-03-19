@@ -2,7 +2,7 @@ package at.htl.musicvoting.rest;
 
 import at.htl.musicvoting.youtube.Search;
 import at.htl.musicvoting.youtube.YoutubedlWrapper;
-import at.htl.musicvoting.model.YoutubeResponseObject;
+import at.htl.musicvoting.model.ObjectYoutubeVideo;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -17,23 +17,23 @@ import java.util.List;
 public class YoutubeEndpoint {
 
     @Inject
-    YoutubedlWrapper youtubedl;
+    private YoutubedlWrapper youtubedl;
 
     @Inject
-    Search youtubeSearch;
+    private Search youtubeSearch;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<YoutubeResponseObject> getVideos(@QueryParam("queryTerm") String param) throws UnsupportedEncodingException {
+    public List<ObjectYoutubeVideo> getVideos(@QueryParam("queryTerm") String param) throws UnsupportedEncodingException {
         String queryTerm = java.net.URLDecoder.decode(param, "UTF-8");
-        List<YoutubeResponseObject> res = youtubeSearch.getVideos(queryTerm);
+        List<ObjectYoutubeVideo> res = youtubeSearch.getVideos(queryTerm);
         return res;
     }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/dl")
-    public Response downloadVideo(YoutubeResponseObject video){
+    public Response downloadVideo(ObjectYoutubeVideo video){
         youtubedl.fetchMp3FileFromYoutube(video);
         return Response.ok().build();
     }

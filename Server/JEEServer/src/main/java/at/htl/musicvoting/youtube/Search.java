@@ -2,7 +2,7 @@ package at.htl.musicvoting.youtube;
 
 import at.htl.musicvoting.dao.YoutubeVideoDao;
 import at.htl.musicvoting.model.AvailabilityStatus;
-import at.htl.musicvoting.model.YoutubeResponseObject;
+import at.htl.musicvoting.model.ObjectYoutubeVideo;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.client.http.HttpRequest;
 import com.google.api.client.http.HttpRequestInitializer;
@@ -22,29 +22,20 @@ import java.util.*;
 @Stateless
 public class Search {
 
-    /**
-     * Define a global variable that identifies the name of a file that
-     * contains the developer's API key.
-     */
     @Inject
-    YoutubeVideoDao dao;
+    private YoutubeVideoDao dao;
 
     private static final long NUMBER_OF_VIDEOS_RETURNED = 10;
     private static String API_KEY;
+    private YouTube youtube;
 
     public Search()
     {
-        String apiKey = "AIzaSyBnABJA3xX04oC3DHIUJDspuCDBGFbhQEk";
         ResourceBundle rb = ResourceBundle.getBundle("youtube");
         API_KEY = rb.getString("apikey");
     }
-    /**
-     * Define a global instance of a Youtube object, which will be used
-     * to make YouTube Data API requests.
-     */
-    private YouTube youtube;
 
-    public List<YoutubeResponseObject> getVideos(String queryTerm) {
+    public List<ObjectYoutubeVideo> getVideos(String queryTerm) {
         try {
             youtube = new YouTube.Builder(new NetHttpTransport(), new JacksonFactory(), new HttpRequestInitializer() {
                 public void initialize(HttpRequest request) throws IOException {
@@ -58,9 +49,9 @@ public class Search {
             search.setMaxResults(NUMBER_OF_VIDEOS_RETURNED);
             SearchListResponse searchResponse = search.execute();
             List<SearchResult> searchResultList = searchResponse.getItems();
-            List<YoutubeResponseObject> youtubeResponseObjectList = new LinkedList<YoutubeResponseObject>();
+            List<ObjectYoutubeVideo> objectYoutubeVideoList = new LinkedList<ObjectYoutubeVideo>();
             for (SearchResult res: searchResultList) {
-                YoutubeResponseObject obj = new YoutubeResponseObject(
+                ObjectYoutubeVideo obj = new ObjectYoutubeVideo(
                         res.getId().getVideoId(),
                         res.getSnippet().getTitle(),
                         res.getSnippet().getChannelTitle(),
@@ -69,9 +60,9 @@ public class Search {
                 if(dao.existsInDatabase(obj.getVideoId())){
                     obj.setStatus(dao.getAvailabilityStatus(obj.getVideoId()));
                 }
-                youtubeResponseObjectList.add(obj);
+                objectYoutubeVideoList.add(obj);
             }
-            return youtubeResponseObjectList;
+            return objectYoutubeVideoList;
         } catch (GoogleJsonResponseException e) {
             System.err.println("There was a service error: " + e.getDetails().getCode() + " : "
                     + e.getDetails().getMessage());
@@ -80,7 +71,7 @@ public class Search {
         } catch (Throwable t) {
             t.printStackTrace();
         }
-        return new LinkedList<YoutubeResponseObject>();
+        return new LinkedList<ObjectYoutubeVideo>();
     }
 
 }

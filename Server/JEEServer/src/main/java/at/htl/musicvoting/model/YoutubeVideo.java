@@ -6,9 +6,9 @@ import javax.persistence.NamedQuery;
 @Entity
 @NamedQuery(name = "YoutubeVideo.getByVideoId", query = "select y from YoutubeVideo y where y.videoId = :VIDEOID")
 public class YoutubeVideo extends Song {
-    String videoId;
-    String thumbNail;
-    AvailabilityStatus status;
+    private String videoId;
+    private String thumbNail;
+    private AvailabilityStatus status;
 
     public YoutubeVideo(String path, String artist, String title, String videoId, String thumbNail, AvailabilityStatus status) {
         this.setPath(path);

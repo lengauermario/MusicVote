@@ -14,7 +14,8 @@ import java.util.ResourceBundle;
 public class InitBean {
 
     @Inject
-    InitDatabase initDatabase;
+    private InitDatabase initDatabase;
+
     public void init(@Observes @Initialized(ApplicationScoped.class) Object init){
         System.out.println("**********************init************************");
         ResourceBundle rb = ResourceBundle.getBundle("config");

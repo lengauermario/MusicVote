@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>SSE EventSource Example by Woolha</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/event-source-polyfill/0.0.9/  eventsource.min.js"></script>
+    <script>
+        var source = new EventSource('http://localhost:8085/musicvoting/api/playlist/connect');
+        source.onopen = function () {
+            connectionOpen(true);
+        };
+
+        source.onerror = function () {
+            connectionOpen(false);
+        };
+
+        source.onmessage = function (event) {
+            console.log(event);
+            // a message without a type was fired
+        };
+
+        source.addEventListener('add_song', (event) => {
+            console.log('got a new song');
+            console.log(JSON.parse(event.data));
+        })
+
+        source.addEventListener('add_vote', (event) => {
+            console.log('got a new vote');
+            console.log(JSON.parse(event.data));
+        })
+
+        source.addEventListener('remove_song', (event) => {
+            console.log('removing a song');
+            console.log(JSON.parse(event.data));
+        })
+
+        source.addEventListener('remove_vote', (event) => {
+            console.log('removing a vote');
+            console.log(JSON.parse(event.data));
+        })
+
+        source.addEventListener('video_download', (event) => {
+            console.log('new video downloading or downloaded');
+            console.log(JSON.parse(event.data));
+        })
+        function addSong() {
+            fetch('http://localhost:8085/musicvoting/api/playlist/add/song?id=1', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "text/plain"
+                },
+                body: 'my message'
+            }).then(
+                response => {
+                    console.log(response);
+                }
+            ).catch(
+                error => console.log(error)
+            )
+        }
+        function removeSong() {
+            fetch('http://localhost:8085/musicvoting/api/playlist/remove/song?id=1', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "text/plain"
+                },
+                body: 'my message'
+            }).then(
+                response => {
+                    console.log(response);
+                }
+            ).catch(
+                error => console.log(error)
+            )
+        }
+        function addVote() {
+            fetch('http://localhost:8085/musicvoting/api/playlist/add/vote?id=1', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "text/plain"
+                },
+                body: 'my message'
+            }).then(
+                response => {
+                    console.log(response);
+                }
+            ).catch(
+                error => console.log(error)
+            )
+        }
+        function removeVote() {
+            fetch('http://localhost:8085/musicvoting/api/playlist/remove/vote?id=1', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "text/plain"
+                },
+                body: 'my message'
+            }).then(
+                response => {
+                    console.log(response);
+                }
+            ).catch(
+                error => console.log(error)
+            )
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="addVote()">Add Vote</button>
+    <button onclick="addSong()">Add Song</button>
+    <button onclick="removeSong()">Remove Song</button>
+    <button onclick="removeVote()">Remove Vote</button>
+</body>
+
+</html>

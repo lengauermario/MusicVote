@@ -19,19 +19,23 @@ class MySongCollection extends LitElement {
         document.addEventListener('my-searchEvent', async  (e) => {
             this.refresh(e.detail.text, e.detail.searchYT);
         });
-      //  this.refresh("Thunder", false);
-        //setInterval(this.refresh, 5000);
     }
 
 
     render() {
         if(this.songs !== undefined){
-            console.log(this.songs);
             return html`
-            ${this.songs.map(i => html`<my-song id="${i.videoId}" status="${i.status}" title="${i.title.substring(0, 36)}" artist="${i.artist.substring(0, 17)}" thumbnail="${i.thumbNail}"></my-song>`)}`;
+            ${this.songs.map(i => html`<my-song id="${i.id}" status="${i.status}" title="${i.title.substring(0, 36)}" artist="${i.artist.substring(0, 17)}" thumbnail="${i.thumbnail}"></my-song>`)}`;
         }
         return html`wird geladen`;
 
+    }
+    updated(_changedProperties) {
+        let myEvent = new CustomEvent('my-songsUpdated', {
+            detail: {},
+            bubbles: true,
+            composed: true });
+        this.dispatchEvent(myEvent);
     }
 
     async refresh(searchText, searchOnYt){
@@ -39,16 +43,28 @@ class MySongCollection extends LitElement {
             let url =  "http://localhost:8080/musicvoting/api/video?queryTerm="+searchText;
             let method = "GET";
             let result = await makeRequest(method, url);
-            console.log(result);
-            this.songs = JSON.parse(result);
+            result = JSON.parse(result);
+            this.songs = result.map(entry => ({
+                id: entry.videoId,
+                status: entry.status,
+                title: entry.title,
+                artist: entry.artist,
+                thumbnail: entry.thumbNail
+            }));
         }
         else{
-            let url =  "http://localhost:8085/musicvoting/api/song/findall";
+            let url =  "http://localhost:8080/musicvoting/api/song/findall";
             let method = "GET";
             let result = await makeRequest(method, url);
-        //    console.log(result);
-            var songs = JSON.parse(result);
-            this.songs = songs.filter( function(item){return (item.title.contains(searchText));} );
+            result = JSON.parse(result);
+            result = result.map(entry => ({
+                id: entry.id,
+                status: entry.status,
+                title: entry.title,
+                artist: entry.artist,
+                thumbnail: entry.thumbNail
+            }));
+            this.songs = result.filter( function(item){return (item.title.toUpperCase().includes(searchText.toUpperCase()));} );
         }
     }
 }

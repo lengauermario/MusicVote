@@ -1,5 +1,9 @@
 package at.htl.musicvoting.model;
 
+import at.htl.musicvoting.converter.LocalDateTimeXmlAdapter;
+
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapters;
 import java.time.LocalDateTime;
 
 public class ObjectPlaylistSong {
@@ -8,6 +12,7 @@ public class ObjectPlaylistSong {
     private String artist;
     private String thumbNail;
     private int votes;
+    @XmlJavaTypeAdapter(LocalDateTimeXmlAdapter.class)
     private LocalDateTime time;
 
     public ObjectPlaylistSong(Long id, String title, String artist, String thumbNail, int votes, LocalDateTime time) {

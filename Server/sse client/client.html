@@ -42,7 +42,7 @@
         })
 
         source.addEventListener('video_download', (event) => {
-            console.log('new video downloading or downloaded');
+            console.log('new youtube video ' + JSON.parse(event.data).status);
             console.log(JSON.parse(event.data));
         })
         function addSong() {

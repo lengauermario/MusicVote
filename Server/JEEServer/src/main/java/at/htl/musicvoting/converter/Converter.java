@@ -1,4 +1,4 @@
-package at.htl.musicvoting.business;
+package at.htl.musicvoting.converter;
 
 import at.htl.musicvoting.model.*;
 

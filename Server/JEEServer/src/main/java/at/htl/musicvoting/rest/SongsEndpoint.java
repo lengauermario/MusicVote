@@ -1,7 +1,7 @@
 package at.htl.musicvoting.rest;
 
 
-import at.htl.musicvoting.business.Converter;
+import at.htl.musicvoting.converter.Converter;
 import at.htl.musicvoting.business.PlaylistHandler;
 import at.htl.musicvoting.dao.SongDao;
 import at.htl.musicvoting.model.ObjectLocalSong;

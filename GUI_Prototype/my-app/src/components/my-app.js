@@ -219,6 +219,14 @@ class MyApp extends connect(store)(LitElement) {
     }
   }
 
+  _menuButtonClicked() {
+    store.dispatch(updateDrawerState(true));
+  }
+
+  _drawerOpenedChanged(e) {
+    store.dispatch(updateDrawerState(e.target.opened));
+  }
+
   stateChanged(state) {
     this._page = state.app.page;
     this._offline = state.app.offline;

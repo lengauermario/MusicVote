@@ -148,7 +148,7 @@
         <option name="DOMAIN" value="false" />
         <option name="SERVER_GROUP" value="main-server-group" />
         <option name="USERNAME" value="" />
-        <option name="PASSWORD" value="" />
+        <option name="CREDENTIAL_ALIAS" />
       </server-settings>
       <predefined_log_file enabled="true" id="JBoss" />
       <RunnerSettings RunnerId="Debug">

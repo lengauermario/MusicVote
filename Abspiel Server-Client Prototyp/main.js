@@ -21,7 +21,7 @@ function onTimeChanged(){
     //$('.progress-bar').css('width', percent+'%').attr('aria-valuenow', percent);  
 }
  */
-function init(){
+function init() {
 
     var audio = document.getElementById('audio');
     audio.style.display = "block";
@@ -53,38 +53,38 @@ function init(){
     var x = 0;
 
     function renderFrame() {
-    requestAnimationFrame(renderFrame);
+        requestAnimationFrame(renderFrame);
 
-    x = 0;
+        x = 0;
 
-    analyser.getByteFrequencyData(dataArray);
+        analyser.getByteFrequencyData(dataArray);
 
-    ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0, 0, WIDTH, HEIGHT);
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
-    for (var i = 0; i < bufferLength; i++) {
-        barHeight = dataArray[i] * 1.4;
-        
-        /* var r = barHeight + (25 * (i/bufferLength));
-        var g = 250 * (i/bufferLength);
-        var b = 50;
- */
-        var r = 10;
-        var g = ((dataArray[i] / 1.4) + (i/bufferLength));
-        var b = 250;
-        ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
-        ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+        for (var i = 0; i < bufferLength; i++) {
+            barHeight = dataArray[i] * 1.4;
 
-        x += barWidth + 1;
-    }
+            /* var r = barHeight + (25 * (i/bufferLength));
+            var g = 250 * (i/bufferLength);
+            var b = 50;
+     */
+            var r = 10;
+            var g = ((dataArray[i] / 1.4) + (i / bufferLength));
+            var b = 250;
+            ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+            ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+
+            x += barWidth + 1;
+        }
     }
 
     audio.play();
     renderFrame();
-    
+
 }
 
-function play(id){
+function play(id) {
     //var id = document.getElementById("id_input").value;
     var audio = document.getElementById('audio');
     //src="http://localhost:8085/musicvoting/api/song/getmp3?id=138"
@@ -93,12 +93,12 @@ function play(id){
 }
 
 
-function playNextSong(){
-    fetch("http://localhost:8085/musicvoting/api/song/playlist/pop")
-    .then(async function(response){
-        let tmp = await response.json();
-        play(tmp.id);
-    });
+function playNextSong() {
+    fetch("http://localhost:8085/musicvoting/api/playlist/pop")
+        .then(async function (response) {
+            let tmp = await response.json();
+            play(tmp.id);
+        });
 }
 
 /*function nextSong(){

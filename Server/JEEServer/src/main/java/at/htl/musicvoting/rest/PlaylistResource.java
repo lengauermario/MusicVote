@@ -128,7 +128,18 @@ public class PlaylistResource {
     @Path("/pop")
     public Response pop(){
         Song song = playlist.playSong();
+        broadcastNextSong(song);
         return Response.ok(song).build();
+    }
+
+    public void broadcastNextSong(Song song){
+        System.out.println("next song started");
+        OutboundSseEvent event = sse.newEventBuilder()
+                .name("song_started")
+                .mediaType(MediaType.APPLICATION_JSON_TYPE)
+                .data(Converter.SongToObjectPlaylistSong(song))
+                .build();
+        sseBroadcaster.broadcast(event);
     }
 
     public void broadcastDonwload(String id, AvailabilityStatus status) {

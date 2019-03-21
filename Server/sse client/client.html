@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>SSE EventSource Example by Woolha</title>
+    <title>SSE Client</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/event-source-polyfill/0.0.9/  eventsource.min.js"></script>
     <script>
@@ -45,8 +45,14 @@
             console.log('new youtube video ' + JSON.parse(event.data).status);
             console.log(JSON.parse(event.data));
         })
+
+
+        source.addEventListener('song_started', (event) => {
+            console.log('next song started');
+            console.log(JSON.parse(event.data));
+        })
         function addSong() {
-            fetch('http://localhost:8085/musicvoting/api/playlist/add/song?id=1', {
+            fetch('http://localhost:8085/musicvoting/api/playlist/add/song?id=' + Math.floor(Math.random() * 10), {
                 method: 'POST',
                 headers: {
                     "Content-Type": "text/plain"

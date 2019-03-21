@@ -22,11 +22,13 @@
             height: 500px;
             border: 1px black;
         }
+
         #content {
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
+
         /* 
 audio {
   position: fixed;
@@ -45,10 +47,10 @@ audio {
         <progress id="progressbar" value="0" max="1" style="width: 1000px"></progress>
         <canvas id="analyser_render"></canvas>
     </div> -->
-    
+
     <div class="container">
         <div class="row">
-                <button class="btn btn-primary" onclick="playNextSong()">Start Stream</button>
+            <button class="btn btn-primary" onclick="playNextSong()">Start Stream</button>
         </div>
         <div class="row">
             <div id="content">
@@ -56,7 +58,7 @@ audio {
                 <audio id="audio" autoplay="true" onended="playNextSong()" crossorigin="anonymous" controls></audio>
             </div>
         </div>
-        
+
     </div>
 
     <script>const audio = new Plyr('#audio');</script>

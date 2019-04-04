@@ -40,7 +40,7 @@ public class InitDatabase {
         }
     }
 
-    private void readMp3File(String path) throws InvalidDataException, IOException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
+    public void readMp3File(String path) throws InvalidDataException, IOException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
         Mp3File mp3file = new Mp3File(path);
         Song newSong = new Song(path, mp3file.getLengthInSeconds(), mp3file.getBitrate(), mp3file.isVbr(), mp3file.getSampleRate(), mp3file.hasId3v1Tag(),
                 mp3file.hasId3v2Tag(), mp3file.hasCustomTag(), mp3file.getId3v2Tag().getTrack(), mp3file.getId3v2Tag().getArtist(), mp3file.getId3v2Tag().getTitle(),

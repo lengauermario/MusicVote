@@ -12,7 +12,7 @@ export const navigate = (path) => (dispatch) => {
   // you can do here
   dispatch(loadPage(page));
 
-  // Close the drawer - in case the *path* change came from a link in the drawer.
+    // Close the drawer - in case the path change came from a link in the drawer.
   dispatch(updateDrawerState(false));
 };
 
@@ -25,10 +25,7 @@ const loadPage = (page) => (dispatch) => {
       });
       break;
     case 'view2':
-      import('../components/views/my-view2.js').then((module) => {
-        // Put code in here that you want to run every time when
-        // navigating to view1 after my-view1.js is loaded.
-      });
+        import('../components/views/my-view2.js');
       break;
     default:
       page = 'view404';
@@ -53,7 +50,7 @@ export const showSnackbar = () => (dispatch) => {
   });
   window.clearTimeout(snackbarTimer);
   snackbarTimer = window.setTimeout(() =>
-    dispatch({ type: CLOSE_SNACKBAR }), 3000);
+      dispatch({type: CLOSE_SNACKBAR}), 3000);
 };
 
 export const updateOffline = (offline) => (dispatch, getState) => {

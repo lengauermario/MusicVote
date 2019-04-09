@@ -2,7 +2,7 @@ import {html, LitElement} from "@polymer/lit-element";
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/iron-icon';
 import '@polymer/iron-image/iron-image.js'
-import {SharedStyles} from '../shared/shared-styles.js';
+import {SharedStyles} from '../../shared/shared-styles.js';
 
 
 class MySongPreview extends LitElement {

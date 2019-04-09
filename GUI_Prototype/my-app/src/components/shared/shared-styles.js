@@ -1,4 +1,4 @@
-import { html } from '@polymer/lit-element';
+import {html} from '@polymer/lit-element';
 
 export const SharedStyles = html`
 <link rel="stylesheet" href="../../../node_modules/bulma/css/bulma.min.css">
@@ -20,11 +20,7 @@ export const SharedStyles = html`
     max-width: 600px;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  section:nth-of-type(even) {
-    background: var(--app-section-even-color);
-  }
+  } 
 
   h2 {
     font-size: 24px;
@@ -36,6 +32,10 @@ export const SharedStyles = html`
     h2 {
       font-size: 36px;
     }
+  }
+  
+  .background{
+      background: var(--app-section-even-color);
   }
 
   .circle {

@@ -1,8 +1,8 @@
 import {html, LitElement} from "@polymer/lit-element";
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/iron-icon';
-import {makeRequest} from "../shared/my-helper";
-import {SharedStyles} from '../shared/shared-styles.js';
+import {makeRequest} from "../../shared/my-helper";
+import {SharedStyles} from '../../shared/shared-styles.js';
 
 
 class MySong extends LitElement {
@@ -36,9 +36,8 @@ class MySong extends LitElement {
     constructor(){
         super();
         this.liked = false;
-        document.addEventListener('my-songsUpdated', async  (e) => {
-            this.IconSrc = this.setIconSrcPath();
-        });
+        console.log(this.status);
+        this.IconSrc = this.setIconSrcPath();
     }
 
     updated(changedProperties) {
@@ -54,12 +53,12 @@ class MySong extends LitElement {
                 <div class="column is-4">
                     <img src="${this.thumbnail}" class="image" style="margin: auto 0; ">
                 </div>
-                <div class="column is-" style="margin: auto 0">
+                <div class="column" style="margin: auto 0">
                     <h6 class="title is-6" style="margin-bottom: 0">${this.title}</h6>
                     <h6 class="subtitle is-6" style="margin: 0 0 15px 0">${this.artist}</p>
                 </div>
                 <div class="column is-2" style="margin: auto auto;">
-                    <img src="${this.IconSrc}" @click="${(this.status === "DOWNLOADABLE") ? this.addYouTubeVideo : this.changeLikedImgSrc}" class="image" style="margin: auto 0;">
+                    <img src="${this.IconSrc}" @click="${this.changeLikedImgSrc}" class="image" style="margin: auto 0;">
                 </div>
             </div>                
             `;
@@ -77,6 +76,8 @@ class MySong extends LitElement {
         }
         else if(this.status === "NOT_AVALABLE"){
             return "/images/error.png";
+        } else if (this.status == null) {
+            return "/images/heartGrey.png"
         }
     }
 
@@ -92,15 +93,6 @@ class MySong extends LitElement {
             console.log(this.id);
             makeRequest("POST", "http://localhost:8080/musicvoting/api/song/playlist/addvote?"+this.id)
         }
-    }
-
-    async addYouTubeVideo() {
-        this.IconSrc = "/images/loading.gif";
-        let url = "http://localhost:8080/musicvoting/api/video/dl";
-        let method = "POST";
-        let data = JSON.stringify({videoId: this.id, title: this.title, artist: this.artist, thumbNail: this.thumbnail, status: this.status}, "");
-        console.log(data);
-        await makeRequest(method, url, data);
     }
 }
 

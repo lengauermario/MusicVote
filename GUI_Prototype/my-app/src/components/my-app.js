@@ -5,6 +5,7 @@ import {installMediaQueryWatcher} from 'pwa-helpers/media-query.js';
 import {installOfflineWatcher} from 'pwa-helpers/network.js';
 import {installRouter} from 'pwa-helpers/router.js';
 import {updateMetadata} from 'pwa-helpers/metadata.js';
+import {SharedStyles} from './shared/shared-styles.js';
 // This element is connected to the Redux store.
 import {store} from '../store.js';
 // These are the actions needed by this element.
@@ -15,7 +16,6 @@ import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import '@polymer/app-layout/app-scroll-effects/effects/fade-background.js'
-import {menuIcon} from './shared/my-icons.js';
 
 class MyApp extends connect(store)(LitElement) {
   render() {
@@ -151,7 +151,7 @@ class MyApp extends connect(store)(LitElement) {
         }
 
         .main-content {
-          padding-top: 107px;
+          padding-top: 100px;
           min-height: calc(100vh - 212px);
         }
 
@@ -164,10 +164,19 @@ class MyApp extends connect(store)(LitElement) {
     </style>
 
     <!-- Header -->
-    <app-header condenses fixed effects="waterfall" style="z-index: 5">
-      <app-toolbar class="toolbar-top">
-        <button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
-        <div main-title>${this.appTitle}</div>
+    <app-header condenses fixed effects="waterfall" style="z-index: 5; padding: 0;">
+      ${SharedStyles}
+      <app-toolbar class="toolbar-top" style="padding: 0; height: 70px; margin 0">
+      <div class="tabs is-fullwidth" style="width: 100%;">
+        <ul>
+          <li style="width: 50%" class="${(this._page === 'view1') ? 'is-active' : ''}">
+            <a href="/view1"> Playlist  </a>
+          </li>
+          <li style="width: 50%" class="${(this._page === 'view2') ? 'is-active' : ''}">
+            <a  href="/view2">Add</a>
+          </li>
+        </ul>
+      </div>
         
       </app-toolbar>
     </app-header>
@@ -175,6 +184,7 @@ class MyApp extends connect(store)(LitElement) {
     <!-- Main content -->
     <main role="main" class="main-content">
       <my-view1 class="page" ?active="${this._page === 'view1'}"></my-view1>
+      <my-view2 class="page" ?active="${this._page === 'view2'}"></my-view2>
       <my-view404 class="page" ?active="${this._page === 'view404'}"></my-view404>
     </main>
 
@@ -187,6 +197,7 @@ class MyApp extends connect(store)(LitElement) {
   static get properties() {
     return {
       appTitle: { type: String },
+      rell: {type: String},
       _page: { type: String },
       _drawerOpened: { type: Boolean },
       _snackbarOpened: { type: Boolean },
@@ -198,10 +209,15 @@ class MyApp extends connect(store)(LitElement) {
     super();
     // To force all event listeners for gestures to be passive.
     // See https://www.polymer-project.org/3.0/docs/devguide/settings#setting-passive-touch-gestures
+    /*   let tab1 = document.querySelector('.tab1');
+       let tab2 = document.querySelector('.tab2');
+       tab1.addEventListener('click', this.slideLeft);
+       tab2.addEventListener('click', this.slideRight);*/
     setPassiveTouchGestures(true);
   }
 
   firstUpdated() {
+    //this.reel = document.querySelector('.main-content');
     installRouter((location) => store.dispatch(navigate(decodeURIComponent(location.pathname))));
     installOfflineWatcher((offline) => store.dispatch(updateOffline(offline)));
     installMediaQueryWatcher(`(min-width: 460px)`,
@@ -209,6 +225,7 @@ class MyApp extends connect(store)(LitElement) {
   }
 
   updated(changedProps) {
+    //  this.reel = document.querySelector('.main-content');
     if (changedProps.has('_page')) {
       const pageTitle = this.appTitle + ' - ' + this._page;
       updateMetadata({
@@ -219,19 +236,24 @@ class MyApp extends connect(store)(LitElement) {
     }
   }
 
-  _menuButtonClicked() {
-    store.dispatch(updateDrawerState(true));
+  slideLeft() {
+    this.reel = document.querySelector('.main-content');
+    if (this.reel != null) {
+      this.reel.style.transform = "translateX(0%)";
+    }
+
   }
 
-  _drawerOpenedChanged(e) {
-    store.dispatch(updateDrawerState(e.target.opened));
+  slideRight() {
+    this.reel = document.querySelector('.main-content');
+    if (this.reel != null) {
+      this.reel.style.transform = "translateX(-50%)";
+
+    }
   }
 
   stateChanged(state) {
     this._page = state.app.page;
-    this._offline = state.app.offline;
-    this._snackbarOpened = state.app.snackbarOpened;
-    this._drawerOpened = state.app.drawerOpened;
   }
 }
 

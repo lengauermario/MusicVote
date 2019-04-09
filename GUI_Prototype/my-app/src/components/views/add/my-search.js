@@ -3,7 +3,7 @@ import '@polymer/paper-input/paper-input.js';
 import '@polymer/iron-icon/iron-icon.js';
 import '@polymer/iron-icons/iron-icons.js';
 import '@polymer/iron-input/iron-input.js';
-import {SharedStyles} from '../shared/shared-styles.js';
+import {SharedStyles} from '../../shared/shared-styles.js';
 
 
 class MySearch extends LitElement {
@@ -42,7 +42,7 @@ class MySearch extends LitElement {
                 <div class="column is-three-quarters">
                     <div class="field">
                         <p class="control has-icons-left">
-                        <input @input="${this.changeInput}" id="searchInput" class="input" type="text" placeholder="${this.searchbar}" .value="${this.searchInput}">
+                        <input @input="${this.changeInput}" id="searchInput" class="input" type="text" placeholder="${this.searchbar}" value="${this.searchInput}">
                         <span class="icon is-small is-left">
                             <i class="icon"><iron-icon icon="search" style="horiz-align: center"></iron-icon></i>
                           <i class="fas fa-envelope"></i>

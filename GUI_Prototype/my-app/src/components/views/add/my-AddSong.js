@@ -83,6 +83,7 @@ class MyAddSong extends LitElement {
     }
 
     async addYouTubeVideo() {
+        console.log("add YT Video");
         this.IconSrc = "/images/loading.gif";
         let url = "http://localhost:8080/musicvoting/api/video/dl";
         let method = "POST";

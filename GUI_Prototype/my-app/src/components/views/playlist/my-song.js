@@ -36,12 +36,12 @@ class MySong extends LitElement {
     constructor(){
         super();
         this.liked = false;
-        console.log(this.status);
+        this.updated(null);
         this.IconSrc = this.setIconSrcPath();
     }
 
     updated(changedProperties) {
-        if(this.thumbnail === "undefined"){
+        if(this.thumbnail === "default"){
             this.thumbnail = "/images/covers/default.png";
         }
     }
@@ -85,13 +85,13 @@ class MySong extends LitElement {
         if (this.liked){
             this.IconSrc = "/images/heartGrey.png";
             this.liked = false;
-            //send request to Back-End voting minus 1
+            makeRequest("POST", "http://localhost:8080/musicvoting/api/playlist/remove/vote?"+this.id)
         }
         else {
             this.IconSrc = "/images/heart.png";
             this.liked = true;
             console.log(this.id);
-            makeRequest("POST", "http://localhost:8080/musicvoting/api/song/playlist/addvote?"+this.id)
+            makeRequest("POST", "http://localhost:8080/musicvoting/api/playlist/add/vote?"+this.id)
         }
     }
 }

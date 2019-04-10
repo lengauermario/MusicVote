@@ -13,7 +13,7 @@ class MyView1 extends PageViewElement {
         <my-songpreview></my-songpreview>
       </section>
       <section class="background" style="padding-top: 0.8em;">
-        <my-songcollection songUrl="http://localhost:8080/musicvoting/api/song/playlist/"></my-songcollection>
+        <my-songcollection songUrl="http://localhost:8080/musicvoting/api/playlist/"></my-songcollection>
       </section>
     `;
   }

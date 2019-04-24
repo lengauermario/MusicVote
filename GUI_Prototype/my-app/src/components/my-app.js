@@ -209,44 +209,78 @@ class MyApp extends connect(store)(LitElement) {
     super();
     // To force all event listeners for gestures to be passive.
     // See https://www.polymer-project.org/3.0/docs/devguide/settings#setting-passive-touch-gestures
-    /*   let tab1 = document.querySelector('.tab1');
-       let tab2 = document.querySelector('.tab2');
-       tab1.addEventListener('click', this.slideLeft);
-       tab2.addEventListener('click', this.slideRight);*/
-    setPassiveTouchGestures(true);
 
     const evtSource = new EventSource('http://localhost:8080/musicvoting/api/playlist/connect');
     evtSource.onmessage = function(event){
       console.log(event);
     };
     evtSource.addEventListener('add_song', (event) => {
-      console.log('got a new song');
-      console.log(JSON.parse(event.data));
+        console.log('got a new song');
+        console.log(JSON.parse(event.data));
+
+        let myEvent = new CustomEvent('my_event_addsong', {
+            detail: { id: JSON.parse(event.data).id},
+            bubbles: true,
+            composed: true });
+        this.dispatchEvent(myEvent);
     });
 
     evtSource.addEventListener('add_vote', (event) => {
-      console.log('got a new vote');
-      console.log(JSON.parse(event.data));
+        console.log('got a new vote');
+        console.log(JSON.parse(event.data));
+
+        let id = JSON.parse(event.data).id;
+        let myEvent = new CustomEvent('my_event_addvote'+id, {
+            detail: { id: id},
+            bubbles: true,
+            composed: true });
+        this.dispatchEvent(myEvent);
     });
 
     evtSource.addEventListener('remove_song', (event) => {
-      console.log('removing a song');
-      console.log(JSON.parse(event.data));
+        console.log('removing a song');
+        console.log(JSON.parse(event.data));
+
+        let id = JSON.parse(event.data).id;
+        let myEvent = new CustomEvent('my_event_removesong', {
+            detail: { id: id},
+            bubbles: true,
+            composed: true });
+        this.dispatchEvent(myEvent);
     });
 
     evtSource.addEventListener('remove_vote', (event) => {
-      console.log('removing a vote');
-      console.log(JSON.parse(event.data));
+        console.log('removing a vote');
+        console.log(JSON.parse(event.data));
+
+        let id = JSON.parse(event.data).id;
+        let myEvent = new CustomEvent('my_event_removevote'+id, {
+            detail: { id: id},
+            bubbles: true,
+            composed: true });
+        this.dispatchEvent(myEvent);
     });
 
     evtSource.addEventListener('video_download', (event) => {
-      console.log('new youtube video ' + JSON.parse(event.data).status);
-      console.log(JSON.parse(event.data));
+        console.log('new youtube video ' + JSON.parse(event.data).status);
+        console.log(JSON.parse(event.data));
+
+        let myEvent = new CustomEvent('my_event_videodownload', {
+            detail: { id: JSON.parse(event.data).id},
+            bubbles: true,
+            composed: true });
+        this.dispatchEvent(myEvent);
     });
 
     evtSource.addEventListener('song_started', (event) => {
-      console.log('next song started');
-      console.log(JSON.parse(event.data));
+        console.log('next song started');
+        console.log(JSON.parse(event.data));
+
+        let myEvent = new CustomEvent('my_event_songstarted', {
+            detail: { id: JSON.parse(event.data).id},
+            bubbles: true,
+            composed: true });
+        this.dispatchEvent(myEvent);
     })
   }
 

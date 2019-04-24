@@ -22,12 +22,16 @@ class MySongCollection extends LitElement {
     }
 
     render() {
-        this.load();
         if(this.songs !== undefined){
+            console.log(this.songs);
             return html`
-            ${this.songs.map(i => html`<my-song id="${i.id}" status="${i.status}" title="${i.title.substring(0, 36)}" artist="${i.artist.substring(0, 17)}" thumbnail="${i.thumbnail}"></my-song>`)}`;
+            ${this.songs.map(i => html`<my-song id="${i.id}" votes="${i.votes}" status="${i.status}" title="${i.title.substring(0, 36)}" artist="${i.artist.substring(0, 17)}" thumbnail="${i.thumbnail}"></my-song>`)}`;
         }
         return html`wird geladen`;
+    }
+
+    firstUpdated(_changedProperties) {
+        this.load();
     }
 
     updated(_changedProperties) {
@@ -44,7 +48,7 @@ class MySongCollection extends LitElement {
         result = JSON.parse(result);
         result = result.map(entry => ({
             id: entry.id,
-            status: entry.status,
+            votes: entry.votes,
             title: entry.title,
             artist: entry.artist,
             thumbnail: entry.thumbNail

@@ -11,6 +11,9 @@ class MySong extends LitElement {
             id:{
                 type: String
             },
+            votes:{
+                type: Number
+            },
             title: {
                 type: String
             },
@@ -18,9 +21,6 @@ class MySong extends LitElement {
                 type: String
             },
             thumbnail: {
-                type: String
-            },
-            status: {
                 type: String
             },
             liked: {
@@ -38,20 +38,30 @@ class MySong extends LitElement {
         this.liked = false;
         this.updated(null);
         this.IconSrc = this.setIconSrcPath();
+
+    }
+    firstUpdated(_changedProperties) {
+        document.addEventListener('my_event_addvote'+this.id, async (e) => {
+            this.votes++;
+        });
+        document.addEventListener('my_event_removevote'+this.id, async (e) => {
+            this.votes--;
+        });
     }
 
     updated(changedProperties) {
         if(this.thumbnail === "default"){
             this.thumbnail = "/images/covers/default.png";
         }
+        console.log(changedProperties)
     }
 
     render() {
         return html`
             ${SharedStyles}
             <div class="columns is-mobile" style="border-bottom: 1px solid black; margin-bottom: 0.7em">
-                <div class="column is-4">
-                    <img src="${this.thumbnail}" class="image" style="margin: auto 0; ">
+                <div class="column is-4" style="margin: auto auto;">
+                    <h4 class="title is-4" style="margin: auto 0;">${this.votes} Votes</h4>
                 </div>
                 <div class="column" style="margin: auto 0">
                     <h6 class="title is-6" style="margin-bottom: 0">${this.title}</h6>
@@ -65,33 +75,20 @@ class MySong extends LitElement {
     }
 
     setIconSrcPath(){
-        if(this.status === "DOWNLOADABLE"){
-            return "/images/plus.png";
-        }
-        else if(this.status === "DOWNLOADING"){
-            return "/images/loading.gif";
-        }
-        else if(this.status === "AVAILABLE"){
-            return "/images/heartGrey.png";
-        }
-        else if(this.status === "NOT_AVALABLE"){
-            return "/images/error.png";
-        } else if (this.status == null) {
-            return "/images/heartGrey.png"
-        }
+        return "/images/heartGrey.png";
     }
 
     changeLikedImgSrc(){
         if (this.liked){
             this.IconSrc = "/images/heartGrey.png";
             this.liked = false;
-            makeRequest("POST", "http://localhost:8080/musicvoting/api/playlist/remove/vote?"+this.id)
+            makeRequest("POST", "http://localhost:8080/musicvoting/api/playlist/remove/vote?id="+this.id)
         }
         else {
             this.IconSrc = "/images/heart.png";
             this.liked = true;
             console.log(this.id);
-            makeRequest("POST", "http://localhost:8080/musicvoting/api/playlist/add/vote?"+this.id)
+            makeRequest("POST", "http://localhost:8080/musicvoting/api/playlist/add/vote?id="+this.id)
         }
     }
 }

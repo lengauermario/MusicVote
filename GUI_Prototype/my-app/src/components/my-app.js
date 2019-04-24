@@ -164,10 +164,10 @@ class MyApp extends connect(store)(LitElement) {
     </style>
 
     <!-- Header -->
-    <app-header condenses fixed effects="waterfall" style="z-index: 5; padding: 0;">
+    <app-header fixed slot="header" style=" z-index:5; padding: 0; top: 0;">
       ${SharedStyles}
-      <app-toolbar class="toolbar-top" style="padding: 0; height: 70px; margin 0">
-      <div class="tabs is-fullwidth" style="width: 100%;">
+      <app-toolbar class="toolbar-top" style="padding: 0; height: 80px; margin 0">
+      <div class="tabs is-fullwidth" style="width: 100%; position: sticky; z-index: 5">
         <ul>
           <li style="width: 50%" class="${(this._page === 'view1') ? 'is-active' : ''}">
             <a href="/view1"> Playlist  </a>

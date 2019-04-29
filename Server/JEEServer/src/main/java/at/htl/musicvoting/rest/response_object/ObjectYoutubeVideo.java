@@ -1,4 +1,6 @@
-package at.htl.musicvoting.model;
+package at.htl.musicvoting.rest.response_object;
+
+import at.htl.musicvoting.model.AvailabilityStatus;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

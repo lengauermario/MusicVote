@@ -49,6 +49,11 @@ public class PlaylistHandler {
         }
         return null;
     }
+
+    public boolean contains(Long id){
+        return get(id) != null;
+    }
+
     public void addVote(long id){
         Song song = get(id);
         if(song != null){

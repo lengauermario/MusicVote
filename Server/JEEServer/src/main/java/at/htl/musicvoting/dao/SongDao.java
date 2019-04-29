@@ -25,8 +25,12 @@ public class SongDao {
 
     public Song getByID(long id) {
         TypedQuery query = em.createNamedQuery("Song.findById", Song.class).setParameter("ID", id);
-        Song song = (Song) query.getSingleResult();
-        return song;
+        try{
+            return (Song)query.getSingleResult();
+        } catch (Exception e) {
+            return null;
+        }
+
     }
 }
 

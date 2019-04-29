@@ -2,7 +2,7 @@ package at.htl.musicvoting.youtube;
 
 import at.htl.musicvoting.dao.YoutubeVideoDao;
 import at.htl.musicvoting.model.AvailabilityStatus;
-import at.htl.musicvoting.model.ObjectYoutubeVideo;
+import at.htl.musicvoting.rest.response_object.ObjectYoutubeVideo;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.client.http.HttpRequest;
 import com.google.api.client.http.HttpRequestInitializer;

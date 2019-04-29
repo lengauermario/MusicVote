@@ -26,11 +26,9 @@ public class Song implements Comparable<Song> {
     private long lengthOfMp3;
     private int bitrate;
     private boolean bitrateVBR;
-    private int sampleRate;
-    private boolean hasId3v1Tag, hasId3v2Tag, hasCustomTag;
     private String track, artist, title, album;
     private int realeaseYear, genre;
-    private String comment, composer, publisher, originalArtist, albumArtist, copyright, url, encoder, path;
+    private String comment, url, path;
 
 
 
@@ -43,15 +41,11 @@ public class Song implements Comparable<Song> {
     private LocalDateTime addedToPlaylist;
 
     //region Constructors
-    public Song(String path, long lengthOfMp3, int bitrate, boolean bitrateVBR, int sampleRate, boolean hasId3v1Tag, boolean hasId3v2Tag, boolean hasCustomTag, String track, String artist, String title, String album, int year, int genre, String comment, String composer, String publisher, String originalArtist, String albumArtist, String copyright, String url, String encoder) {
+    public Song(String path, long lengthOfMp3, int bitrate, boolean bitrateVBR, String track, String artist, String title, String album, int year, int genre, String comment, String url) {
         this.path = path;
         this.lengthOfMp3 = lengthOfMp3;
         this.bitrate = bitrate;
         this.bitrateVBR = bitrateVBR;
-        this.sampleRate = sampleRate;
-        this.hasId3v1Tag = hasId3v1Tag;
-        this.hasId3v2Tag = hasId3v2Tag;
-        this.hasCustomTag = hasCustomTag;
         this.track = track;
         this.artist = artist;
         this.title = title;
@@ -59,13 +53,12 @@ public class Song implements Comparable<Song> {
         this.realeaseYear = year;
         this.genre = genre;
         this.comment = comment;
-        this.composer = composer;
-        this.publisher = publisher;
-        this.originalArtist = originalArtist;
-        this.albumArtist = albumArtist;
-        this.copyright = copyright;
         this.url = url;
-        this.encoder = encoder;
+    }
+
+    public Song(String artist, String title) {
+        this.artist = artist;
+        this.title = title;
     }
 
     public Song(){
@@ -140,38 +133,6 @@ public class Song implements Comparable<Song> {
         this.bitrateVBR = bitrateVBR;
     }
 
-    public int getSampleRate() {
-        return sampleRate;
-    }
-
-    public void setSampleRate(int sampleRate) {
-        this.sampleRate = sampleRate;
-    }
-
-    public boolean isHasId3v1Tag() {
-        return hasId3v1Tag;
-    }
-
-    public void setHasId3v1Tag(boolean hasId3v1Tag) {
-        this.hasId3v1Tag = hasId3v1Tag;
-    }
-
-    public boolean isHasId3v2Tag() {
-        return hasId3v2Tag;
-    }
-
-    public void setHasId3v2Tag(boolean hasId3v2Tag) {
-        this.hasId3v2Tag = hasId3v2Tag;
-    }
-
-    public boolean isHasCustomTag() {
-        return hasCustomTag;
-    }
-
-    public void setHasCustomTag(boolean hasCustomTag) {
-        this.hasCustomTag = hasCustomTag;
-    }
-
     public String getTrack() {
         return track;
     }
@@ -228,45 +189,6 @@ public class Song implements Comparable<Song> {
         this.comment = comment;
     }
 
-    public String getComposer() {
-        return composer;
-    }
-
-    public void setComposer(String composer) {
-        this.composer = composer;
-    }
-
-    public String getPublisher() {
-        return publisher;
-    }
-
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
-
-    public String getOriginalArtist() {
-        return originalArtist;
-    }
-
-    public void setOriginalArtist(String originalArtist) {
-        this.originalArtist = originalArtist;
-    }
-
-    public String getAlbumArtist() {
-        return albumArtist;
-    }
-
-    public void setAlbumArtist(String albumArtist) {
-        this.albumArtist = albumArtist;
-    }
-
-    public String getCopyright() {
-        return copyright;
-    }
-
-    public void setCopyright(String copyright) {
-        this.copyright = copyright;
-    }
 
     public String getUrl() {
         return url;
@@ -276,13 +198,6 @@ public class Song implements Comparable<Song> {
         this.url = url;
     }
 
-    public String getEncoder() {
-        return encoder;
-    }
-
-    public void setEncoder(String encoder) {
-        this.encoder = encoder;
-    }
 
     public int compareTo(Song song) {
         return Integer.compare(song.getVotes(), this.getVotes());

@@ -1,4 +1,4 @@
-package at.htl.musicvoting.rest;
+package at.htl.musicvoting.rest.filter;
 
 import java.io.IOException;
 

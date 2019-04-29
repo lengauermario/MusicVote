@@ -1,4 +1,4 @@
-package at.htl.musicvoting.model;
+package at.htl.musicvoting.rest.response_object;
 
 import at.htl.musicvoting.converter.LocalDateTimeXmlAdapter;
 

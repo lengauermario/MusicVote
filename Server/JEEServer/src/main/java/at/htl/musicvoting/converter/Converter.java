@@ -1,6 +1,8 @@
 package at.htl.musicvoting.converter;
 
 import at.htl.musicvoting.model.*;
+import at.htl.musicvoting.rest.response_object.ObjectLocalSong;
+import at.htl.musicvoting.rest.response_object.ObjectPlaylistSong;
 
 import java.util.LinkedList;
 import java.util.List;

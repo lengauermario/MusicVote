@@ -4,8 +4,9 @@ package at.htl.musicvoting.rest;
 import at.htl.musicvoting.converter.Converter;
 import at.htl.musicvoting.business.PlaylistHandler;
 import at.htl.musicvoting.dao.SongDao;
-import at.htl.musicvoting.model.ObjectLocalSong;
+import at.htl.musicvoting.rest.response_object.ObjectLocalSong;
 import at.htl.musicvoting.model.Song;
+import at.htl.musicvoting.rest.auth.annotation.Secured;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -32,8 +33,10 @@ public class SongsEndpoint {
         List<ObjectLocalSong> entity = Converter.SongsToObjectLocalSongList(songs);
         return Response.ok().entity(entity).build();
     }
+
     @GET
     @Produces("audio/mp3")
+    @Secured
     @Path("getmp3")
     public Response get(@QueryParam("id")long id) {
         Song song = dao.getByID(id);

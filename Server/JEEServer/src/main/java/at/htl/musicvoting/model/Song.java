@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name="Song.findAll" , query = "select s from Song s"),
+        @NamedQuery(name="Song.findAll" , query = "select s from Song s order by s.title"),
         @NamedQuery(name="Song.findById", query = "select s from Song s where s.id = :ID")
 })
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -102,6 +102,11 @@ public class Song implements Comparable<Song> {
     public void increaseVotes() {
         this.votes++;
     }
+
+    public void decreaseVotes() {
+        this.votes--;
+    }
+
 
     public String getPath() {
         return path;

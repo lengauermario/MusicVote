@@ -10,11 +10,14 @@ import java.util.stream.Collectors;
 
 @Stateless
 public class PlaylistHandler {
-    Song currentSong;
-
-    List<Song> playlist = new LinkedList<Song>();
-    Comparator<Song> comparator = Comparator.comparing(Song::getVotes).reversed()
+    private Song currentSong;
+    private List<Song> playlist = new LinkedList<Song>();
+    private Comparator<Song> comparator = Comparator.comparing(Song::getVotes).reversed()
             .thenComparing(Song::getAddedToPlaylist);
+
+    public Song getCurrentSong() {
+        return currentSong;
+    }
 
     public List<Song> getPlaylist(){
         playlist.sort(comparator);
@@ -32,6 +35,13 @@ public class PlaylistHandler {
         }
     }
 
+    public void removeSong(long id){
+        Song song = get(id);
+        if(song != null){
+            playlist.remove(song);
+        }
+    }
+
     private Song get(Long id) {
         for (Song song: playlist) {
             if(song.getId().equals(id))
@@ -43,6 +53,13 @@ public class PlaylistHandler {
         Song song = get(id);
         if(song != null){
             song.increaseVotes();
+        }
+    }
+
+    public void removeVote(long id){
+        Song song = get(id);
+        if(song != null){
+            song.decreaseVotes();
         }
     }
 

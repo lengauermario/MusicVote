@@ -6,7 +6,183 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e1c6d04-be30-45d0-a172-d87b35abb6e9" name="Default Changelist" comment="" />
+    <list default="true" id="20712e9b-7b4f-45ac-b560-3fea07853937" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/gulpfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/actions/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/my-app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/page-view-element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/shared/button-shared-styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-AddSong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-AddSongCollection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/my-view1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/my-view404.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/playlist/my-song.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/playlist/my-songcollection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/reducers/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/sw-precache-config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/regenerate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/visual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/counter-element.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/views-a11y.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/wct.conf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/jeeserver_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/jeeserver_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e62bd90-9332-4a8e-a0ec-fe9ee89a0b25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_collections_google_collections_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_http_client_google_http_client_1_28_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson2_1_28_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_oauth_client_google_oauth_client_java6_1_28_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_oauth_client_google_oauth_client_jetty_1_28_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_util_6_1_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_servlet_api_2_5_20081211.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/log/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/log/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/log/log1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c10.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c101.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c101.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c111.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c111.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c121.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c121.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c130.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c130.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c141.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c141.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c150.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c161.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c171.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c171.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c180.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c180.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c1a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c1a1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c1b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c1b1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c20.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c200.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c200.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c211.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c211.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c221.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c221.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c230.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c241.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c241.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c31.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c380.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c380.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c391.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c391.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c3a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c3a1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c3b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c3b1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c400.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c400.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c41.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c411.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c411.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c421.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c421.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c4d0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c4e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c4f0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c501.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c51.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c60.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c71.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c81.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c90.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/ca1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/cb1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/cf0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/cf0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/d490.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/d4a1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/d4b0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/d4c1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/service.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/db/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jeeserver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jeeserver.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/InitBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/InitBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/InitDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/InitDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/PlaylistHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/PlaylistHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/dao/SongDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/dao/SongDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/dao/YoutubeVideoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/dao/YoutubeVideoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/AvailabilityStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/AvailabilityStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/ResponseObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/YoutubeResponseObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/YoutubeVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/YoutubeVideo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/CORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/CORSFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/RestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/RestConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/SongsEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/SongsEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/YoutubeEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/YoutubeEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/DownloadThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/DownloadThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/YoutubedlWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/YoutubedlWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/at/htl/musicvoting/business/PlaylistHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/at/htl/musicvoting/business/PlaylistHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/Converter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/Converter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/InitBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/InitBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/InitDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/InitDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/PlaylistHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/PlaylistHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/dao/YoutubeVideoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/dao/YoutubeVideoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/AvailabilityStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/AvailabilityStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/ResponseObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/Song.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/YoutubeResponseObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/YoutubeVideo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/YoutubeVideo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/CORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/CORSFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/RestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/RestConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/SongsEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/SongsEndpoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/YoutubeEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/YoutubeEndpoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/DownloadThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/DownloadThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/Search$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/Search$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/Search.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/YoutubedlWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/YoutubedlWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/Converter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/Converter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/InitBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/InitBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/InitDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/InitDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/PlaylistHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/PlaylistHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/dao/YoutubeVideoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/dao/YoutubeVideoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/AvailabilityStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/AvailabilityStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/ResponseObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/Song.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/YoutubeResponseObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/YoutubeVideo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/YoutubeVideo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/CORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/CORSFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/RestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/RestConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/SongsEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/SongsEndpoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/YoutubeEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/YoutubeEndpoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/DownloadThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/DownloadThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/Search$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/Search$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/Search.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/YoutubedlWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/YoutubedlWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/derbyclient-10.14.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/google-collections-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/google-oauth-client-java6-1.28.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/google-oauth-client-jetty-1.28.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/jakarta.persistence-2.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/javax.persistence-2.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/javax.ws.rs-api-2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/jetty-6.1.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/jetty-util-6.1.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/org.eclipse.persistence.antlr-2.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/org.eclipse.persistence.asm-2.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/org.eclipse.persistence.core-2.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/org.eclipse.persistence.jpa-2.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/org.eclipse.persistence.jpa.jpql-2.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/servlet-api-2.5-20081211.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/at/htl/musicvoting/business/PlaylistHandlerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/at/htl/musicvoting/business/PlaylistHandlerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,32 +190,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
-    <select />
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/InitBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="39" lean-forward="true" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+              <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -49,6 +219,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="46" selection-start-column="46" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/PlaylistResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -63,16 +242,21 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/youtube.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
       </list>
     </option>
   </component>
-  <component name="PhpServers">
-    <servers />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1920" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -103,7 +287,57 @@
               <item name="JEEServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeeserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JEEServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="musicvoting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeeserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JEEServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="musicvoting" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeeserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JEEServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="musicvoting" type="462c0819:PsiDirectoryNode" />
+              <item name="rest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeeserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JEEServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="musicvoting" type="462c0819:PsiDirectoryNode" />
+              <item name="youtube" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeeserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JEEServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeeserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JEEServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -114,13 +348,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="derby" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551171125406" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GUI Voting Client/my-app" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario\Google Drive\School\4BHIF\SYP\MusicVote\Server\JEEServer\src\main\resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -135,7 +373,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Wildfly" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 14.0.1.Final" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="JBoss 14.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 14.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="jeeserver:war exploded">
@@ -152,7 +390,7 @@
       </server-settings>
       <predefined_log_file enabled="true" id="JBoss" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="63691" />
+        <option name="DEBUG_PORT" value="54575" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -212,81 +450,80 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5e1c6d04-be30-45d0-a172-d87b35abb6e9" name="Default Changelist" comment="" />
-      <created>1551165176606</created>
+      <changelist id="20712e9b-7b4f-45ac-b560-3fea07853937" name="Default Changelist" comment="" />
+      <created>1554801231372</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1551165176606</updated>
-      <workItem from="1551165189508" duration="4781000" />
+      <updated>1554801231372</updated>
+      <workItem from="1554801232593" duration="1597000" />
+      <workItem from="1554898006528" duration="688000" />
+      <workItem from="1556031094054" duration="2044000" />
+      <workItem from="1556874402452" duration="3746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4781000" />
+    <option name="totallyTimeSpent" value="8075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Persistence" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32936078" />
-      <window_info anchor="bottom" id="YouTrack" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32936078" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="JSF" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="CDI" />
-      <window_info anchor="right" id="Database" visible="true" weight="0.32995737" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="YouTrack" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="JSF" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="CDI" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/SongsEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/InitBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        <state relative-caret-position="204">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0e62bd90-9332-4a8e-a0ec-fe9ee89a0b25/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/youtube.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -295,17 +532,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/PlaylistResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="39" lean-forward="true" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        <state relative-caret-position="374">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
         </state>
       </provider>
     </entry>

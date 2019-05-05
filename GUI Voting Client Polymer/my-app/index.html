@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My app</title>
+    <meta content="Music-Voting" name="generator">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="A Music Voting System" name="description">
+
+    <!--
+      The `<base>` tag below is present to support two advanced deployment options:
+      1) Differential serving. 2) Serving from a non-root path.
+
+      Instead of manually editing the `<base>` tag yourself, you should generally either:
+      a) Add a `basePath` property to the build configuration in your `polymer.json`.
+      b) Use the `--base-path` command-line option for `polymer build`.
+    -->
+    <base href="/">
+
+    <link href="images/favicon.ico" rel="icon">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link href="manifest.json" rel="manifest">
+
+    <!-- See https://goo.gl/qRE0vM -->
+    <meta content="#3f51b5" name="theme-color">
+
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="My App" name="application-name">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+    <meta content="My App" name="apple-mobile-web-app-title">
+
+    <!-- Homescreen icons -->
+    <link href="images/manifest/icon-48x48.png" rel="apple-touch-icon">
+    <link href="images/manifest/icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/manifest/icon-96x96.png" rel="apple-touch-icon" sizes="96x96">
+    <link href="images/manifest/icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="images/manifest/icon-192x192.png" rel="apple-touch-icon" sizes="192x192">
+
+    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+    <meta content="images/manifest/icon-144x144.png" name="msapplication-TileImage">
+    <meta content="#3f51b5" name="msapplication-TileColor">
+    <meta content="no" name="msapplication-tap-highlight">
+
+    <!-- Default twitter cards -->
+    <meta content="summary" name="twitter:card">
+    <meta content="@username" name="twitter:site">
+    <meta content="website" property="og:type">
+    <meta content="my-app" property="og:site_name">
+    <meta content="images/manifest/icon-144x144.png" property="og:image"/>
+
+    <!-- Performance tip: hint to the browser to start the handshake for the fonts site -->
+    <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect">
+    <script>
+        // Load and register pre-caching Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('service-worker.js', {
+                    scope: '/',
+                });
+            });
+        }
+
+        // Redux assumes `process.env.NODE_ENV` exists in the ES module build.
+        // https://github.com/reactjs/redux/issues/2907
+        window.process = {env: {NODE_ENV: 'production'}};
+    </script>
+
+    <!-- Add any global styles for body, document, etc. -->
+    <style>
+        @font-face {
+            font-family: 'Pacifico';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/Q_Z9mv4hySLTMoMjnk_rCXYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+            /* The browser draws the text immediately in the fallback font if the font
+               isn't loaded, then swaps it with the webfont when it eventually loads
+               See: https://developers.google.com/web/updates/2016/02/font-display
+            */
+            font-display: swap;
+        }
+
+        body {
+            margin: 0;
+            /* This is a font-stack that tries to use the system-default sans-serifs first */
+            font-family: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.5;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body>
+<my-app appTitle="Music Voting"></my-app>
+<noscript>
+    Please enable JavaScript to view this website.
+</noscript>
+<!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
+<script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+<!-- Built with love using PWA Starter Kit -->
+<script src="src/components/my-app.js" type="module"></script>
+</body>
+</html>

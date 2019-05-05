@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="510f778c-58d8-4a8f-ba8e-4b65d4fe6bce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/images/heartGrey.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/heartGrey.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+>>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/accordion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/accordion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/accordion.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/accordion.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/ad.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/ad.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/api.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/breadcrumb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/breadcrumb.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/button.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/card.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/checkbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/checkbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/checkbox.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/checkbox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/comment.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/comment.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/container.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/container.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/dimmer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/dimmer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/dimmer.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/dimmer.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/divider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/divider.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/dropdown.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/dropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/dropdown.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/dropdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/embed.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/embed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/embed.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/embed.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/feed.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/feed.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/flag.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/flag.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/form.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/form.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/header.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/icon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/icon.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/image.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/input.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/input.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/item.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/item.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/label.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/label.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/list.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/list.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/loader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/loader.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/menu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/menu.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/message.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/message.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/modal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/modal.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/modal.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/nag.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/nag.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/nag.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/nag.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/placeholder.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/placeholder.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/popup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/popup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/popup.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/popup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/progress.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/progress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/progress.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/progress.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/rail.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/rail.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/rating.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/rating.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/rating.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/rating.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/reset.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/reveal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/reveal.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/search.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/search.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/segment.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/segment.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/shape.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/shape.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/shape.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/shape.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/sidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/sidebar.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/sidebar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/site.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/site.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/site.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/site.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/statistic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/statistic.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/step.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/step.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/sticky.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/sticky.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/sticky.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/sticky.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/tab.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/tab.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/tab.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/table.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/transition.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/transition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/transition.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/transition.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/video.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/video.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/video.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/visibility.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/components/visibility.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/semantic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/semantic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/semantic.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/semantic.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/basic/assets/fonts/icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/basic/assets/fonts/icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/basic/assets/fonts/icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/basic/assets/fonts/icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/brand-icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/brand-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/brand-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/brand-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/brand-icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/icons.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/outline-icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/outline-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/outline-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/outline-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/fonts/outline-icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/default/assets/images/flags.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/github/assets/fonts/octicons-local.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/github/assets/fonts/octicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/github/assets/fonts/octicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/github/assets/fonts/octicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/material/assets/fonts/icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/material/assets/fonts/icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/material/assets/fonts/icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/material/assets/fonts/icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/SemanticUI/themes/material/assets/fonts/icons.woff2" beforeDir="false" />
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Views/my-view1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Views/my-view1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Views/my-view404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Views/my-view404.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button-shared-styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/button-shared-styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/my-app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/my-app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/my-icons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/my-icons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/my-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/my-search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/my-song.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/my-song.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/my-songcollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/my-songcollection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/my-songpreview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/song/my-songpreview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared-styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/shared-styles.js" afterDir="false" />
+>>>>>>> Stashed changes
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< Updated upstream
+      <file pinned="false" current-in-tab="true">
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/song/my-songpreview.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+                <element signature="n#style#0;n#iron-image#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#progress#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+>>>>>>> Stashed changes
+        <entry file="file://$PROJECT_DIR$/node_modules/bulma/bulma.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
+        <entry file="file://$PROJECT_DIR$/src/reducers/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <folding>
+                <element signature="e#512#638#0" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/components/song/my-song.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="68" column="5" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="68" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+>>>>>>> Stashed changes
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< Updated upstream
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Views/my-view1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/song/my-songcollection.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <folding>
+                <element signature="e#512#638#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/song/my-search.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-725">
+              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+                <element signature="n#style#0;n#iron-icon#0;n#i#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Views/my-view1.js">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+            <state relative-caret-position="243">
+              <caret line="166" column="50" selection-start-line="166" selection-start-column="50" selection-end-line="166" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#690#744#0" expanded="true" />
+=======
+            <state relative-caret-position="321">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+>>>>>>> Stashed changes
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< Updated upstream
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/shared/shared-styles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="112" selection-start-line="4" selection-start-column="112" selection-end-line="4" selection-end-column="112" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/my-app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="166" column="50" selection-start-line="166" selection-start-column="50" selection-end-line="166" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#690#744#0" expanded="true" />
+                <element signature="n#style#0;n#app-header#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> Stashed changes
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>my app</find>
+      <find>height</find>
+      <find>pwa-start</find>
+      <find>my-inde</find>
+      <find>my-view</find>
+      <find>store</find>
+      <find>updateOffline</find>
+      <find>bulma</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Users\Mario\Google Drive\School\4BHIF\SYP\MusicVote\GUI_Prototype\my-app\src\components</dir>
+      <dir>C:\Users\Mario\Google Drive\School\4BHIF\SYP\MusicVote\GUI_Prototype\my-app</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lengauermario &lt;32167396+lengauermario@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/components/shared-styles.js" />
+        <option value="$PROJECT_DIR$/src/components/my-songpreview.js" />
+        <option value="$PROJECT_DIR$/src/components/my-view1.js" />
+        <option value="$PROJECT_DIR$/src/components/my-song.js" />
+        <option value="$PROJECT_DIR$/src/components/my-songcollection.js" />
+        <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/components/my-search.js" />
+        <option value="$PROJECT_DIR$/src/components/my-view2.js" />
+        <option value="$PROJECT_DIR$/test/unit/views-a11y.html" />
+        <option value="$PROJECT_DIR$/src/components/shop-cart.js" />
+        <option value="$PROJECT_DIR$/test/unit/counter-element.html" />
+        <option value="$PROJECT_DIR$/src/store.js" />
+        <option value="$PROJECT_DIR$/src/components/page-view-element.js" />
+        <option value="$PROJECT_DIR$/src/components/my-icons.js" />
+        <option value="$PROJECT_DIR$/src/actions/app.js" />
+        <option value="$PROJECT_DIR$/src/components/Views/my-view404.js" />
+        <option value="$PROJECT_DIR$/src/components/shared/button-shared-styles.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/components/shared/shared-styles.js" />
+        <option value="$PROJECT_DIR$/src/components/song/my-songpreview.js" />
+        <option value="$PROJECT_DIR$/src/components/Views/my-view1.js" />
+        <option value="$PROJECT_DIR$/src/components/song/my-song.js" />
+        <option value="$PROJECT_DIR$/src/components/song/my-search.js" />
+        <option value="$PROJECT_DIR$/src/components/my-app.js" />
+        <option value="$PROJECT_DIR$/src/components/song/my-songcollection.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1920" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="song" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548927361737" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../NVS/Projects/Daoests" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Users\Mario\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\183.5429.30\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario\Google Drive\School\4BHIF\SYP\MusicVote\GUI_Prototype\my-app\src\components\song" />
+      <recent name="C:\Users\Mario\Google Drive\School\4BHIF\SYP\MusicVote\GUI_Prototype\my-app\src\components\shared" />
+      <recent name="C:\Users\Mario\Google Drive\School\4BHIF\SYP\MusicVote\GUI_Prototype\my-app\src\components\Views" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="510f778c-58d8-4a8f-ba8e-4b65d4fe6bce" name="Default Changelist" comment="" />
+      <created>1545470192138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545470192138</updated>
+      <workItem from="1545470193402" duration="9405000" />
+      <workItem from="1545666645122" duration="30000" />
+      <workItem from="1546003226805" duration="17221000" />
+      <workItem from="1548759473602" duration="4569000" />
+      <workItem from="1548843249877" duration="6527000" />
+      <workItem from="1548927446282" duration="28739000" />
+    </task>
+    <task id="LOCAL-00001" summary="added YouTube Logo">
+      <created>1548832113742</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1548832113742</updated>
+    </task>
+    <task id="LOCAL-00002" summary="cleaned up project GUI">
+      <created>1548849962889</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1548849962889</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers>
+      <YouTrack url="http://vm81.htl-leonding.ac.at:8080">
+        <username>if150112</username>
+      </YouTrack>
+    </servers>
+  </component>
+  <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
+    <option name="totallyTimeSpent" value="35424000" />
+=======
+    <option name="totallyTimeSpent" value="66491000" />
+>>>>>>> Stashed changes
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+<<<<<<< Updated upstream
+=======
+    <editor active="true" />
+>>>>>>> Stashed changes
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.124200426" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+<<<<<<< Updated upstream
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.33260393" />
+=======
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32932165" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32936078" />
+>>>>>>> Stashed changes
+      <window_info anchor="bottom" id="Database Changes" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32932165" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="YouTrack" order="12" weight="0.32932165" />
+      <window_info anchor="right" id="Theme Preview" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added YouTube Logo" />
+    <MESSAGE value="cleaned up project GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up project GUI" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/server/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/src/reducers/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="e#512#638#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> Stashed changes
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polymer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="106" column="45" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> Stashed changes
+    <entry file="file://$PROJECT_DIR$/src/actions/counter.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/my-view2.js" />
+    <entry file="file://$PROJECT_DIR$/src/reducers/counter.js" />
+    <entry file="file://$PROJECT_DIR$/test/unit/views-a11y.html">
+<<<<<<< Updated upstream
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+          <folding>
+            <element signature="e#1687#1718#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/snack-bar.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/shop-products.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/shop-cart.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/counter-element.js" />
+    <entry file="file://$PROJECT_DIR$/test/unit/counter-element.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+          <folding>
+            <element signature="e#1161#1192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/shop.js" />
+    <entry file="file://$PROJECT_DIR$/src/actions/shop.js" />
+    <entry file="file://$PROJECT_DIR$/src/store.js">
+>>>>>>> Stashed changes
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+          <folding>
+            <element signature="e#512#599#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/src/components/snack-bar.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/shop-products.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/shop-cart.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/counter-element.js" />
+    <entry file="file://$PROJECT_DIR$/test/unit/counter-element.html">
+=======
+    <entry file="file://$PROJECT_DIR$/src/components/shared/my-icons.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page-view-element.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Views/my-view404.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/shared/button-shared-styles.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+>>>>>>> Stashed changes
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="62" column="26" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bulma/bulma.sass">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+        <state relative-caret-position="396">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/shop.js" />
+    <entry file="file://$PROJECT_DIR$/src/actions/shop.js" />
+    <entry file="file://$PROJECT_DIR$/src/store.js">
+=======
+        <state relative-caret-position="119">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/shared/shared-styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="112" selection-start-line="4" selection-start-column="112" selection-end-line="4" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Views/my-view1.js">
+>>>>>>> Stashed changes
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="e#512#638#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/song/my-songpreview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <element signature="n#style#0;n#iron-image#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#progress#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@polymer/lit-element/lit-element.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/song/my-song.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="68" column="5" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="68" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/song/my-search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-725">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <element signature="n#style#0;n#iron-icon#0;n#i#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/my-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="166" column="50" selection-start-line="166" selection-start-column="50" selection-end-line="166" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#690#744#0" expanded="true" />
+<<<<<<< Updated upstream
+=======
+            <element signature="n#style#0;n#app-header#0;n#!!top" expanded="true" />
+>>>>>>> Stashed changes
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/song/my-songcollection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bulma/bulma.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

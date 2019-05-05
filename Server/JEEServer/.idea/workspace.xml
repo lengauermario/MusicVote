@@ -7,180 +7,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20712e9b-7b4f-45ac-b560-3fea07853937" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/gulpfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/actions/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/my-app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/page-view-element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/shared/button-shared-styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-AddSong.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-AddSongCollection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/my-view1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/my-view404.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/playlist/my-song.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/playlist/my-songcollection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/reducers/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/sw-precache-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/regenerate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/visual.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/counter-element.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/views-a11y.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI Voting Client/my-app/wct.conf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/jeeserver_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/jeeserver_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e62bd90-9332-4a8e-a0ec-fe9ee89a0b25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_collections_google_collections_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_http_client_google_http_client_1_28_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson2_1_28_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_oauth_client_google_oauth_client_java6_1_28_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_oauth_client_google_oauth_client_jetty_1_28_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_util_6_1_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_servlet_api_2_5_20081211.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/ReadMe.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/afterSwap.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/beforeSwap.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/liste.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.idea/my-app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/ReadMe/afterSwap.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/ReadMe/beforeSwap.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/ReadMe/liste.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/ReadMe/prototypeMobile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/covers/default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/covers/dreamer_sunriseavenue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/heartGrey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-144x144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-48x48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-72x72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-96x96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/youTube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/youTubeGrey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/polymer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/push-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/server/app.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/server/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/server/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/actions/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/my-app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/page-view-element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/shared/button-shared-styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/shared/my-helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/shared/my-icons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/shared/shared-styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-AddSong.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-AddSongCollection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/my-view1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/my-view2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/my-view404.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/playlist/my-song.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/playlist/my-songcollection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/playlist/my-songpreview.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/reducers/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/sw-precache-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/narrow/batmanNotAView.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/narrow/index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/narrow/view1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/narrow/view2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/narrow/view3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/regenerate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/wide/batmanNotAView.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/wide/index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/wide/view1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/wide/view2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/wide/view3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/visual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/counter-element.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/views-a11y.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/wct.conf.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/log/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/log/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c10.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c101.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c101.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c111.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c111.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c121.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c121.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c130.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c130.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c141.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c141.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c150.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c161.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c171.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c171.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c180.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c180.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c1a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c1a1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c1b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c1b1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c20.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c200.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c200.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c211.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c211.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c221.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c221.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c230.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c241.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c241.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c31.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c380.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c380.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c391.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c391.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c3a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c3a1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c3b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c3b1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c400.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c400.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c41.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c411.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c411.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c421.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c421.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c4d0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c4e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c4f0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c501.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c60.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c71.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c81.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c90.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/ca1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/cb1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/cf0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/cf0.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/d490.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/d4a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/d4b0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/seg0/d4c1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db/service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/service.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/db/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeeserver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jeeserver.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/InitBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/InitBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/InitDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/InitDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/PlaylistHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/PlaylistHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/dao/SongDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/dao/SongDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/dao/YoutubeVideoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/dao/YoutubeVideoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/AvailabilityStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/AvailabilityStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/ResponseObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/YoutubeResponseObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/YoutubeVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/YoutubeVideo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/CORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/CORSFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/RestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/RestConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/SongsEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/SongsEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/YoutubeEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/YoutubeEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/DownloadThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/DownloadThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/YoutubedlWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/youtube/YoutubedlWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/at/htl/musicvoting/business/PlaylistHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/at/htl/musicvoting/business/PlaylistHandlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/Converter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/Converter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/InitBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/InitBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/InitDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/InitDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/PlaylistHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/business/PlaylistHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/dao/YoutubeVideoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/dao/YoutubeVideoDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/AvailabilityStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/AvailabilityStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/ResponseObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/Song.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/YoutubeResponseObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/YoutubeVideo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/YoutubeVideo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/CORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/CORSFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/RestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/RestConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/SongsEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/SongsEndpoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/YoutubeEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/rest/YoutubeEndpoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/DownloadThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/DownloadThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/Search$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/Search$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/Search.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/YoutubedlWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/youtube/YoutubedlWrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/Converter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/Converter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/InitBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/InitBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/InitDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/InitDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/PlaylistHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/business/PlaylistHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/dao/YoutubeVideoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/dao/YoutubeVideoDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/AvailabilityStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/AvailabilityStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/ResponseObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/Song.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/YoutubeResponseObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/YoutubeVideo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/YoutubeVideo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/CORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/CORSFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/RestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/RestConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/SongsEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/SongsEndpoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/YoutubeEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/rest/YoutubeEndpoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/DownloadThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/DownloadThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/Search$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/Search$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/Search.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/YoutubedlWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/youtube/YoutubedlWrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/derbyclient-10.14.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/google-collections-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/google-oauth-client-java6-1.28.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/google-oauth-client-jetty-1.28.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/jakarta.persistence-2.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/javax.persistence-2.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/javax.ws.rs-api-2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/jetty-6.1.26.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/jetty-util-6.1.26.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/org.eclipse.persistence.antlr-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/org.eclipse.persistence.asm-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/org.eclipse.persistence.core-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/org.eclipse.persistence.jpa-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/org.eclipse.persistence.jpa.jpql-2.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/lib/servlet-api-2.5-20081211.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/at/htl/musicvoting/business/PlaylistHandlerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/at/htl/musicvoting/business/PlaylistHandlerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -458,12 +364,20 @@
       <workItem from="1554801232593" duration="1597000" />
       <workItem from="1554898006528" duration="688000" />
       <workItem from="1556031094054" duration="2044000" />
-      <workItem from="1556874402452" duration="3746000" />
+      <workItem from="1556874402452" duration="4369000" />
     </task>
+    <task id="LOCAL-00001" summary="optimizingg structure">
+      <created>1557035953191</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557035953191</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8075000" />
+    <option name="totallyTimeSpent" value="8698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -509,6 +423,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="optimizingg structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimizingg structure" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/business/InitBean.java">

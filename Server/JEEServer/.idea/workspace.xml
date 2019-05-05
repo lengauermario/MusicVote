@@ -7,86 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20712e9b-7b4f-45ac-b560-3fea07853937" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/ReadMe.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/afterSwap.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/beforeSwap.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/liste.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.idea/my-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/gulpfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/ReadMe/afterSwap.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/ReadMe/beforeSwap.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/ReadMe/liste.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/ReadMe/prototypeMobile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/covers/default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/covers/dreamer_sunriseavenue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/heartGrey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-48x48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-72x72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/manifest/icon-96x96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/youTube.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/images/youTubeGrey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/polymer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/push-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/server/app.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/server/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/server/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/actions/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/my-app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/page-view-element.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/shared/button-shared-styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/shared/my-helper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/shared/my-icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/shared/shared-styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-AddSong.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-AddSongCollection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/add/my-search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/my-view1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/my-view2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/my-view404.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/playlist/my-song.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/playlist/my-songcollection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/components/views/playlist/my-songpreview.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/reducers/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/src/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/sw-precache-config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/router.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/narrow/batmanNotAView.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/narrow/index.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/narrow/view1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/narrow/view2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/narrow/view3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/regenerate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/wide/batmanNotAView.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/wide/index.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/wide/view1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/wide/view2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/screenshots-baseline/wide/view3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/integration/visual.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/counter-element.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/test/unit/views-a11y.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client/my-app/wct.conf.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/db/derby.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -120,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/youtube.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -129,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/PlaylistResource.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -158,7 +80,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -170,6 +92,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,8 +173,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,7 +286,8 @@
       <workItem from="1554801232593" duration="1597000" />
       <workItem from="1554898006528" duration="688000" />
       <workItem from="1556031094054" duration="2044000" />
-      <workItem from="1556874402452" duration="4369000" />
+      <workItem from="1556874402452" duration="4965000" />
+      <workItem from="1557083428990" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="optimizingg structure">
       <created>1557035953191</created>
@@ -377,13 +300,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8698000" />
+    <option name="totallyTimeSpent" value="9595000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -436,6 +359,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/PlaylistResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -447,13 +377,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="46" selection-start-column="46" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/PlaylistResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
         </state>
       </provider>
     </entry>

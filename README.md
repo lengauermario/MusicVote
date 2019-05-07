@@ -52,7 +52,7 @@ Der Server befindet sich bereits in einem fortgeschrittenen Stadium. Clients kö
 - HTML5
 - CSS
 - JavaScript
-- Polymer LitElement
+- Angular
 
 
 ## :lock: Lizenz:

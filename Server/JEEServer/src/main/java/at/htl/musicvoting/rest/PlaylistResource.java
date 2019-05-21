@@ -77,7 +77,6 @@ public class PlaylistResource {
     @Produces(MediaType.SERVER_SENT_EVENTS)
     public void removeSong(@QueryParam("id") Long id){
         if(id != null && playlist.contains(id)){
-            System.out.println("song removed from playlist");
             playlist.removeSong(id);
             OutboundSseEvent event = sse.newEventBuilder()
                     .name("remove_song")
@@ -93,7 +92,6 @@ public class PlaylistResource {
     @Produces(MediaType.SERVER_SENT_EVENTS)
     public void vote(@QueryParam("id") Long id){
         if(id != null && playlist.contains(id)){
-            System.out.println("new vote");
             playlist.addVote(id);
             OutboundSseEvent event = sse.newEventBuilder()
                     .name("add_vote")
@@ -109,7 +107,6 @@ public class PlaylistResource {
     @Produces(MediaType.SERVER_SENT_EVENTS)
     public void removeVote(@QueryParam("id") Long id){
         if(id != null && playlist.contains(id)){
-            System.out.println("remove vote");
             playlist.removeVote(id);
             OutboundSseEvent event = sse.newEventBuilder()
                     .name("remove_vote")

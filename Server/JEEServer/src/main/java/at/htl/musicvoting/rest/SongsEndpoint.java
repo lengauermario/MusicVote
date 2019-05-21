@@ -36,7 +36,6 @@ public class SongsEndpoint {
 
     @GET
     @Produces("audio/mp3")
-    @Secured
     @Path("getmp3")
     public Response get(@QueryParam("id")long id) {
         Song song = dao.getByID(id);

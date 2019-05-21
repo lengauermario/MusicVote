@@ -94,7 +94,13 @@ function play(id) {
 
 
 function playNextSong() {
-    fetch("http://localhost:8085/musicvoting/api/playlist/pop")
+    fetch("http://localhost:8085/musicvoting/api/playlist/pop", {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+            "Content-Type": "text/plain"
+        }
+    })
         .then(async function (response) {
             let tmp = await response.json();
             play(tmp.id);

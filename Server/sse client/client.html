@@ -14,7 +14,7 @@
                 "Content-Type": "text/plain",
 
             },
-            credentials: 'same-origin',
+            credentials: 'include',
             body: '89b909c43fb9ad3cb5d3519d99d4426e1cc0a35c2c47d66ca75e3f5391e9d5e0'
         }).then(
             response => {
@@ -84,7 +84,7 @@
         }
         function removeSong() {
             fetch('http://localhost:8085/musicvoting/api/playlist/remove/song?id=1', {
-                credentials: 'same-origin',
+                credentials: 'include',
                 method: 'POST',
                 headers: {
                     "Content-Type": "text/plain"

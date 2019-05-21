@@ -13,11 +13,16 @@ const httpOption = {
 })
 export class SongsService {
 
-  url = 'http://localhost:8080/musicvoting/api/song/';
+  songUrl = 'http://localhost:8080/musicvoting/api/song';
+  playlistUrl = 'http://localhost:8080/musicvoting/api/playlist';
 
   constructor(private http: HttpClient) { }
 
   findAll() {
-    return this.http.get<Song[]>(this.url + 'findall', httpOption);
+    return this.http.get<Song[]>(this.songUrl + '/findall', httpOption);
+  }
+
+  addToPlaylist(id) {
+    return this.http.post<Song>(this.playlistUrl + '/add/song?id=' + id, {}, httpOption);
   }
 }

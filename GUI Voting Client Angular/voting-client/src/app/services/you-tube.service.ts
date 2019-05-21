@@ -15,11 +15,15 @@ const httpOption = {
 
 export class YouTubeService {
 
-  url = 'http://localhost:8080/musicvoting/api/video/';
+  url = 'http://localhost:8080/musicvoting/api/video';
 
   constructor(private http: HttpClient) { }
 
   downloadVideo(video: YouTubeVideo) {
-    return this.http.put<YouTubeVideo>(this.url, video, httpOption);
+    return this.http.put<YouTubeVideo>(this.url + '/dl', video, httpOption);
+  }
+
+  search(input: string) {
+    return this.http.get<YouTubeVideo[]>(this.url + '?queryTerm=' + input);
   }
 }

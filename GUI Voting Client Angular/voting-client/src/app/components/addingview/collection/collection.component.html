@@ -1,3 +1,25 @@
-<div *ngFor="let item of list">
-  <div>{{item.title}}</div>
+<div class="container" >
+  <div class="row h-50" style="margin:  10px 0; background: white">
+      <div class="col-9 input-group">
+          <input class="form-control" type="text" [(ngModel)]="filterSong" (ngModelChange)="searchInputChanged($event)">
+      </div>
+      <div class="col my-verticalCenter">
+        <img [src]="actualYouTubePath" alt="YouTube" class="img-fluid" (click)="setSearchOnYouTube()">
+      </div>
+  </div>
+
+  <div class="row h-100" *ngFor="let item of list">
+    <ng-container *ngIf="item.title.toUpperCase().includes(filterSong.toUpperCase())">
+      <div class="col my-verticalCenter" style="margin: 10px">
+          <img [src]="(item.thumbNail === undefined)? 'assets/images/defaultCover.png': item.thumbNail" alt="thumbNail" class="img-fluid">
+      </div>
+      <div class="col-6 my-verticalCenter">
+        <div>{{item.title}}</div>
+        <div>{{item.artist}}</div>
+      </div>
+      <div class="col-2 my-verticalCenter">
+        <img [src]="item.iconPath" alt="plus" class="img-fluid" (click)="addVideo(item)">
+      </div>
+    </ng-container>
+  </div>
 </div>

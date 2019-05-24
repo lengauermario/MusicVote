@@ -17,6 +17,7 @@
           <v-list>
             <v-list-tile v-for="song in playlist" :key="song.id">
               <v-list-tile-content>{{song.votes}}</v-list-tile-content>
+              <v-list-tile-content>{{song.id}}</v-list-tile-content>
               <v-list-tile-content>{{song.title}}</v-list-tile-content>
             </v-list-tile>
           </v-list>
@@ -44,20 +45,27 @@ export default {
       }).then(async function(res) {
         let tmp = await res.json();
         this.playlist = tmp;
+        this.sort();
       }.bind(this));
   },
   methods: {
     addSong(song) {
         this.playlist.push(song);
+        this.sort();
     },
     removeSong(id){
         const index = this.getIndexOfSong(id);
         if(index != -1)
             this.playlist.splice(index, 1);
+        this.sort();
     },
     addVote(id){
-        console.log(id);
         this.playlist[this.getIndexOfSong(id)].votes++;
+        this.sort();
+    },
+    removeVote(id){
+        this.playlist[this.getIndexOfSong(id)].votes--;
+        this.sort();
     },
     getIndexOfSong(id){
         for(var i = 0;i < this.playlist.length;i++){
@@ -65,6 +73,16 @@ export default {
                 return i;
         }
         return -1;
+    },
+    sort(){
+      this.playlist.sort((a,b) => {
+        if(a.votes > b.votes) return -1;
+        else if(a.votes < b.votes) return 1;
+        else{
+          if(new Date(a.time + 'Z') >= new Date(b.time + 'Z')) return 1;
+          else return -1;
+        }
+      });
     }
   }
 };

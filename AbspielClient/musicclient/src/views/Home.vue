@@ -63,6 +63,9 @@ export default Vue.extend({
     eventSource.addEventListener("remove_song", e => {
       this.$refs.playlist.removeSong(JSON.parse(e.data).id);
     });
+    eventSource.addEventListener("remove_vote", e => {
+      this.$refs.playlist.removeVote(JSON.parse(e.data).id);
+    });
     eventSource.addEventListener("song_started", e => {
       this.$refs.playingSong.refresh();
     });

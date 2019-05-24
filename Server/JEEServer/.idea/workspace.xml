@@ -7,8 +7,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20712e9b-7b4f-45ac-b560-3fea07853937" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client Angular/voting-client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI Voting Client Angular/voting-client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client Angular/voting-client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI Voting Client Angular/voting-client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GUI Voting Client Angular/voting-client/src/app/components/votingview/voting-collection/voting-collection.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI Voting Client Angular/voting-client/src/app/components/votingview/voting-collection/voting-collection.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/log/log1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c101.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c101.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c111.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c111.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c121.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c121.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c130.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c130.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c141.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c141.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c150.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c161.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c171.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c171.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c20.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c200.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c200.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c211.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c211.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c221.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c221.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c31.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c400.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c400.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c41.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c411.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c411.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c421.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c421.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c51.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c60.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c71.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c81.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/c90.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/ca1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/cb1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db/seg0/cf0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/db/db/seg0/cf0.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/db/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/ObjectYoutubeVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/ObjectYoutubeVideo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/YoutubeVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/YoutubeVideo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/YoutubeVideo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/musicvoting/model/YoutubeVideo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/YoutubeVideo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/musicvoting/WEB-INF/classes/at/htl/musicvoting/model/YoutubeVideo.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,7 +78,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/youtube.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -52,10 +88,58 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/YoutubeEndpoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="35" column="52" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/SongsEndpoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/ObjectYoutubeVideo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/YoutubeVideo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/CorsFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/PlaylistResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+            <state relative-caret-position="306">
+              <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -70,6 +154,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/youtube.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/ObjectYoutubeVideo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/YoutubeVideo.java" />
       </list>
     </option>
   </component>
@@ -92,8 +178,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,6 +229,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="musicvoting" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jeeserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JEEServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="musicvoting" type="462c0819:PsiDirectoryNode" />
               <item name="rest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -179,7 +274,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GUI Voting Client/my-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../NVS/Projects/Ticket" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -287,7 +382,11 @@
       <workItem from="1554898006528" duration="688000" />
       <workItem from="1556031094054" duration="2044000" />
       <workItem from="1556874402452" duration="4965000" />
-      <workItem from="1557083428990" duration="301000" />
+      <workItem from="1557083428990" duration="809000" />
+      <workItem from="1557130050705" duration="1853000" />
+      <workItem from="1557221981541" duration="2372000" />
+      <workItem from="1557735304258" duration="2559000" />
+      <workItem from="1558343603488" duration="6774000" />
     </task>
     <task id="LOCAL-00001" summary="optimizingg structure">
       <created>1557035953191</created>
@@ -300,13 +399,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9595000" />
+    <option name="totallyTimeSpent" value="23661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -359,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/PlaylistResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -377,6 +469,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="46" selection-start-column="46" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/YoutubeEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="35" column="52" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/SongsEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/ObjectYoutubeVideo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/model/YoutubeVideo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/CorsFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/musicvoting/rest/PlaylistResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
         </state>
       </provider>
     </entry>

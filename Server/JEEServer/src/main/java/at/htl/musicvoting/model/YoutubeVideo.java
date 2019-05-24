@@ -1,10 +1,13 @@
 package at.htl.musicvoting.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import javax.persistence.Entity;
 import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQuery(name = "YoutubeVideo.getByVideoId", query = "select y from YoutubeVideo y where y.videoId = :VIDEOID")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class YoutubeVideo extends Song {
     private String videoId;
     private String thumbNail;

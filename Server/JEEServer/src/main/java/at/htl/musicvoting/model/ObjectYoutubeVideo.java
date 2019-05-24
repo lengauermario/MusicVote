@@ -1,8 +1,11 @@
 package at.htl.musicvoting.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ObjectYoutubeVideo {
     private String videoId;
     private String title;

@@ -1,7 +1,7 @@
-Sun May 05 21:13:39 CEST 2019 : Apache Derby Network Server 10.14.2.0 - (1828579) wurde gestartet und ist bereit, Verbindungen auf Port 1527 zu akzeptieren.
+Wed May 22 10:38:52 CEST 2019 : Apache Derby Network Server 10.14.2.0 - (1828579) wurde gestartet und ist bereit, Verbindungen auf Port 1527 zu akzeptieren.
 ----------------------------------------------------------------
-Sun May 05 21:14:53 CEST 2019:
-Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): Instanz a816c00e-016a-896a-7eb2-00000e5838a8
+Wed May 22 10:40:51 CEST 2019:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): Instanz a816c00e-016a-deb1-705f-00000e583860
 für Datenbankverzeichnis C:\Users\Mario\Google Drive\School\4BHIF\SYP\MusicVote\Server\JEEServer\db\db mit Class Loader sun.misc.Launcher$AppClassLoader@610455d6
 Geladen aus file:/C:/opt/db-derby-10.14.2.0-bin/lib/derby.jar
 java.vendor=Oracle Corporation

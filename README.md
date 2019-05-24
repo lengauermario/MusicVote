@@ -48,11 +48,11 @@ Der Server befindet sich bereits in einem fortgeschrittenen Stadium. Clients kö
 ## :wrench: Technologien:
 
 - Jakarta EE
-- Derby
+- Derby DB
 - HTML5
 - CSS
 - JavaScript
-- Angular
+- VueJS
 
 
 ## :lock: Lizenz:

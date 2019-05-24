@@ -13,7 +13,7 @@
 - [Lizenz](#lock-lizenz)
 
 ## :arrow_forward: Einleitung
-Was ist nerviger als schlechte Musik auf einer Party? Und weil wir auch finden, dass es nichts Schlimmeres gibt, entwickeln wir MusicVoting. MusicVoting ermöglicht jedem Partygast ganz einfach mittels Smartphone mitzubestimmen welche Musik gespielt werden soll.
+Was ist nerviger als schlechte Musik auf einer Party? Weil wir finden, dass es nichts Schlimmeres gibt, entwickeln wir MusicVoting. MusicVoting ermöglicht jedem Partygast ganz einfach mittels Smartphone mitzubestimmen welche Musik gespielt werden soll.
 
 
 ## :ferris_wheel: System Architektur
@@ -23,15 +23,15 @@ Was ist nerviger als schlechte Musik auf einer Party? Und weil wir auch finden, 
 
 ### :iphone: GUI
 #### 🛠 Status: In Arbeit
-Die GUI befindet sich momentan noch in Entwicklung. Alles zum aktuellen GUI-Prototypem finden Sie [hier](/GUI_Prototype/my-app).
+Die GUI befindet sich momentan noch in Entwicklung. Alles zum aktuellen Stand finden Sie [hier](/AbspielClient/musicclient).
 
 ### :musical_note: Youtube-Einbindung
 #### 🛠 Status: Fertig
 Die Einbinding von Youtube funktioniert bereits in vollem Umfang. User können nach Youtube Videos suchen und herunterladen und zur Playlist hinzufügen.
 
 ### :computer: Server
-#### 🛠 Status: In Arbeit
-Der Server befindet sich bereits in einem fortgeschrittenen Stadium. Clients können sich beim Server conntected, werden dann von Änderungen der Playlist per SSE informiert. Weitere Informationen befinden sich [hier](/Server).
+#### 🛠 Status: Fertig
+Der Server wurde bereits fertig implementiert!
 
 ##  :closed_book: Dokumente:
 

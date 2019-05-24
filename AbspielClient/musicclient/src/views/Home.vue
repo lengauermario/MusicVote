@@ -32,7 +32,7 @@
       </div>
     </v-content>
     <v-footer dark color="transparent" app>
-      <span class="black--text">&copy;MusicVoting 2019</span>
+      <span class="black--text">&copy;MusicVoting by HTL Leonding 2019</span>
     </v-footer>
   </v-app>
 </template>

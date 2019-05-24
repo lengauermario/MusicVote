@@ -145,6 +145,12 @@ public class PlaylistResource {
         Song song = playlist.playSong();
         if(song == null)
             song = playlist.playRandom();
+        OutboundSseEvent event = sse.newEventBuilder()
+                .name("remove_song")
+                .mediaType(MediaType.APPLICATION_JSON_TYPE)
+                .data(Json.createObjectBuilder().add("id", song.getId()).build())
+                .build();
+        sseBroadcaster.broadcast(event);
         broadcastNextSong(song);
         return Response.ok(song).build();
     }

@@ -4,7 +4,7 @@
       <v-flex xs12>
         <v-card dark color="primary">
           <div class="example1" style="width: 66%;margin-right: auto;margin-left: auto;">
-            <p class="px-0">{{title}} von {{artist}} wird gerade gespielt...</p>
+            <p class="px-0">{{text}}</p>
           </div>
         </v-card>
       </v-flex>
@@ -13,12 +13,7 @@
       <v-flex xs2></v-flex>
       <v-flex xs8>
         <div style="height:40vh">
-          <v-img
-            src="https://i.ytimg.com/vi/oKYAupGsYg4/hqdefault.jpg"
-            aspect-ratio="1"
-            class="grey lighten-2"
-            max-height="100%"
-          ></v-img>
+          <v-img v-bind:src="thumbNail" aspect-ratio="1" class="grey lighten-2" max-height="100%"></v-img>
         </div>
       </v-flex>
       <v-flex xs2></v-flex>
@@ -33,8 +28,12 @@ export default {
     return {
       thumbNail: "",
       title: "",
-      artist: ""
+      artist: "",
+      text: "Playlist wurde noch nicht gestarted"
     };
+  },
+  created(){
+    this.refresh();
   },
   methods: {
     refresh() {
@@ -43,9 +42,11 @@ export default {
         credentials: "include"
       }).then(async function(res) {
         let tmp = await res.json();
+        var parser = new DOMParser;
         this.title = tmp.title;
         this.artist = tmp.artist;
-        this.thumbNail = tmp.thumbNail;
+        this.thumbNail = tmp.thumbNail == "default" ? '../assets/defaultCover.png' : tmp.thumbNail;
+        this.text = this.title + " von " + this.artist + " wird gerade gespielt";
       }.bind(this));
     }
   }

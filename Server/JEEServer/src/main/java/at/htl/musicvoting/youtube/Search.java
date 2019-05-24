@@ -13,6 +13,7 @@ import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
 
+import org.apache.commons.lang3.StringEscapeUtils;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -53,8 +54,8 @@ public class Search {
             for (SearchResult res: searchResultList) {
                 ObjectYoutubeVideo obj = new ObjectYoutubeVideo(
                         res.getId().getVideoId(),
-                        res.getSnippet().getTitle(),
-                        res.getSnippet().getChannelTitle(),
+                        StringEscapeUtils.unescapeXml(res.getSnippet().getTitle()),
+                        StringEscapeUtils.unescapeXml(res.getSnippet().getChannelTitle()),
                         res.getSnippet().getThumbnails().getHigh().getUrl(),
                         AvailabilityStatus.DOWNLOADABLE);
                 if(dao.existsInDatabase(obj.getVideoId())){

@@ -13,14 +13,17 @@
     </v-layout>
     <v-layout row>
       <v-flex xs12>
-        <div style="height: 70vh; overflow-y: scroll">
-          <v-list>
-            <v-list-tile v-for="song in playlist" :key="song.id">
-              <v-list-tile-content>{{song.votes}}</v-list-tile-content>
-              <v-list-tile-content>{{song.id}}</v-list-tile-content>
-              <v-list-tile-content>{{song.title}}</v-list-tile-content>
-            </v-list-tile>
-          </v-list>
+        <div style="height: 70vh; overflow-y: scroll;overflow-x: hidden;">
+          <transition-group name="list-complete" tag="p">
+            <v-layout row v-for="item in playlist" v-bind:key="item.id" class="list-complete-item">
+              <v-flex xs1>{{item.votes}}</v-flex>
+              <v-flex xs5>{{item.title}}</v-flex>
+              <v-flex xs5>{{item.artist}}</v-flex>
+              <v-flex xs1>
+                <i class="material-icons" @click="remove(item.id)" style="cursor: pointer">clear</i>
+              </v-flex>
+            </v-layout>
+          </transition-group>
         </div>
       </v-flex>
     </v-layout>
@@ -49,6 +52,12 @@ export default {
       }.bind(this));
   },
   methods: {
+    remove(id){
+      fetch("http://localhost:8085/musicvoting/api/playlist/remove/song?id=" + id, {
+        method: "POST",
+        credentials: "include"
+      });
+    },
     addSong(song) {
         this.playlist.push(song);
         this.sort();
@@ -90,6 +99,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.list-complete-item {
+  transition: all 1s;
+  margin-right: 10px;
+}
+.list-complete-enter, .list-complete-leave-to
+/* .list-complete-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(300px);
+}
+.list-complete-leave-active {
+  position: absolute;
+}
 h3 {
   margin: 40px 0 0;
 }

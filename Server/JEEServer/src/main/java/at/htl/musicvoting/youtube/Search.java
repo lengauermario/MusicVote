@@ -45,7 +45,7 @@ public class Search {
             search.setKey(API_KEY);
             search.setQ(queryTerm);
             search.setType("video");
-            search.setFields("items(id/kind,id/videoId,snippet/title, snippet/channelTitle, snippet/thumbnails/default/url)");
+            search.setFields("items(id/kind,id/videoId,snippet/title, snippet/channelTitle, snippet/thumbnails/high/url)");
             search.setMaxResults(NUMBER_OF_VIDEOS_RETURNED);
             SearchListResponse searchResponse = search.execute();
             List<SearchResult> searchResultList = searchResponse.getItems();
@@ -55,7 +55,7 @@ public class Search {
                         res.getId().getVideoId(),
                         res.getSnippet().getTitle(),
                         res.getSnippet().getChannelTitle(),
-                        res.getSnippet().getThumbnails().getDefault().getUrl(),
+                        res.getSnippet().getThumbnails().getHigh().getUrl(),
                         AvailabilityStatus.DOWNLOADABLE);
                 if(dao.existsInDatabase(obj.getVideoId())){
                     obj.setStatus(dao.getAvailabilityStatus(obj.getVideoId()));

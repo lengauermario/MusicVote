@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
+import java.util.Random;
 
 @Stateless
 public class SongDao {
@@ -31,6 +32,11 @@ public class SongDao {
             return null;
         }
 
+    }
+
+    public Song getRandom() {
+        List<Long> ids = em.createQuery("select s.id from Song s", Long.class).getResultList();
+        return this.getByID(ids.get(new Random().nextInt(ids.size()-1)));
     }
 }
 

@@ -130,8 +130,12 @@ public class PlaylistResource {
     @Path("/peek")
     public Response peek(){
         Song song = playlist.peek();
-        return Response.ok(song).build();
+        if(song != null){
+            return Response.ok(Converter.SongToObjectPlaylistSong(song)).build();
+        }
+        return Response.noContent().build();
     }
+
 
     @GET
     @Secured
@@ -139,12 +143,13 @@ public class PlaylistResource {
     @Path("/pop")
     public Response pop(){
         Song song = playlist.playSong();
+        if(song == null)
+            song = playlist.playRandom();
         broadcastNextSong(song);
         return Response.ok(song).build();
     }
 
     public void broadcastNextSong(Song song){
-        System.out.println("next song started");
         OutboundSseEvent event = sse.newEventBuilder()
                 .name("song_started")
                 .mediaType(MediaType.APPLICATION_JSON_TYPE)
@@ -154,7 +159,6 @@ public class PlaylistResource {
     }
 
     public void broadcastDownload(String id, AvailabilityStatus status) {
-        System.out.println("new video downlaoded");
         OutboundSseEvent event = sse.newEventBuilder()
                 .name("video_download")
                 .mediaType(MediaType.APPLICATION_JSON_TYPE)

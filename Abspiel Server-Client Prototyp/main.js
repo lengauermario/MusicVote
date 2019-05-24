@@ -21,6 +21,8 @@ function onTimeChanged(){
     //$('.progress-bar').css('width', percent+'%').attr('aria-valuenow', percent);  
 }
  */
+
+
 function init() {
 
     var audio = document.getElementById('audio');
@@ -94,17 +96,52 @@ function play(id) {
 
 
 function playNextSong() {
+    //check if empty -> play random song
     fetch("http://localhost:8085/musicvoting/api/playlist/pop", {
         method: 'GET',
         credentials: 'include',
         headers: {
             "Content-Type": "text/plain"
         }
-    })
-        .then(async function (response) {
-            let tmp = await response.json();
-            play(tmp.id);
-        });
+    }).then(async function (response) {
+        let tmp = await response.json();
+        play(tmp.id);
+    });
+    /*fetch("http://localhost:8085/musicvoting/api/playlist/peek", {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+            "Content-Type": "text/plain"
+        }
+    }).then(async function (response) {
+        let tmp = await response;
+        if (tmp.status == 204) {
+            fetch("http://localhost:8085/musicvoting/api/playlist/random", {
+                method: 'GET',
+                credentials: 'include',
+                headers: {
+                    "Content-Type": "text/plain"
+                }
+            }).then(async function (response) {
+                let tmp = await response.json();
+                play(tmp.id);
+            });
+        }
+        else {
+            fetch("http://localhost:8085/musicvoting/api/playlist/pop", {
+                method: 'GET',
+                credentials: 'include',
+                headers: {
+                    "Content-Type": "text/plain"
+                }
+            }).then(async function (response) {
+                let tmp = await response.json();
+                play(tmp.id);
+            });
+        }
+
+    });*/
+
 }
 
 /*function nextSong(){

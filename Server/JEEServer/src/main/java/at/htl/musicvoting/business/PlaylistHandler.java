@@ -1,5 +1,6 @@
 package at.htl.musicvoting.business;
 
+import at.htl.musicvoting.dao.SongDao;
 import at.htl.musicvoting.model.Song;
 
 import javax.ejb.Stateless;
@@ -10,6 +11,9 @@ import java.util.stream.Collectors;
 
 @Stateless
 public class PlaylistHandler {
+
+    @Inject
+    SongDao dao;
     private Song currentSong;
     private List<Song> playlist = new LinkedList<Song>();
     private Comparator<Song> comparator = Comparator.comparing(Song::getVotes).reversed()
@@ -69,13 +73,22 @@ public class PlaylistHandler {
     }
 
     public Song playSong(){
-        Song s = getPlaylist().get(0);
-        playlist.remove(s);
+        Song s = null;
+        if(getPlaylist().size() > 0){
+            s = getPlaylist().get(0);
+            playlist.remove(s);
+        }
         currentSong = s;
         return currentSong;
     }
 
     public Song peek(){
         return currentSong;
+    }
+
+    public Song playRandom() {
+        Song song = dao.getRandom();
+        currentSong = song;
+        return song;
     }
 }

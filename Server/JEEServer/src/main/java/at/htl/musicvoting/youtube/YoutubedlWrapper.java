@@ -34,6 +34,7 @@ public class YoutubedlWrapper {
         DownloadThread thread = new DownloadThread(ytvideo.getVideoId(), path, (Integer exitCode) -> {
             dao.updateToDownloaded(newVideo, exitCode);
             playlistResource.broadcastDownload(newVideo.getVideoId(), newVideo.getStatus());
+            playlistResource.addSong(newVideo.getId());
             try{
                 File oSourceFile = new File(path);
                 MediaFile oMediaFile = new MP3File(oSourceFile);

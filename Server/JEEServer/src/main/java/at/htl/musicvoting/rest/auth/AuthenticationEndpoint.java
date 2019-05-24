@@ -29,4 +29,18 @@ public class AuthenticationEndpoint {
         }
 
     }
+
+    @Path("/validate")
+    @GET
+    public Response validate(@CookieParam("token") String value) {
+        String password = ResourceBundle.getBundle("config").getString("password");
+        String sha256hex = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
+        if (value != null && value.equals(sha256hex)) {
+            return Response.ok(password).build();
+        } else {
+            return Response.status(403).build();
+        }
+    }
+
+
 }

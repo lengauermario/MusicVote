@@ -3,6 +3,7 @@ package at.htl.musicvoting.rest;
 import at.htl.musicvoting.youtube.Search;
 import at.htl.musicvoting.youtube.YoutubedlWrapper;
 import at.htl.musicvoting.rest.response_object.ObjectYoutubeVideo;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;

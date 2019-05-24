@@ -1,10 +1,13 @@
 package at.htl.musicvoting.rest.response_object;
 
 import at.htl.musicvoting.model.AvailabilityStatus;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ObjectYoutubeVideo {
     private String videoId;
     private String title;

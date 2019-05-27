@@ -29,7 +29,8 @@ export default {
       thumbNail: "",
       title: "",
       artist: "",
-      text: "Playlist wurde noch nicht gestarted"
+      text: "Playlist wurde noch nicht gestarted",
+      defaultThumbnail: require('@/assets/images/defaultCover.png')
     };
   },
   created(){
@@ -45,7 +46,7 @@ export default {
         var parser = new DOMParser;
         this.title = tmp.title;
         this.artist = tmp.artist;
-        this.thumbNail = tmp.thumbNail == "default" ? '../assets/defaultCover.png' : tmp.thumbNail;
+        this.thumbNail = tmp.thumbNail === "default" ? this.defaultThumbnail : tmp.thumbNail;
         this.text = this.title + " von " + this.artist + " wird gerade gespielt";
       }.bind(this));
     }

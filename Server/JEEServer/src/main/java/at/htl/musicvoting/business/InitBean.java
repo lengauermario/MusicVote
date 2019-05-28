@@ -21,15 +21,7 @@ public class InitBean {
         ResourceBundle rb = ResourceBundle.getBundle("config");
         if(Boolean.valueOf(rb.getString("init")))
         {
-            try {
-                initDatabase.initialize();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (InvalidDataException e) {
-                e.printStackTrace();
-            } catch (UnsupportedTagException e) {
-                e.printStackTrace();
-            }
+            initDatabase.initialize();
         }
 
 

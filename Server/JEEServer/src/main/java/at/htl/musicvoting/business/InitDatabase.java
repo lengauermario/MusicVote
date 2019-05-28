@@ -19,40 +19,58 @@ public class InitDatabase {
     @Inject
     private SongDao dao;
 
-    public void initialize() throws IOException, InvalidDataException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
-        File folder = new File(ResourceBundle.getBundle("config").getString("startFolder"));
-        if(folder.exists() && folder.isDirectory()){
-            File arr[] = folder.listFiles();
-            recursiveRead(arr,0);
+    public void initialize() {
+        try{
+            File folder = new File(ResourceBundle.getBundle("config").getString("startFolder"));
+            if(folder.exists() && folder.isDirectory()){
+                File arr[] = folder.listFiles();
+                recursiveRead(arr,0);
+            }
+        }catch (Exception ex){
+            System.out.println("error read source recursive");
         }
     }
 
-    private void recursiveRead(File[] arr, int level) throws IOException, InvalidDataException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
-        for (File f : arr){
-            if (f.isFile()){
-                if(getFileExtension(f.getAbsolutePath()).equalsIgnoreCase("mp3")){
-                    readMp3File(f.getAbsolutePath());
+    private void recursiveRead(File[] arr, int level) {
+        try{
+            for (File f : arr){
+                if (f.isFile()){
+                    if(getFileExtension(f.getAbsolutePath()).equalsIgnoreCase("mp3")){
+                        readMp3File(f.getAbsolutePath());
+                    }
                 }
-            }
-            else if(f.isDirectory()){
-                recursiveRead(f.listFiles(),level + 1);
-            }
+                else if(f.isDirectory()){
+                    recursiveRead(f.listFiles(),level + 1);
+                }
 
+            }
+        }catch (Exception ex){
+            System.out.println("Error in recursiveRead Method");
         }
     }
 
-    private void readMp3File(String path) throws IOException, UnsupportedTagException, com.mpatric.mp3agic.InvalidDataException {
-        Mp3File mp3file = new Mp3File(path);
-        Song newSong = new Song(path, mp3file.getLengthInSeconds(), mp3file.getBitrate(), mp3file.isVbr(),
-                    mp3file.getId3v2Tag().getTrack(), mp3file.getId3v2Tag().getArtist(), mp3file.getId3v2Tag().getTitle(),
-                    mp3file.getId3v2Tag().getAlbum(), Integer.parseInt(mp3file.getId3v2Tag().getYear()), mp3file.getId3v2Tag().getGenre(), mp3file.getId3v2Tag().getComment(),
-                    mp3file.getId3v2Tag().getUrl());
-        dao.persist(newSong);
+    private void readMp3File(String path) {
+        try{
+            Mp3File mp3file = new Mp3File(path);
+            Song newSong;
+            if (path == null || mp3file.getId3v2Tag().getArtist() == null || mp3file.getId3v2Tag().getTitle() == null){
+                return;
+            }
+            newSong = new Song(path,mp3file.getId3v2Tag().getArtist(),mp3file.getId3v2Tag().getTitle());
+            dao.persist(newSong);
+        }catch (Exception ex){
+            System.out.println("could not read File");
+        }
     }
 
     private String getFileExtension(String fullName) {
-        String fileName = new File(fullName).getName();
-        int dotIndex = fileName.lastIndexOf('.');
-        return (dotIndex == -1) ? "" : fileName.substring(dotIndex + 1);
+        try{
+            String fileName = new File(fullName).getName();
+            int dotIndex = fileName.lastIndexOf('.');
+            return (dotIndex == -1) ? "" : fileName.substring(dotIndex + 1);
+        }catch (Exception ex){
+            System.out.println("Error in getFileExtension Method ");
+        }
+        return "";
     }
 }

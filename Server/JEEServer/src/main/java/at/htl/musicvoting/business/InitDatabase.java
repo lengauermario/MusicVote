@@ -53,6 +53,9 @@ public class InitDatabase {
         try{
             Mp3File mp3file = new Mp3File(path);
             Song newSong;
+            if (path == null || mp3file.getId3v2Tag().getArtist() == null || mp3file.getId3v2Tag().getTitle() == null){
+                return;
+            }
             newSong = new Song(path,mp3file.getId3v2Tag().getArtist(),mp3file.getId3v2Tag().getTitle());
             dao.persist(newSong);
         }catch (Exception ex){

@@ -21,7 +21,7 @@
   </v-tabs>
 </template>
 
-<script>
+<script lang="js">
 import Vue from "vue";
 import Vuetify from 'vuetify' 
 import VotingList from '@/components/VotingList.vue'
@@ -41,24 +41,25 @@ export default Vue.extend({
     }
   },
   created() {
-    const eventSource = new EventSource(
+    console.log(process.env.API_URL);
+    /*const eventSource = new EventSource(
       "http://localhost:8080/musicvoting/api/playlist/connect"
     );
     eventSource.addEventListener("add_song", e => {
-      this.$refs.playlist.addSong(JSON.parse(e.data));
+      this.$refs.VotingList.addSong(JSON.parse(e.data));
     });
     eventSource.addEventListener("add_vote", e => {
-      this.$refs.playlist.addVote(JSON.parse(e.data).id);
+      this.$refs.VotingList.addVote(JSON.parse(e.data).id);
     });
     eventSource.addEventListener("remove_song", e => {
-      this.$refs.playlist.removeSong(JSON.parse(e.data).id);
+      this.$refs.songs.removeSong(JSON.parse(e.data).id);
     });
     eventSource.addEventListener("remove_vote", e => {
       this.$refs.playlist.removeVote(JSON.parse(e.data).id);
     });
     eventSource.addEventListener("song_started", e => {
       this.$refs.playingSong.refresh();
-    });
+    });*/
   }
 });
 </script>

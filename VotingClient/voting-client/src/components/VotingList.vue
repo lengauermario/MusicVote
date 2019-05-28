@@ -23,7 +23,7 @@
         </v-card>
       </v-flex>
       <v-flex xs2>
-        <v-img style="margin: auto auto" :src="item.iconPath" :lazy-src="item.thumbNail" aspect-ratio="1"/>
+        <v-img style="margin: auto auto" :src="item.iconPath" :lazy-src="item.iconPath" aspect-ratio="1" @click="handleVote(item)"/>
       </v-flex>
     </v-layout>
   </v-container>
@@ -38,15 +38,15 @@ export default {
   name: "voting-list",
   data() {
     return {
-      songs:[],
-      iconPaths: [
-        require('@/assets/images/heartGrey.png'),
-        require('@/assets/images/heart.png'),
-        require('@/assets/images/error.png'),
-        require('@/assets/images/loading.gif'),
-        require('@/assets/images/plus.png')
+      songs: [],
+      imagePaths: [
+        require("@/assets/images/heartGrey.png"),
+        require("@/assets/images/heart.png"),
+        require("@/assets/images/error.png"),
+        require("@/assets/images/loading.gif"),
+        require("@/assets/images/plus.png"),
       ],
-      defaultThumbnail: require('@/assets/images/defaultCover.png')
+      defaultThumbnail: require("@/assets/images/defaultCover.png"),
     };
   },
   components: {
@@ -55,24 +55,62 @@ export default {
   },
   created() {
     console.log("start votinglist");
-    this.initializePlaylist();
+    this.fetchPlaylist();
   },
-  methods:{
-    initializePlaylist(){
+  methods:{    
+    fetchPlaylist(){
       PlaylistService.getAll().then(result => {
         this.songs = result;
         this.songs.forEach(song => {
-          if(song.thumbNail === "default"){
-            song.thumbNail = this.defaultThumbnail;
-          }
-          song.iconPath = this.iconPaths[0];
+          song = this.prepareSong(song);
         });
+        console.log(result);
       });
+    },
+    handleVote(item){
+      if(item.iconPath.includes("Grey")){
+        item.iconPath = this.imagePaths[1];
+        localStorage.setItem(item.id, "voted");
+        PlaylistService.addVote(item.id).then(x => console.log("vote added "+item.id));
+      }
+      else{
+        item.iconPath = this.imagePaths[0];
+        localStorage.removeItem(item.id);
+        PlaylistService.removeVote(item.id).then(x => console.log("vote removed "+item.id));
+      }
+    },
+    addSong(item){
+      console.log(item);
+      item = this.prepareSong(item);
+      this.songs.push(item);
+    },
+    prepareSong(item){
+      if (!("thumbNail" in item) || item.thumbNail === "default") {
+        item.thumbNail = this.defaultThumbnail;
+      }
+      if(localStorage.getItem(item.id) != null) {
+        item.status = "LIKED"
+      }
+      item.iconPath = this.getIconPath(item);
+      return item;
+    },
+    getIconPath(item) {
+      if (item === undefined || item.status === undefined) {
+        return this.imagePaths[0];
+      }
+      switch (item.status) {
+        case 'LIKED':
+          return this.imagePaths[1];
+        case 'AVAILABLE':
+          return this.imagePaths[0];
+        case 'DOWNLOADABLE':
+          return this.imagePaths[4];
+        case 'DOWNLOADING':
+          return this.imagePaths[3];
+        case 'NOT_AVAILABLE':
+          return this.imagePaths[2];
+      }
     }
   }
 };
-
 </script>
-
-<style>
-</style>

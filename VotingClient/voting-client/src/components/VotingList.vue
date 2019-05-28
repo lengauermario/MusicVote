@@ -34,7 +34,7 @@ import Vue from 'vue'
 import Vuetify from 'vuetify' 
 import PlaylistService from '@/services/PlaylistService.ts'
 
-  export default {
+export default {
   name: "voting-list",
   data() {
     return {
@@ -67,7 +67,6 @@ import PlaylistService from '@/services/PlaylistService.ts'
           }
           song.iconPath = this.iconPaths[0];
         });
-        console.log(result);
       });
     }
   }

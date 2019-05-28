@@ -2,7 +2,7 @@
   <v-tabs fixed-tabs 
       color="white"
       slider-color="black" >
-    <v-tab style=" border-bottom: 2px solid grey;">
+    <v-tab style=" border-bottom: 2px solid lightgrey;">
       Voting View
     </v-tab>
     <v-tab style=" border-bottom: 2px solid lightgrey;">
@@ -22,12 +22,12 @@
 </template>
 
 <script>
-import Vue from 'vue'
+import Vue from "vue";
 import Vuetify from 'vuetify' 
 import VotingList from '@/components/VotingList.vue'
 import AddView from '@/components/AddView.vue'
 
-export default {
+export default Vue.extend({
   name: 'App',
   components: {
     Vue,
@@ -39,8 +39,28 @@ export default {
     return {
       //
     }
+  },
+  created() {
+    const eventSource = new EventSource(
+      "http://localhost:8080/musicvoting/api/playlist/connect"
+    );
+    eventSource.addEventListener("add_song", e => {
+      this.$refs.playlist.addSong(JSON.parse(e.data));
+    });
+    eventSource.addEventListener("add_vote", e => {
+      this.$refs.playlist.addVote(JSON.parse(e.data).id);
+    });
+    eventSource.addEventListener("remove_song", e => {
+      this.$refs.playlist.removeSong(JSON.parse(e.data).id);
+    });
+    eventSource.addEventListener("remove_vote", e => {
+      this.$refs.playlist.removeVote(JSON.parse(e.data).id);
+    });
+    eventSource.addEventListener("song_started", e => {
+      this.$refs.playingSong.refresh();
+    });
   }
-}
+});
 </script>
 
 <style>

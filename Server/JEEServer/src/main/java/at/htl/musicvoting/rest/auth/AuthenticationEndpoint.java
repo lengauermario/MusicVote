@@ -22,7 +22,7 @@ public class AuthenticationEndpoint {
         String password = ResourceBundle.getBundle("config").getString("password");
         String sha256hex = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
         if(token.equals(sha256hex)){
-            NewCookie cookie = new NewCookie("token", sha256hex, "/", null, null, 3600, false, true);
+            NewCookie cookie = new NewCookie("token", sha256hex, "/", null, null, 36000, false, true);
             return Response.ok().cookie(cookie).build();
         }else{
             return Response.status(Response.Status.UNAUTHORIZED).build();

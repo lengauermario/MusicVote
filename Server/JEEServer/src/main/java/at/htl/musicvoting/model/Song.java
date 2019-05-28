@@ -23,12 +23,7 @@ public class Song implements Comparable<Song> {
     @Column(name = "DTYPE", insertable = false, updatable = false)
     private String dType;
 
-    private long lengthOfMp3;
-    private int bitrate;
-    private boolean bitrateVBR;
-    private String track, artist, title, album;
-    private int realeaseYear, genre;
-    private String comment, url, path;
+    private String artist, title, path;
 
 
 
@@ -41,19 +36,10 @@ public class Song implements Comparable<Song> {
     private LocalDateTime addedToPlaylist;
 
     //region Constructors
-    public Song(String path, long lengthOfMp3, int bitrate, boolean bitrateVBR, String track, String artist, String title, String album, int year, int genre, String comment, String url) {
+    public Song(String path,String artist, String title) {
         this.path = path;
-        this.lengthOfMp3 = lengthOfMp3;
-        this.bitrate = bitrate;
-        this.bitrateVBR = bitrateVBR;
-        this.track = track;
         this.artist = artist;
         this.title = title;
-        this.album = album;
-        this.realeaseYear = year;
-        this.genre = genre;
-        this.comment = comment;
-        this.url = url;
     }
 
     public Song(String artist, String title) {
@@ -109,38 +95,6 @@ public class Song implements Comparable<Song> {
         this.path = path;
     }
 
-    public long getLengthOfMp3() {
-        return lengthOfMp3;
-    }
-
-    public void setLengthOfMp3(long lengthOfMp3) {
-        this.lengthOfMp3 = lengthOfMp3;
-    }
-
-    public int getBitrate() {
-        return bitrate;
-    }
-
-    public void setBitrate(int bitrate) {
-        this.bitrate = bitrate;
-    }
-
-    public boolean isBitrateVBR() {
-        return bitrateVBR;
-    }
-
-    public void setBitrateVBR(boolean bitrateVBR) {
-        this.bitrateVBR = bitrateVBR;
-    }
-
-    public String getTrack() {
-        return track;
-    }
-
-    public void setTrack(String track) {
-        this.track = track;
-    }
-
     public String getArtist() {
         return artist;
     }
@@ -155,47 +109,6 @@ public class Song implements Comparable<Song> {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getAlbum() {
-        return album;
-    }
-
-    public void setAlbum(String album) {
-        this.album = album;
-    }
-
-    public int getRealeaseYear() {
-        return realeaseYear;
-    }
-
-    public void setRealeaseYear(int year) {
-        this.realeaseYear = year;
-    }
-
-    public int getGenre() {
-        return genre;
-    }
-
-    public void setGenre(int genre) {
-        this.genre = genre;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 
 

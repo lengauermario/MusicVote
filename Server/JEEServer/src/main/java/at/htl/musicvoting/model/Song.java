@@ -1,5 +1,9 @@
 package at.htl.musicvoting.model;
 
+import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Indexed;
+import org.hibernate.search.annotations.TermVector;
+
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlTransient;
@@ -15,6 +19,7 @@ import java.util.Objects;
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "SONG")
 @DiscriminatorColumn
+@Indexed
 public class Song implements Comparable<Song> {
 
     @Id
@@ -24,7 +29,11 @@ public class Song implements Comparable<Song> {
     @Column(name = "DTYPE", insertable = false, updatable = false)
     private String dType;
 
-    private String artist, title, path;
+    @Field(termVector = TermVector.YES)
+    private String artist;
+    @Field(termVector = TermVector.YES)
+    private String title;
+    private String path;
 
 
 

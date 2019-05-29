@@ -27,9 +27,9 @@ public class SongsEndpoint {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("findall")
-    public Response listSongs(){
-        List<Song> songs = dao.findAll();
+    @Path("find")
+    public Response listSongs(@QueryParam("queryTerm") String queryTerm){
+        List<Song> songs = dao.find(queryTerm);
         List<ObjectLocalSong> entity = Converter.SongsToObjectLocalSongList(songs);
         return Response.ok().entity(entity).build();
     }

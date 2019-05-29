@@ -9,7 +9,8 @@ import java.util.Objects;
 @Entity
 @NamedQueries({
         @NamedQuery(name="Song.findAll" , query = "select s from Song s order by s.title"),
-        @NamedQuery(name="Song.findById", query = "select s from Song s where s.id = :ID")
+        @NamedQuery(name="Song.findById", query = "select s from Song s where s.id = :ID"),
+        @NamedQuery(name="Song.find", query="select s from Song s where lower(s.title) like lower(:TERM) or lower(s.artist) like lower(:TERM)")
 })
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "SONG")

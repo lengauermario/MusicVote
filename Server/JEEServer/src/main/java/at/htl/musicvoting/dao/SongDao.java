@@ -20,6 +20,12 @@ public class SongDao {
         return songs;
     }
 
+    public List<Song> find(String term){
+        TypedQuery query = em.createNamedQuery("Song.find", Song.class);
+        List<Song> songs = query.setParameter("TERM", "%" + term + "%").setMaxResults(100).getResultList();
+        return songs;
+    }
+
     public void persist(Song newSong) {
         em.persist(newSong);
     }

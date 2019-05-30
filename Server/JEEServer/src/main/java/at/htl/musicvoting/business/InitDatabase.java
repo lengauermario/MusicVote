@@ -9,7 +9,6 @@ import com.mpatric.mp3agic.UnsupportedTagException;
 import javax.ejb.Stateless;
 import javax.imageio.IIOException;
 import javax.inject.Inject;
-import javax.transaction.Transactional;
 import java.io.File;
 import java.io.IOException;
 import java.util.ResourceBundle;
@@ -20,7 +19,6 @@ public class InitDatabase {
     @Inject
     private SongDao dao;
 
-    @Transactional
     public void initialize() {
         try{
             File folder = new File(ResourceBundle.getBundle("config").getString("startFolder"));
@@ -32,7 +30,7 @@ public class InitDatabase {
             System.out.println("error read source recursive");
         }
     }
-    @Transactional
+
     private void recursiveRead(File[] arr, int level) {
         try{
             for (File f : arr){
@@ -51,7 +49,6 @@ public class InitDatabase {
         }
     }
 
-    @Transactional
     private void readMp3File(String path) {
         try{
             Mp3File mp3file = new Mp3File(path);
@@ -59,16 +56,13 @@ public class InitDatabase {
             if (path == null || mp3file.getId3v2Tag().getArtist() == null || mp3file.getId3v2Tag().getTitle() == null){
                 return;
             }
-            for (int i = 0; i < 50; i++) {
-                newSong = new Song(path,mp3file.getId3v2Tag().getArtist(),mp3file.getId3v2Tag().getTitle());
-                dao.persist(newSong);
-            }
-
+            newSong = new Song(path,mp3file.getId3v2Tag().getArtist(),mp3file.getId3v2Tag().getTitle());
+            dao.persist(newSong);
         }catch (Exception ex){
             System.out.println("could not read File");
         }
     }
-    @Transactional
+
     private String getFileExtension(String fullName) {
         try{
             String fileName = new File(fullName).getName();

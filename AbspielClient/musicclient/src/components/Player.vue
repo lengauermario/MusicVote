@@ -28,7 +28,7 @@ export default {
   components: {},
   methods: {
     playNextSong() {
-      fetch("http://localhost:8085/musicvoting/api/playlist/pop", {
+      fetch(process.env.VUE_APP_API_URL + "/playlist/pop", {
         method: "GET",
         credentials: "include",
         headers: {
@@ -39,7 +39,7 @@ export default {
           let tmp = await response.json();
           let audio = document.getElementById("audio");
           audio.src =
-            "http://localhost:8085/musicvoting/api/song/getmp3?id=" + tmp.id;
+            process.env.VUE_APP_API_URL + "/song/getmp3?id=" + tmp.id;
           audio.play();
         }.bind(this)
       );

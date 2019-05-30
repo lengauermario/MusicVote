@@ -42,7 +42,7 @@ export default {
      };
   },
   created(){
-      fetch("http://localhost:8085/musicvoting/api/playlist/", {
+      fetch(process.env.VUE_APP_API_URL + "/playlist/", {
         method: "GET",
         credentials: "include"
       }).then(async function(res) {
@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     remove(id){
-      fetch("http://localhost:8085/musicvoting/api/playlist/remove/song?id=" + id, {
+      fetch(process.env.VUE_APP_API_URL + "/playlist/remove/song?id=" + id, {
         method: "POST",
         credentials: "include"
       });

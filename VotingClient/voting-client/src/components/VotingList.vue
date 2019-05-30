@@ -54,6 +54,7 @@ export default {
     Vuetify
   },
   created() {
+    
     console.log("start votinglist");
     this.fetchPlaylist();
   },

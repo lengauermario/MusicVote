@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  votingclient:
+    build: 
+      context: ./VotingClient/voting-client
+      dockerfile: Dockerfile
+    ports:
+      - 8081:8080
+  musicclient:
+    build: 
+      context: ./AbspielClient/musicclient
+      dockerfile: Dockerfile
+    ports:
+      - 8082:8080
+  wildfly:
+    build: 
+      context: ./Server/JEEServer
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+      - 9990:9990
+    volumes:
+      - /media/leon/Windows/mp3/local:/media/leon/Windows/mp3/local
+      - /media/leon/Windows/mp3/youtube:/media/leon/Windows/mp3/youtube
+   
+  derby:
+    image: az82/docker-derby:v1.3
+    ports:
+      - 1527:1527

@@ -1,12 +1,12 @@
 import Axios from "axios"
 
 
-let songUrl = 'http://localhost:8080/musicvoting/api/song/';
-let playlistUrl = 'http://localhost:8080/musicvoting/api/playlist/'
+let songUrl = process.env.VUE_APP_API_URL + '/song/';
+let playlistUrl = process.env.VUE_APP_API_URL + '/playlist/'
 export default{
 
   async getAll() {
-    let response = await Axios.get(songUrl+'findall');
+    let response = await Axios.get(songUrl +'findall');
     return response.data;
   },
   async addSong(id: number){

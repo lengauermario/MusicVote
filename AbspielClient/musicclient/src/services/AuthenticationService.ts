@@ -2,7 +2,8 @@ import { sha256 } from "js-sha256";
 
 export default {
     authenticate() {
-        return fetch('http://localhost:8085/musicvoting/api/auth/validate', {
+        //@ts-ignore
+        return fetch(process.env.VUE_APP_API_URL + '/auth/validate', {
             method: 'GET',
             credentials: 'include',
         })
@@ -21,8 +22,8 @@ export default {
         // if he is already logged in don't log in again
         if (localStorage.getItem("isLoggedIn") == "true")
             return Promise.reject()
-
-        return fetch('http://localhost:8085/musicvoting/api/auth', {
+        //@ts-ignore
+        return fetch(process.env.VUE_APP_API_URL + '/auth', {
             method: 'POST',
             headers: {
                 "Content-Type": "text/plain",

@@ -1,6 +1,6 @@
 import Axios from "axios"
 
-let url = 'http://localhost:8080/musicvoting/api/video';
+let url = process.env.VUE_APP_API_URL + '/video';
 
 export default{
   async downloadVideo(video: YouTubeSong) {

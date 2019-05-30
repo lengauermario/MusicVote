@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     refresh() {
-      fetch("http://localhost:8085/musicvoting/api/playlist/peek", {
+      fetch(process.env.VUE_APP_API_URL + "/playlist/peek", {
         method: "GET",
         credentials: "include"
       }).then(async function(res) {

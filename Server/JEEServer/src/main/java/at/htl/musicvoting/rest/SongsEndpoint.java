@@ -39,6 +39,7 @@ public class SongsEndpoint {
     @Path("getmp3")
     public Response get(@QueryParam("id")long id) {
         Song song = dao.getByID(id);
+        System.out.println(song);
         File mp3file = new File(song.getPath());
         return Response
                 .status(200)

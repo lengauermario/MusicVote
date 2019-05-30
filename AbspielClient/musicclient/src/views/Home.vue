@@ -52,7 +52,7 @@ export default Vue.extend({
   },
   created() {
     const eventSource = new EventSource(
-      "http://localhost:8085/musicvoting/api/playlist/connect"
+      process.env.VUE_APP_API_URL + "/playlist/connect"
     );
     eventSource.addEventListener("add_song", e => {
       this.$refs.playlist.addSong(JSON.parse(e.data));

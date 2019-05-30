@@ -41,7 +41,7 @@ export default Vue.extend({
     }
   },
   created() {
-    console.log(process.env.API_URL);
+    
     /*const eventSource = new EventSource(
       "http://localhost:8080/musicvoting/api/playlist/connect"
     );

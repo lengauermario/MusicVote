@@ -27,7 +27,7 @@ public class YoutubedlWrapper {
         if(dao.existsInDatabase(ytvideo.getVideoId()))
             return;
         String fileName =  ytvideo.getVideoId() + ".mp3";
-        String path = ResourceBundle.getBundle("config").getString("youtubeFolder")+ "\\" + fileName;
+        String path = ResourceBundle.getBundle("config").getString("youtubeFolder")+ "/" + fileName;
         YoutubeVideo newVideo = new YoutubeVideo(path, ytvideo.getArtist() ,ytvideo.getTitle(),ytvideo.getVideoId(), ytvideo.getThumbNail(), AvailabilityStatus.DOWNLOADING);
         dao.persist(newVideo);
         playlistResource.broadcastDownload(newVideo.getVideoId(), newVideo.getStatus());

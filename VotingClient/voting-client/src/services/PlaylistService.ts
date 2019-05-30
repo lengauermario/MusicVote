@@ -1,5 +1,5 @@
 import Axios from "axios"
-let url = 'http://localhost:8080/musicvoting/api/playlist/';
+let url = process.env.VUE_APP_API_URL + '/playlist/';
 export default{
 
   async getAll() {

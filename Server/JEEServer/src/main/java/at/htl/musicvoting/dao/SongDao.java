@@ -21,9 +21,15 @@ public class SongDao {
     }
 
     public List<Song> find(String term){
-        TypedQuery query = em.createNamedQuery("Song.find", Song.class);
-        List<Song> songs = query.setParameter("TERM", "%" + term + "%").setMaxResults(100).getResultList();
-        return songs;
+        String sql = "select s from Song s where";
+        String[] elements = term.split(" ");
+        for (String el: elements) {
+            sql += " lower(s.title || ' ' ||s.artist) like lower('%" + el + "%') and";
+        }
+        sql = sql.substring(0, sql.length()-3);
+        sql+= "order by s.title";
+        TypedQuery query = em.createQuery(sql, Song.class);
+        return query.setMaxResults(100).getResultList();
     }
 
     public void persist(Song newSong) {

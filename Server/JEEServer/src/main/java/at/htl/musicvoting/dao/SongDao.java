@@ -21,14 +21,18 @@ public class SongDao {
     }
 
     public List<Song> find(String term){
-        String sql = "select s from Song s where";
-        String[] elements = term.split(" ");
-        for (String el: elements) {
-            sql += " lower(s.title || ' ' ||s.artist) like lower('%" + el + "%') and";
+        StringBuilder sql = new StringBuilder("select s from Song s");
+        if (term != null && term.length() > 0) {
+            String[] elements = term.split(" ");
+            sql.append(" where ");
+            for(int i = 0;i<elements.length;i++){
+                sql.append("lower(s.title || ' ' ||s.artist) like lower('%" + elements[i] + "%')");
+                if(i < elements.length -1)
+                    sql.append(" and ");
+            }
         }
-        sql = sql.substring(0, sql.length()-3);
-        sql+= "order by s.title";
-        TypedQuery query = em.createQuery(sql, Song.class);
+        sql.append(" order by s.title");
+        TypedQuery query = em.createQuery(sql.toString(), Song.class);
         return query.setMaxResults(100).getResultList();
     }
 

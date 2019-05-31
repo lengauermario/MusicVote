@@ -22,7 +22,7 @@ public class DownloadThread extends Thread {
         Process p;
         int exitcode = 1;
         try {
-            p = Runtime.getRuntime().exec("youtube-dl -o " + path + " https://www.youtube.com/watch?v=" + videoId + " -x --audio-format mp3");
+            p = Runtime.getRuntime().exec("youtube-dl -o \"" + path + ".%(ext)s\" https://www.youtube.com/watch?v=" + videoId + " --extract-audio --audio-format mp3");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(p.getInputStream()));
             while ((s = br.readLine()) != null)

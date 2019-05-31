@@ -31,7 +31,7 @@ public class YoutubedlWrapper {
         YoutubeVideo newVideo = new YoutubeVideo(path, ytvideo.getArtist() ,ytvideo.getTitle(),ytvideo.getVideoId(), ytvideo.getThumbNail(), AvailabilityStatus.DOWNLOADING);
         dao.persist(newVideo);
         playlistResource.broadcastDownload(newVideo.getVideoId(), newVideo.getStatus());
-        DownloadThread thread = new DownloadThread(ytvideo.getVideoId(), path, (Integer exitCode) -> {
+        DownloadThread thread = new DownloadThread(ytvideo.getVideoId(), ResourceBundle.getBundle("config").getString("youtubeFolder")+ "/" + newVideo.getVideoId(), (Integer exitCode) -> {
             dao.updateToDownloaded(newVideo, exitCode);
             playlistResource.broadcastDownload(newVideo.getVideoId(), newVideo.getStatus());
             playlistResource.addSong(newVideo.getId());

@@ -2,10 +2,10 @@
 
 ## :bookmark_tabs: Inhaltsverzeichnis
 - [Einleitung](#arrow_forward-einleitung)
+- [Verwendung](#rocket-verwendung)
 - [System Architektur](#ferris_wheel-system-architektur)
 - [Aktueller Stand](#hammer-aktueller-stand)
   - [GUI](#iphone-gui)
-  - [Youtube-Einbindung](#musical_note-youtube-einbindung)
   - [Server](#computer-server)
 - [Dokumente](#closed_book-dokumente)
 - [Entwickler](#guardsman-entwickler)
@@ -15,7 +15,7 @@
 ## :arrow_forward: Einleitung
 Was ist nerviger als schlechte Musik auf einer Party? Weil wir finden, dass es nichts Schlimmeres gibt, entwickeln wir MusicVoting. MusicVoting ermöglicht jedem Partygast ganz einfach mittels Smartphone mitzubestimmen welche Musik gespielt werden soll.
 
-## Verwendung
+## :rocket: Verwendung
 Folgende Tools müssen installiert sein:
 - maven
 - docker
@@ -29,6 +29,22 @@ Starten des Systems:
 cd /Server/JEEServer
 mvn install -DskipTests
 ```
+
+Konfiguration:
+- Setzen der richtigen IP-Adresse für die Clients (.env-Files in den Projektordnern des MobilClients und des Abspielclients):
+```
+VUE_APP_API_URL=http://<IP-Adresse>:8080/musicvoting/api
+```
+
+- Konfigurationsfile am Server:
+  - Erstellen des Files config.properties im Ordner Server\JEEServer\src\main\resources
+  - Inhalt:
+```
+init=true
+password=<PASSWORT FÜR ADMIN>
+startFolder=<ORDNER IN DEM MP3 FILES LIEGEN>
+```
+
 
 - Builden und Starten des Docker-Netzwerks
 ```

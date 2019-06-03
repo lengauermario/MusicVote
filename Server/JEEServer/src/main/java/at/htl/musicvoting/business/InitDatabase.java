@@ -2,15 +2,11 @@ package at.htl.musicvoting.business;
 
 import at.htl.musicvoting.dao.SongDao;
 import at.htl.musicvoting.model.Song;
-import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.Mp3File;
-import com.mpatric.mp3agic.UnsupportedTagException;
 
 import javax.ejb.Stateless;
-import javax.imageio.IIOException;
 import javax.inject.Inject;
 import java.io.File;
-import java.io.IOException;
 import java.util.ResourceBundle;
 
 @Stateless
@@ -27,7 +23,7 @@ public class InitDatabase {
                 recursiveRead(arr,0);
             }
         }catch (Exception ex){
-            System.out.println("error read source recursive");
+            System.out.println("ERROR: Read source recursive");
         }
     }
 
@@ -45,7 +41,7 @@ public class InitDatabase {
 
             }
         }catch (Exception ex){
-            System.out.println("Error in recursiveRead Method");
+            System.out.println("ERROR: In recursiveRead Method");
         }
     }
 
@@ -53,14 +49,31 @@ public class InitDatabase {
         try{
             Mp3File mp3file = new Mp3File(path);
             Song newSong;
-            if (path == null || mp3file.getId3v2Tag().getArtist() == null || mp3file.getId3v2Tag().getTitle() == null){
-                return;
+            if (mp3file.getId3v2Tag().getArtist() == null || mp3file.getId3v2Tag().getTitle() == null){
+                String songTitle = getSongTitle(path);
+                newSong = new Song(path,"Unbekannt",songTitle);
             }
-            newSong = new Song(path,mp3file.getId3v2Tag().getArtist(),mp3file.getId3v2Tag().getTitle());
+            else{
+                newSong = new Song(path,mp3file.getId3v2Tag().getArtist(),mp3file.getId3v2Tag().getTitle());
+            }
             dao.persist(newSong);
         }catch (Exception ex){
-            System.out.println("could not read File");
+            System.out.println("ERROR: Could not read File");
         }
+    }
+
+    private String getSongTitle(String path) {
+        try {
+            String fileName = new File(path).getName();
+            int pos = fileName.lastIndexOf(".");
+            if (pos == -1){
+                return fileName;
+            }
+            return fileName.substring(0, pos);
+        }catch (Exception ex){
+            System.out.println("ERROR: Could not read Filename");
+        }
+        return "";
     }
 
     private String getFileExtension(String fullName) {
@@ -69,7 +82,7 @@ public class InitDatabase {
             int dotIndex = fileName.lastIndexOf('.');
             return (dotIndex == -1) ? "" : fileName.substring(dotIndex + 1);
         }catch (Exception ex){
-            System.out.println("Error in getFileExtension Method ");
+            System.out.println("ERROR: Could not read file extension");
         }
         return "";
     }

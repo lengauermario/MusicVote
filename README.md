@@ -15,6 +15,27 @@
 ## :arrow_forward: Einleitung
 Was ist nerviger als schlechte Musik auf einer Party? Weil wir finden, dass es nichts Schlimmeres gibt, entwickeln wir MusicVoting. MusicVoting ermöglicht jedem Partygast ganz einfach mittels Smartphone mitzubestimmen welche Musik gespielt werden soll.
 
+## Verwendung
+Folgende Tools müssen installiert sein:
+- maven
+- docker
+- docker-compose 
+
+https://get.docker.com/ stellt ein Script zur Installation von Docker auf Linux zur Verfügung.
+
+Starten des Systems:
+- Builden des Servers:
+```
+cd /Server/JEEServer
+mvn install -DskipTests
+```
+
+- Builden und Starten des Docker-Netzwerks
+```
+docker-compose build
+docker-compose up
+```
+
 
 ## :ferris_wheel: System Architektur
 ![sysarch](/img/systemarchitektur.png)
@@ -25,9 +46,9 @@ Was ist nerviger als schlechte Musik auf einer Party? Weil wir finden, dass es n
 #### 🛠 Status: In Arbeit
 Die GUI befindet sich momentan noch in Entwicklung. Alles zum aktuellen Stand finden Sie [hier](/AbspielClient/musicclient).
 
-### :musical_note: Youtube-Einbindung
+### <strike> :musical_note: Youtube-Einbindung
 #### 🛠 Status: Fertig
-Die Einbinding von Youtube funktioniert bereits in vollem Umfang. User können nach Youtube Videos suchen und herunterladen und zur Playlist hinzufügen.
+Die Einbinding von Youtube funktioniert bereits in vollem Umfang. User können nach Youtube Videos suchen und herunterladen und zur Playlist hinzufügen.</strike>
 
 ### :computer: Server
 #### 🛠 Status: Fertig

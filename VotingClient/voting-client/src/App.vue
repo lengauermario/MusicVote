@@ -1,4 +1,4 @@
-<template>
+npm<template>
   <v-tabs fixed-tabs 
       color="white"
       slider-color="black" >
@@ -10,7 +10,10 @@
     </v-tab>
     <v-tab-item>
       <v-card flat>
-          <v-card-text><voting-list/></v-card-text>
+          <v-card-text>
+            <song-preview ref="songpreview"/>
+            <voting-list ref="votinglist"/>
+          </v-card-text>
         </v-card>
     </v-tab-item>
     <v-tab-item >
@@ -26,6 +29,7 @@ import Vue from "vue";
 import Vuetify from 'vuetify' 
 import VotingList from '@/components/VotingList.vue'
 import AddView from '@/components/AddView.vue'
+import SongPreview from '@/components/SongPreview.vue'
 
 export default Vue.extend({
   name: 'App',
@@ -33,33 +37,33 @@ export default Vue.extend({
     Vue,
     Vuetify,
     VotingList,
-    AddView
+    AddView,
+    SongPreview
   },
   data () {
     return {
-      //
+      
     }
-  },
-  created() {
-    
-    /*const eventSource = new EventSource(
+  },  
+  mounted() {
+    const eventSource = new EventSource(
       "http://localhost:8080/musicvoting/api/playlist/connect"
     );
     eventSource.addEventListener("add_song", e => {
-      this.$refs.VotingList.addSong(JSON.parse(e.data));
+      this.$refs.votinglist.addSong(JSON.parse(e.data));
     });
     eventSource.addEventListener("add_vote", e => {
-      this.$refs.VotingList.addVote(JSON.parse(e.data).id);
+      this.$refs.votinglist.addVote(JSON.parse(e.data).id);
     });
     eventSource.addEventListener("remove_song", e => {
-      this.$refs.songs.removeSong(JSON.parse(e.data).id);
+      this.$refs.votinglist.removeSong(JSON.parse(e.data).id);
     });
     eventSource.addEventListener("remove_vote", e => {
-      this.$refs.playlist.removeVote(JSON.parse(e.data).id);
+      this.$refs.votinglist.removeVote(JSON.parse(e.data).id);
     });
     eventSource.addEventListener("song_started", e => {
-      this.$refs.playingSong.refresh();
-    });*/
+      this.$refs.songpreview.refresh();
+    });
   }
 });
 </script>
@@ -67,5 +71,9 @@ export default Vue.extend({
 <style>
   * {
     font-family: sans-serif;
+  }
+  .v-tabs__wrapper{
+    position: sticky;
+    z-index: 5;
   }
 </style>

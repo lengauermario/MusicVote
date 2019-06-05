@@ -6,7 +6,7 @@ let playlistUrl = process.env.VUE_APP_API_URL + '/playlist/'
 export default{
 
   async getAll() {
-    let response = await Axios.get(songUrl +'findall');
+    let response = await Axios.get(songUrl +'find');
     return response.data;
   },
   async addSong(id: number){

@@ -1,16 +1,16 @@
 <template>
   <v-container grid-list-md text-xs-center>
     <v-layout rpw wrap align-center>
-      <v-flex xs9>
+      <v-flex xs12>
         <v-text-field v-model="search" label="Suche..." @input="searchInputChanged()"></v-text-field>
       </v-flex>
-      <v-flex xs3>
+      <!-- <v-flex xs3>
         <v-img
           :src="this.youTubeImgPath"
           :lazy-src="this.youTubeImgPath"
           @click="turnYouTubeSearch()"
         />
-      </v-flex>
+      </v-flex> -->
     </v-layout>
     <v-layout row wrap align-center v-for="item in songs" v-bind:key="item.video">
       <template v-if="item.title.toUpperCase().includes(search.toUpperCase())">

@@ -8,6 +8,7 @@ import store from './store'
 import './registerServiceWorker'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
+
 Vue.config.productionTip = false
 
 Vue.use(Vuetify)

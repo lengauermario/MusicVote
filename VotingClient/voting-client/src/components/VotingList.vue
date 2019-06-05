@@ -54,8 +54,6 @@ export default {
     Vuetify
   },
   created() {
-    
-    console.log("start votinglist");
     this.fetchPlaylist();
   },
   methods:{    
@@ -65,8 +63,8 @@ export default {
         this.songs.forEach(song => {
           song = this.prepareSong(song);
         });
-        console.log(result);
       });
+      this.sort();
     },
     handleVote(item){
       if(item.iconPath.includes("Grey")){
@@ -79,11 +77,6 @@ export default {
         localStorage.removeItem(item.id);
         PlaylistService.removeVote(item.id).then(x => console.log("vote removed "+item.id));
       }
-    },
-    addSong(item){
-      console.log(item);
-      item = this.prepareSong(item);
-      this.songs.push(item);
     },
     prepareSong(item){
       if (!("thumbNail" in item) || item.thumbNail === "default") {
@@ -110,6 +103,36 @@ export default {
           return this.imagePaths[3];
         case 'NOT_AVAILABLE':
           return this.imagePaths[2];
+      }
+    },
+    sort(){
+      this.songs.sort((a,b) => {
+        if(a.votes > b.votes) return -1;
+        else if(a.votes < b.votes) return 1;
+        else{
+          if(new Date(a.time + 'Z') >= new Date(b.time + 'Z')) return 1;
+          else return -1;
+        }
+      });
+    },
+    addVote(id){
+      var song = this.songs.find(x => x.id == id);
+      song.votes ++;
+      this.sort();
+    },
+    removeVote(id){
+      var song = this.songs.find(x => x.id == id);
+      song.votes --;
+      this.sort();
+    },
+    addSong(song){
+      song = this.prepareSong(song);
+      this.songs.push(song);
+    },
+    removeSong(id){
+      if(this.songs.filter(x => x.id == id) != undefined){
+        this.songs = this.songs.filter(x => x.id != id);
+
       }
     }
   }

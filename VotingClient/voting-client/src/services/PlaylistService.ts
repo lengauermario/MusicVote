@@ -13,5 +13,9 @@ export default{
   async removeVote(id: number) {
     let response = await Axios.post(url+"remove/vote?id="+id);
     return response.data;
+  },
+  async peek(){
+    let response = await Axios.get(url+"peek");
+    return response.data;
   }
 }

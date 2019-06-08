@@ -26,7 +26,7 @@ public class SongDao {
             String[] elements = term.split(" ");
             sql.append(" where ");
             for(int i = 0;i<elements.length;i++){
-                sql.append("lower(s.title || ' ' ||s.artist) like lower('%" + elements[i] + "%')");
+                sql.append("lower(s.title || ' ' || s.artist) like lower('%" + elements[i] + "%')");
                 if(i < elements.length -1)
                     sql.append(" and ");
             }

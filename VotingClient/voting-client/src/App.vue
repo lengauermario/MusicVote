@@ -44,10 +44,22 @@ export default Vue.extend({
     return {
       
     }
-  },  
+  }, 
+  ready:function(){
+    window.onbeforeunload = this.leaving;
+    window.onblur = this.leaving;
+    window.onmouseout = this.leaving;
+
+},
+   methods: {
+    leaving:function(){
+        console.log('tab closed')
+        return null
+    }
+  },
   mounted() {
     const eventSource = new EventSource(
-      "http://localhost:8080/musicvoting/api/playlist/connect"
+      process.env.VUE_APP_API_URL + "/playlist/connect"
     );
     eventSource.addEventListener("add_song", e => {
       this.$refs.votinglist.addSong(JSON.parse(e.data));

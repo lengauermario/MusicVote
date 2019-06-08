@@ -3,7 +3,6 @@ package at.htl.musicvoting.rest;
 import at.htl.musicvoting.converter.Converter;
 import at.htl.musicvoting.business.PlaylistHandler;
 import at.htl.musicvoting.dao.SongDao;
-import at.htl.musicvoting.model.AvailabilityStatus;
 import at.htl.musicvoting.rest.response_object.ObjectPlaylistSong;
 import at.htl.musicvoting.model.Song;
 import at.htl.musicvoting.rest.auth.annotation.Secured;
@@ -164,12 +163,4 @@ public class PlaylistResource {
         sseBroadcaster.broadcast(event);
     }
 
-    public void broadcastDownload(String id, AvailabilityStatus status) {
-        OutboundSseEvent event = sse.newEventBuilder()
-                .name("video_download")
-                .mediaType(MediaType.APPLICATION_JSON_TYPE)
-                .data(Json.createObjectBuilder().add("videoId", id).add("status", status.toString()).build())
-                .build();
-        sseBroadcaster.broadcast(event);
-    }
 }

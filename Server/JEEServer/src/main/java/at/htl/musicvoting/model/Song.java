@@ -12,21 +12,14 @@ import java.util.Objects;
         @NamedQuery(name="Song.findById", query = "select s from Song s where s.id = :ID"),
         @NamedQuery(name="Song.find", query="select s from Song s where lower(s.title) like lower(:TERM) or lower(s.artist) like lower(:TERM)")
 })
-@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "SONG")
-@DiscriminatorColumn
 public class Song implements Comparable<Song> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "DTYPE", insertable = false, updatable = false)
-    private String dType;
-
     private String artist, title, path;
-
-
 
     @Transient
     private int votes;

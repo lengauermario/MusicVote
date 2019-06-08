@@ -21,8 +21,8 @@ services:
       - 8080:8080
       - 9990:9990
     volumes:
-      - /media/leon/Windows/mp3/local:/media/leon/Windows/mp3/local
-      - /media/leon/Windows/mp3/youtube:/media/leon/Windows/mp3/youtube
+      - /home/leon/mp3/local:/home/leon/mp3/local
+      - /home/leon/mp3/youtube:/home/leon/mp3/youtube
    
   derby:
     image: az82/docker-derby:v1.3

@@ -1,7 +1,5 @@
 package at.htl.musicvoting.rest.response_object;
 
-import at.htl.musicvoting.model.AvailabilityStatus;
-
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -9,13 +7,11 @@ public class ObjectLocalSong {
     private Long id;
     private String title;
     private String artist;
-    private AvailabilityStatus status;
 
-    public ObjectLocalSong(Long id, String title, String artist, AvailabilityStatus status) {
+    public ObjectLocalSong(Long id, String title, String artist) {
         this.id = id;
         this.title = title;
         this.artist = artist;
-        this.status = status;
     }
 
     public ObjectLocalSong() {
@@ -43,13 +39,5 @@ public class ObjectLocalSong {
 
     public void setArtist(String artist) {
         this.artist = artist;
-    }
-
-    public AvailabilityStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(AvailabilityStatus status) {
-        this.status = status;
     }
 }

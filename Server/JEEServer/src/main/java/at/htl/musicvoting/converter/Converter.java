@@ -10,12 +10,7 @@ import java.util.List;
 public class Converter {
 
     public static ObjectLocalSong SongToObjectLocalSong(Song song){
-        ObjectLocalSong objectLocalSong = new ObjectLocalSong(song.getId(), song.getTitle(), song.getArtist(), AvailabilityStatus.AVAILABLE);
-        if(song instanceof YoutubeVideo ){
-            YoutubeVideo ytsong = (YoutubeVideo)song;
-            objectLocalSong.setStatus(ytsong.getStatus());
-        }
-        return objectLocalSong;
+        return new ObjectLocalSong(song.getId(), song.getTitle(), song.getArtist());
     }
 
     public static List<ObjectLocalSong> SongsToObjectLocalSongList(List<Song> songs){
@@ -25,12 +20,7 @@ public class Converter {
     }
 
     public static ObjectPlaylistSong SongToObjectPlaylistSong(Song song){
-        ObjectPlaylistSong object = new ObjectPlaylistSong(song.getId(), song.getTitle(), song.getArtist(), "default", song.getVotes(), song.getAddedToPlaylist());
-        if(song instanceof YoutubeVideo){
-            YoutubeVideo ytsong = (YoutubeVideo)song;
-            object.setThumbNail(ytsong.getThumbNail());
-        }
-        return object;
+       return new ObjectPlaylistSong(song.getId(), song.getTitle(), song.getArtist(), "default", song.getVotes(), song.getAddedToPlaylist());
     }
     public static List<ObjectPlaylistSong> SongsToObjectPlaylistSongList(List<Song> songs){
         List<ObjectPlaylistSong> objectPlaylistSongList = new LinkedList<>();

@@ -2,6 +2,10 @@ import Axios from "axios"
 let url = process.env.VUE_APP_API_URL + '/playlist/';
 export default{
 
+  async getVersion(){
+    let response = await Axios.get(url + "timestamp")
+    return response.data;
+  },
   async getAll() {
     let response = await Axios.get(url);
     return response.data;

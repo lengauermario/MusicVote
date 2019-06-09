@@ -51,8 +51,8 @@ export default Vue.extend({
     Vuetify,
     PlaylistService
   },
-  Create() {
-      
+  created() {
+      this.refresh();
   },
   methods: {
     refresh(){

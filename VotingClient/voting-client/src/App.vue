@@ -11,7 +11,6 @@ npm<template>
     <v-tab-item>
       <v-card flat>
           <v-card-text>
-            {{abc}}
             <song-preview ref="songpreview"/>
             <voting-list ref="votinglist"/>
           </v-card-text>
@@ -43,13 +42,13 @@ export default Vue.extend({
   },
   data () {
     return {
-      shouldReload: false,
-      abc: ""
+      timestamp: 0
     }
   },
   methods: {
     refresh(){
-        this.$refs.votinglist.fetchPlaylist()
+      if(this.$refs.votinglist)
+        this.$refs.votinglist.refreshIfNecessary();   
     }
   },
   created(){
@@ -82,17 +81,13 @@ export default Vue.extend({
     const eventSource = new EventSource(
       process.env.VUE_APP_API_URL + "/playlist/connect"
     );
-    eventSource.addEventListener("add_song", e => {
-      this.$refs.votinglist.addSong(JSON.parse(e.data));
+    eventSource.addEventListener("change", e => {
+      let tmp = JSON.parse(e.data);
+      this.$refs.votinglist.refresh(tmp);
     });
-    eventSource.addEventListener("add_vote", e => {
-      this.$refs.votinglist.addVote(JSON.parse(e.data).id);
-    });
-    eventSource.addEventListener("remove_song", e => {
-      this.$refs.votinglist.removeSong(JSON.parse(e.data).id);
-    });
-    eventSource.addEventListener("remove_vote", e => {
-      this.$refs.votinglist.removeVote(JSON.parse(e.data).id);
+    eventSource.addEventListener("removement", e => {
+      let tmp = JSON.parse(e.data);
+      this.$refs.votinglist.handleRemovement(tmp.id);
     });
     eventSource.addEventListener("song_started", e => {
       this.$refs.songpreview.refresh();

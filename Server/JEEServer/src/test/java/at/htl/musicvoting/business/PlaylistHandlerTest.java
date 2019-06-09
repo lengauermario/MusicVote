@@ -37,7 +37,7 @@ public class PlaylistHandlerTest {
         Song song1 = dao.getByID(1);
         playlistHandler.addSong(song1);
         playlistHandler.addSong(song1);
-        List<Song> playlist = playlistHandler.getPlaylist();
+        List<Song> playlist = playlistHandler.getPlaylist().getSongs();
         assertThat(playlist.isEmpty(), is(false));
         assertThat(playlist.size(), is(1));
     }
@@ -46,7 +46,7 @@ public class PlaylistHandlerTest {
         Song song1 = dao.getByID(1);
         playlistHandler.addSong(song1);
         playlistHandler.addSong(song1);
-        List<Song> playlist = playlistHandler.getPlaylist();
+        List<Song> playlist = playlistHandler.getPlaylist().getSongs();
         assertThat(song1.getVotes(), is(1));
     }
 
@@ -56,7 +56,7 @@ public class PlaylistHandlerTest {
         playlistHandler.addSong(dao.getByID(2));
         playlistHandler.addSong(dao.getByID(3));
         playlistHandler.peek();
-        assertThat(playlistHandler.getPlaylist().size(), is(3));
+        assertThat(playlistHandler.getPlaylist().getSongs().size(), is(3));
     }
 
 
@@ -66,7 +66,7 @@ public class PlaylistHandlerTest {
         playlistHandler.addSong(dao.getByID(2));
         playlistHandler.addSong(dao.getByID(3));
         playlistHandler.playSong();
-        List<Song> playlist = playlistHandler.getPlaylist();
+        List<Song> playlist = playlistHandler.getPlaylist().getSongs();
         assertThat(playlist.size(), is(2));
     }
     @Test
@@ -162,7 +162,7 @@ public class PlaylistHandlerTest {
     public void test070_RemoveSong(){
         Song song1 = dao.getByID(1);
         playlistHandler.addSong(song1);
-        List<Song> playlist = playlistHandler.getPlaylist();
+        List<Song> playlist = playlistHandler.getPlaylist().getSongs();
         playlistHandler.removeSong(song1.getId());
         assertThat(playlist.isEmpty(), is(true));
         assertThat(playlist.size(), is(0));
@@ -171,7 +171,7 @@ public class PlaylistHandlerTest {
     public void test071_RemoveSongTwice(){
         Song song1 = dao.getByID(1);
         playlistHandler.addSong(song1);
-        List<Song> playlist = playlistHandler.getPlaylist();
+        List<Song> playlist = playlistHandler.getPlaylist().getSongs();
         playlistHandler.removeSong(song1.getId());
         playlistHandler.removeSong(song1.getId());
         assertThat(playlist.isEmpty(), is(true));

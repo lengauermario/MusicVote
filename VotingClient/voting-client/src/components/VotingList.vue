@@ -1,6 +1,7 @@
 <template>
   <v-container grid-list-md text-xs-center>
-    <v-layout row wrap align-center v-for="item in songs" v-bind:key="item.id" >
+    <transition-group name="list-complete" tag="p">
+    <v-layout row wrap align-center v-for="item in songs" v-bind:key="item.id" class="list-complete-item" >
       <v-flex xs4>
         <v-card dark color="primary">
           <v-img :src="item.thumbNail" :lazy-src="item.thumbNail" aspect-ratio="1" class="grey lighten-2">
@@ -26,6 +27,7 @@
         <v-img style="margin: auto auto" :src="item.iconPath" :lazy-src="item.iconPath" aspect-ratio="1" @click="handleVote(item)"/>
       </v-flex>
     </v-layout>
+    </transition-group>
   </v-container>
 </template>
 
@@ -47,6 +49,7 @@ export default {
         require("@/assets/images/plus.png"),
       ],
       defaultThumbnail: require("@/assets/images/defaultCover.png"),
+      timestamp: 0,
     };
   },
   components: {
@@ -59,12 +62,18 @@ export default {
   methods:{    
     fetchPlaylist(){
       PlaylistService.getAll().then(result => {
-        this.songs = result;
+        this.songs = result.songs;
+        this.timestamp = result.timestamp;
         this.songs.forEach(song => {
           song = this.prepareSong(song);
         });
       });
-      this.sort();
+    },
+    refreshIfNecessary(){
+      PlaylistService.getVersion().then(x => {
+          if(x != this.timestamp)
+            this.fetchPlaylist();
+        }); 
     },
     handleVote(item){
       if(item.iconPath.includes("Grey")){
@@ -74,7 +83,7 @@ export default {
       }
       else{
         item.iconPath = this.imagePaths[0];
-        localStorage.removeItem(item.id);
+        this.clearLocalStorage(item.id)
         PlaylistService.removeVote(item.id).then(x => console.log("vote removed "+item.id));
       }
     },
@@ -92,49 +101,38 @@ export default {
       if (item === undefined || item.status === undefined) {
         return this.imagePaths[0];
       }
-      switch (item.status) {
-        case 'LIKED':
-          return this.imagePaths[1];
-        case 'AVAILABLE':
-          return this.imagePaths[0];
-        case 'DOWNLOADABLE':
-          return this.imagePaths[4];
-        case 'DOWNLOADING':
-          return this.imagePaths[3];
-        case 'NOT_AVAILABLE':
-          return this.imagePaths[2];
-      }
+      if(item.status == 'LIKED')
+        return this.imagePaths[1];
+      else
+        return this.imagePaths[0];      
     },
-    sort(){
-      this.songs.sort((a,b) => {
-        if(a.votes > b.votes) return -1;
-        else if(a.votes < b.votes) return 1;
-        else{
-          if(new Date(a.time + 'Z') >= new Date(b.time + 'Z')) return 1;
-          else return -1;
-        }
+    clearLocalStorage(id){
+      localStorage.removeItem(id);
+    },
+    handleRemovement(id){
+      this.clearLocalStorage(id);
+    },
+    refresh(data){
+      this.songs = data.songs;
+      this.timestamp = data.timestamp;
+      this.songs.forEach(song => {
+          song = this.prepareSong(song);
       });
-    },
-    addVote(id){
-      var song = this.songs.find(x => x.id == id);
-      song.votes ++;
-      this.sort();
-    },
-    removeVote(id){
-      var song = this.songs.find(x => x.id == id);
-      song.votes --;
-      this.sort();
-    },
-    addSong(song){
-      song = this.prepareSong(song);
-      this.songs.push(song);
-    },
-    removeSong(id){
-      if(this.songs.filter(x => x.id == id) != undefined){
-        this.songs = this.songs.filter(x => x.id != id);
-
-      }
     }
   }
 };
 </script>
+
+<style scoped>
+.list-complete-item {
+  transition: all 1s;
+  margin-right: 10px;
+}
+.list-complete-enter, .list-complete-leave-to {
+  opacity: 0;
+  transform: translateX(200px);
+}
+.list-complete-leave-active {
+  position: absolute;
+}
+</style>

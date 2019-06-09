@@ -1,6 +1,7 @@
 package at.htl.musicvoting.business;
 
 import at.htl.musicvoting.dao.SongDao;
+import at.htl.musicvoting.model.Playlist;
 import at.htl.musicvoting.model.Song;
 
 import javax.ejb.Stateless;
@@ -13,19 +14,29 @@ import java.util.stream.Collectors;
 public class PlaylistHandler {
 
     @Inject
+    PlaylistHolder playlistHolder;
+
+    @Inject
     SongDao dao;
     private Song currentSong;
     private List<Song> playlist = new LinkedList<Song>();
     private Comparator<Song> comparator = Comparator.comparing(Song::getVotes).reversed()
             .thenComparing(Song::getAddedToPlaylist);
 
+
+
     public Song getCurrentSong() {
         return currentSong;
     }
 
-    public List<Song> getPlaylist(){
+    public Playlist getPlaylist(){
+        //playlist.sort(comparator);
+        return playlistHolder.getPlaylist();
+    }
+
+    private void updatePlaylist(){
         playlist.sort(comparator);
-        return playlist;
+        playlistHolder.updatePlaylist(playlist);
     }
 
     public synchronized void addSong(Song song){
@@ -37,12 +48,14 @@ public class PlaylistHandler {
         else{
             addVote(song.getId());
         }
+        updatePlaylist();
     }
 
     public void removeSong(long id){
         Song song = get(id);
         if(song != null){
             playlist.remove(song);
+            updatePlaylist();
         }
     }
 
@@ -62,6 +75,7 @@ public class PlaylistHandler {
         Song song = get(id);
         if(song != null){
             song.increaseVotes();
+            updatePlaylist();
         }
     }
 
@@ -69,14 +83,16 @@ public class PlaylistHandler {
         Song song = get(id);
         if(song != null){
             song.decreaseVotes();
+            updatePlaylist();
         }
     }
 
     public Song playSong(){
         Song s = null;
-        if(getPlaylist().size() > 0){
-            s = getPlaylist().get(0);
+        if(playlist.size() > 0){
+            s = playlist.get(0);
             playlist.remove(s);
+            updatePlaylist();
         }
         currentSong = s;
         return currentSong;

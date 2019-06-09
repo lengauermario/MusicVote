@@ -3,6 +3,8 @@ package at.htl.musicvoting.rest;
 import at.htl.musicvoting.converter.Converter;
 import at.htl.musicvoting.business.PlaylistHandler;
 import at.htl.musicvoting.dao.SongDao;
+import at.htl.musicvoting.model.Playlist;
+import at.htl.musicvoting.rest.adapter.PlaylistAdapter;
 import at.htl.musicvoting.rest.response_object.ObjectPlaylistSong;
 import at.htl.musicvoting.model.Song;
 import at.htl.musicvoting.rest.auth.annotation.Secured;
@@ -60,12 +62,7 @@ public class PlaylistResource {
         if(song != null && !playlist.contains(id)){
             System.out.println("new song added to playlist");
             playlist.addSong(song);
-            OutboundSseEvent event = sse.newEventBuilder()
-                    .name("add_song")
-                    .mediaType(MediaType.APPLICATION_JSON_TYPE)
-                    .data(Converter.SongToObjectPlaylistSong(song))
-                    .build();
-            sseBroadcaster.broadcast(event);
+            broadcastChange();
         }
 
     }
@@ -77,14 +74,12 @@ public class PlaylistResource {
     public void removeSong(@QueryParam("id") Long id){
         if(id != null && playlist.contains(id)){
             playlist.removeSong(id);
-            OutboundSseEvent event = sse.newEventBuilder()
-                    .name("remove_song")
-                    .mediaType(MediaType.APPLICATION_JSON_TYPE)
-                    .data(Json.createObjectBuilder().add("id", id).build())
-                    .build();
-            sseBroadcaster.broadcast(event);
+            broadcastChange();
+            broadcastRemovement(id);
         }
     }
+
+
 
     @POST
     @Path("/add/vote")
@@ -92,12 +87,7 @@ public class PlaylistResource {
     public void vote(@QueryParam("id") Long id){
         if(id != null && playlist.contains(id)){
             playlist.addVote(id);
-            OutboundSseEvent event = sse.newEventBuilder()
-                    .name("add_vote")
-                    .mediaType(MediaType.APPLICATION_JSON_TYPE)
-                    .data(Json.createObjectBuilder().add("id", id).build())
-                    .build();
-            sseBroadcaster.broadcast(event);
+            broadcastChange();
         }
     }
 
@@ -107,21 +97,15 @@ public class PlaylistResource {
     public void removeVote(@QueryParam("id") Long id){
         if(id != null && playlist.contains(id)){
             playlist.removeVote(id);
-            OutboundSseEvent event = sse.newEventBuilder()
-                    .name("remove_vote")
-                    .mediaType(MediaType.APPLICATION_JSON_TYPE)
-                    .data(Json.createObjectBuilder().add("id", id).build())
-                    .build();
-            sseBroadcaster.broadcast(event);
+            broadcastChange();
         }
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getPlaylist(){
-        List<Song> songs = playlist.getPlaylist();
-        List<ObjectPlaylistSong> entity = Converter.SongsToObjectPlaylistSongList(new LinkedList<Song>(songs));
-        return Response.ok(entity).build();
+        Playlist entity = playlist.getPlaylist();
+        return Response.ok(PlaylistAdapter.marshall(entity)).build();
     }
 
     @GET
@@ -144,14 +128,36 @@ public class PlaylistResource {
         Song song = playlist.playSong();
         if(song == null)
             song = playlist.playRandom();
-        OutboundSseEvent event = sse.newEventBuilder()
-                .name("remove_song")
-                .mediaType(MediaType.APPLICATION_JSON_TYPE)
-                .data(Json.createObjectBuilder().add("id", song.getId()).build())
-                .build();
-        sseBroadcaster.broadcast(event);
+        else
+            broadcastRemovement(song.getId());
+        broadcastChange();
         broadcastNextSong(song);
         return Response.ok(song).build();
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/timestamp")
+    public Response getCurrentTimestamp(){
+        return Response.ok(playlist.getPlaylist().getTimestamp()).build();
+    }
+
+    public void broadcastChange(){
+        OutboundSseEvent event = sse.newEventBuilder()
+                .name("change")
+                .mediaType(MediaType.APPLICATION_JSON_TYPE)
+                .data(PlaylistAdapter.marshall(playlist.getPlaylist()))
+                .build();
+        sseBroadcaster.broadcast(event);
+    }
+
+    private void broadcastRemovement(Long id) {
+        OutboundSseEvent event = sse.newEventBuilder()
+                .name("removement")
+                .mediaType(MediaType.APPLICATION_JSON_TYPE)
+                .data(Json.createObjectBuilder().add("id", id).build())
+                .build();
+        sseBroadcaster.broadcast(event);
     }
 
     public void broadcastNextSong(Song song){

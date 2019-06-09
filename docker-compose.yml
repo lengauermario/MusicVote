@@ -22,7 +22,6 @@ services:
       - 9990:9990
     volumes:
       - /home/leon/mp3/local:/home/leon/mp3/local
-      - /home/leon/mp3/youtube:/home/leon/mp3/youtube
    
   derby:
     image: az82/docker-derby:v1.3

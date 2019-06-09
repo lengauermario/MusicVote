@@ -11,6 +11,7 @@ npm<template>
     <v-tab-item>
       <v-card flat>
           <v-card-text>
+            {{abc}}
             <song-preview ref="songpreview"/>
             <voting-list ref="votinglist"/>
           </v-card-text>
@@ -42,22 +43,42 @@ export default Vue.extend({
   },
   data () {
     return {
-      
-    }
-  }, 
-  ready:function(){
-    window.onbeforeunload = this.leaving;
-    window.onblur = this.leaving;
-    window.onmouseout = this.leaving;
-
-},
-   methods: {
-    leaving:function(){
-        console.log('tab closed')
-        return null
+      shouldReload: false,
+      abc: ""
     }
   },
-  mounted() {
+  methods: {
+    refresh(){
+        this.$refs.votinglist.fetchPlaylist()
+    }
+  },
+  created(){
+    //window.addEventListener('resume', () => {this.abc += "resume"});
+    window.addEventListener('focus', () => this.refresh());
+    /* window.addEventListener('blur', () => this.abc += "blur");
+    window.addEventListener('visibilitychange', () => this.abc += "visibilitychange");
+    window.addEventListener('freeze', () => this.abc += "freeze");
+    window.addEventListener('beforeunload', () => this.abc += "beforeunload");
+    window.addEventListener('pagehide', () => this.abc += "pagehide");
+    window.addEventListener('unload', () => this.abc += "unload");
+    window.addEventListener('pagehide', () => this.abc += "pagehide");
+    window.addEventListener('pageshow', () => this.abc += "pageshow");
+    window.addEventListener("beforeunload", function(e){
+      this.abc += "called\n"
+      this.shouldReload = true
+    }, false); */
+    
+  },
+  destroyed() {
+    window.removeEventListener('visibilitychange',  this.refresh);
+  },
+  mounted() {  
+    /*setInterval(() => {
+        if(this.shouldReload){
+          this.$refs.votinglist.fetchPlaylist()
+          this.shouldReload = false
+        }
+      }, 10000);*/
     const eventSource = new EventSource(
       process.env.VUE_APP_API_URL + "/playlist/connect"
     );

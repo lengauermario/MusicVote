@@ -38,8 +38,7 @@ export default {
         async function(response) {
           let tmp = await response.json();
           let audio = document.getElementById("audio");
-          audio.src =
-            process.env.VUE_APP_API_URL + "/song/getmp3?id=" + tmp.id;
+          audio.src = process.env.VUE_APP_API_URL + "/song/getmp3?id=" + tmp.id;
           audio.play();
         }.bind(this)
       );

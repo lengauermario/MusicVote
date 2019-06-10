@@ -47,50 +47,17 @@ export default {
         credentials: "include"
       }).then(async function(res) {
         let tmp = await res.json();
-        this.playlist = tmp;
-        this.sort();
+        this.playlist = tmp.songs;
       }.bind(this));
   },
   methods: {
+    refresh(data){
+      this.playlist = data.songs;
+    },
     remove(id){
       fetch(process.env.VUE_APP_API_URL + "/playlist/remove/song?id=" + id, {
         method: "POST",
         credentials: "include"
-      });
-    },
-    addSong(song) {
-        this.playlist.push(song);
-        this.sort();
-    },
-    removeSong(id){
-        const index = this.getIndexOfSong(id);
-        if(index != -1)
-            this.playlist.splice(index, 1);
-        this.sort();
-    },
-    addVote(id){
-        this.playlist[this.getIndexOfSong(id)].votes++;
-        this.sort();
-    },
-    removeVote(id){
-        this.playlist[this.getIndexOfSong(id)].votes--;
-        this.sort();
-    },
-    getIndexOfSong(id){
-        for(var i = 0;i < this.playlist.length;i++){
-            if(this.playlist[i].id == id)
-                return i;
-        }
-        return -1;
-    },
-    sort(){
-      this.playlist.sort((a,b) => {
-        if(a.votes > b.votes) return -1;
-        else if(a.votes < b.votes) return 1;
-        else{
-          if(new Date(a.time + 'Z') >= new Date(b.time + 'Z')) return 1;
-          else return -1;
-        }
       });
     }
   }

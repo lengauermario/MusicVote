@@ -30,6 +30,7 @@ import Vuetify from 'vuetify'
 import VotingList from '@/components/VotingList.vue'
 import AddView from '@/components/AddView.vue'
 import SongPreview from '@/components/SongPreview.vue'
+import PlaylistService from '@/services/PlaylistService.ts'
 
 export default Vue.extend({
   name: 'App',
@@ -48,7 +49,9 @@ export default Vue.extend({
   methods: {
     refresh(){
       if(this.$refs.votinglist)
-        this.$refs.votinglist.refreshIfNecessary();   
+        this.$refs.votinglist.refreshIfNecessary();  
+      if(this.$refs.songpreview)
+        this.$refs.songpreview.refresh(); 
     }
   },
   created(){
@@ -85,12 +88,11 @@ export default Vue.extend({
       let tmp = JSON.parse(e.data);
       this.$refs.votinglist.refresh(tmp);
     });
-    eventSource.addEventListener("removement", e => {
-      let tmp = JSON.parse(e.data);
-      this.$refs.votinglist.handleRemovement(tmp.id);
-    });
     eventSource.addEventListener("song_started", e => {
       this.$refs.songpreview.refresh();
+    });
+    PlaylistService.getAll().then(result => {
+      this.$refs.votinglist.refresh(result);
     });
   }
 });

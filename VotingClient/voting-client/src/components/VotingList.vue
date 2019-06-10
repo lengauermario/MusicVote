@@ -57,17 +57,10 @@ export default {
     Vuetify
   },
   created() {
-    this.fetchPlaylist();
   },
   methods:{    
     fetchPlaylist(){
-      PlaylistService.getAll().then(result => {
-        this.songs = result.songs;
-        this.timestamp = result.timestamp;
-        this.songs.forEach(song => {
-          song = this.prepareSong(song);
-        });
-      });
+      
     },
     refreshIfNecessary(){
       PlaylistService.getVersion().then(x => {
@@ -78,20 +71,21 @@ export default {
     handleVote(item){
       if(item.iconPath.includes("Grey")){
         item.iconPath = this.imagePaths[1];
-        localStorage.setItem(item.id, "voted");
-        PlaylistService.addVote(item.id).then(x => console.log("vote added "+item.id));
+        this.pushToLocalStorage(item.id);
+        PlaylistService.addVote(item.id).then(x => console.log('vote for ' + item.id));
       }
       else{
         item.iconPath = this.imagePaths[0];
-        this.clearLocalStorage(item.id)
-        PlaylistService.removeVote(item.id).then(x => console.log("vote removed "+item.id));
+        this.removeFromLocalStorage(item.id);
+        PlaylistService.removeVote(item.id).then(x => console.log('vote removed ' + item.id));
       }
     },
     prepareSong(item){
       if (!("thumbNail" in item) || item.thumbNail === "default") {
         item.thumbNail = this.defaultThumbnail;
       }
-      if(localStorage.getItem(item.id) != null) {
+      let tmp = JSON.parse(localStorage.getItem("votes"));
+      if(tmp != null && tmp.indexOf(item.id) >= 0) {
         item.status = "LIKED"
       }
       item.iconPath = this.getIconPath(item);
@@ -106,19 +100,41 @@ export default {
       else
         return this.imagePaths[0];      
     },
-    clearLocalStorage(id){
-      localStorage.removeItem(id);
-    },
-    handleRemovement(id){
-      this.clearLocalStorage(id);
-    },
     refresh(data){
       this.songs = data.songs;
       this.timestamp = data.timestamp;
       this.songs.forEach(song => {
           song = this.prepareSong(song);
       });
+      this.refreshLocalStorage();
+    },
+    pushToLocalStorage(id){
+      var votes = JSON.parse(localStorage.getItem("votes"));
+      if(votes == null)
+        votes = [];
+      votes.push(id);
+      localStorage.setItem("votes", JSON.stringify(votes));
+    },
+    removeFromLocalStorage(id){
+      var votes = JSON.parse(localStorage.getItem("votes"));
+      votes.splice(votes.indexOf(id), 1);
+      localStorage.setItem("votes", JSON.stringify(votes));
+    },
+    refreshLocalStorage(){
+      var votes = JSON.parse(localStorage.getItem("votes"));
+      let intersection = null;
+      if(votes)
+        intersection = votes.filter(x => this.isInPlaylist(x))
+      localStorage.setItem("votes", JSON.stringify(intersection));
+    },
+    isInPlaylist(id){
+      for (const s of this.songs) {
+        if(s.id == id)
+          return true;
+      }
+      return false;
     }
+
   }
 };
 </script>

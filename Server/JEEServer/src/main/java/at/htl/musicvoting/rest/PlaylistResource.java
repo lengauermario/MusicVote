@@ -75,7 +75,6 @@ public class PlaylistResource {
         if(id != null && playlist.contains(id)){
             playlist.removeSong(id);
             broadcastChange();
-            broadcastRemovement(id);
         }
     }
 
@@ -128,8 +127,6 @@ public class PlaylistResource {
         Song song = playlist.playSong();
         if(song == null)
             song = playlist.playRandom();
-        else
-            broadcastRemovement(song.getId());
         broadcastChange();
         broadcastNextSong(song);
         return Response.ok(song).build();
@@ -147,15 +144,6 @@ public class PlaylistResource {
                 .name("change")
                 .mediaType(MediaType.APPLICATION_JSON_TYPE)
                 .data(PlaylistAdapter.marshall(playlist.getPlaylist()))
-                .build();
-        sseBroadcaster.broadcast(event);
-    }
-
-    private void broadcastRemovement(Long id) {
-        OutboundSseEvent event = sse.newEventBuilder()
-                .name("removement")
-                .mediaType(MediaType.APPLICATION_JSON_TYPE)
-                .data(Json.createObjectBuilder().add("id", id).build())
                 .build();
         sseBroadcaster.broadcast(event);
     }

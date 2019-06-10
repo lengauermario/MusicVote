@@ -50,21 +50,13 @@ export default Vue.extend({
     PlayingSong,
     Playlist
   },
-  created() {
+  mounted() { 
     const eventSource = new EventSource(
       process.env.VUE_APP_API_URL + "/playlist/connect"
     );
-    eventSource.addEventListener("add_song", e => {
-      this.$refs.playlist.addSong(JSON.parse(e.data));
-    });
-    eventSource.addEventListener("add_vote", e => {
-      this.$refs.playlist.addVote(JSON.parse(e.data).id);
-    });
-    eventSource.addEventListener("remove_song", e => {
-      this.$refs.playlist.removeSong(JSON.parse(e.data).id);
-    });
-    eventSource.addEventListener("remove_vote", e => {
-      this.$refs.playlist.removeVote(JSON.parse(e.data).id);
+    eventSource.addEventListener("change", e => {
+      let tmp = JSON.parse(e.data);
+      this.$refs.playlist.refresh(tmp);
     });
     eventSource.addEventListener("song_started", e => {
       this.$refs.playingSong.refresh();

@@ -57,7 +57,6 @@ export default Vue.extend({
   methods: {
     refresh(){
         PlaylistService.peek().then( song => {
-            console.log(song)
             localStorage.removeItem(song.id);
             this.thumbNail = (song.thumbNail == "default")? this.defaultThumbnail : song.thumbNail;
             this.title = song.title;

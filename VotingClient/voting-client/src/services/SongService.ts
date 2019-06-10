@@ -5,8 +5,8 @@ let songUrl = process.env.VUE_APP_API_URL + '/song/';
 let playlistUrl = process.env.VUE_APP_API_URL + '/playlist/'
 export default{
 
-  async getAll() {
-    let response = await Axios.get(songUrl +'find');
+  async find(term: String) {
+    let response = await Axios.get(songUrl +'find?queryTerm=' + term);
     return response.data;
   },
   

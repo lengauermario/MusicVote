@@ -18,7 +18,7 @@ npm<template>
     </v-tab-item>
     <v-tab-item >
         <v-card flat>
-          <v-card-text><add-view/></v-card-text>
+          <v-card-text><add-view ref="addview"/></v-card-text>
         </v-card>
     </v-tab-item>
   </v-tabs>
@@ -75,24 +75,20 @@ export default Vue.extend({
     window.removeEventListener('visibilitychange',  this.refresh);
   },
   mounted() {  
-    /*setInterval(() => {
-        if(this.shouldReload){
-          this.$refs.votinglist.fetchPlaylist()
-          this.shouldReload = false
-        }
-      }, 10000);*/
     const eventSource = new EventSource(
       process.env.VUE_APP_API_URL + "/playlist/connect"
     );
     eventSource.addEventListener("change", e => {
       let tmp = JSON.parse(e.data);
       this.$refs.votinglist.refresh(tmp);
+      this.$refs.addview.playlistChanged(tmp.songs.map(s => s.id));
     });
     eventSource.addEventListener("song_started", e => {
       this.$refs.songpreview.refresh();
     });
     PlaylistService.getAll().then(result => {
       this.$refs.votinglist.refresh(result);
+      this.$refs.addview.playlistChanged(result.songs.map(s => s.id));
     });
   }
 });

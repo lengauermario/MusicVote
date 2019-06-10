@@ -72,12 +72,12 @@ export default {
       if(item.iconPath.includes("Grey")){
         item.iconPath = this.imagePaths[1];
         this.pushToLocalStorage(item.id);
-        PlaylistService.addVote(item.id).then(x => console.log('vote for ' + item.id));
+        PlaylistService.addVote(item.id).then(x => {});
       }
       else{
         item.iconPath = this.imagePaths[0];
         this.removeFromLocalStorage(item.id);
-        PlaylistService.removeVote(item.id).then(x => console.log('vote removed ' + item.id));
+        PlaylistService.removeVote(item.id).then(x => {});
       }
     },
     prepareSong(item){

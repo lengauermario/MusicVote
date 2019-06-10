@@ -4,16 +4,9 @@
       <v-flex xs12>
         <v-text-field v-model="search" label="Suche..." @input="searchInputChanged()"></v-text-field>
       </v-flex>
-      <!-- <v-flex xs3>
-        <v-img
-          :src="this.youTubeImgPath"
-          :lazy-src="this.youTubeImgPath"
-          @click="turnYouTubeSearch()"
-        />
-      </v-flex> -->
     </v-layout>
     <v-layout row wrap align-center v-for="item in songs" v-bind:key="item.video">
-      <template v-if="item.title.toUpperCase().includes(search.toUpperCase())">
+      <template>
         <v-flex xs4>
           <v-card dark color="primary">
             <v-img
@@ -42,8 +35,7 @@
         <v-flex xs2>
           <v-img
             style="margin: auto auto"
-            :src="item.iconPath"
-            :lazy-src="item.iconPath"
+            :src="item.iconPath" :lazy-src="item.iconPath"
             aspect-ratio="1"
             @click="addSong(item)"
           />
@@ -57,7 +49,8 @@
 import Vue from "vue";
 import Vuetify from "vuetify";
 import SongService from "@/services/SongService.ts";
-import YouTubeService from "@/services/YouTubeService";
+
+import PlaylistService from '@/services/PlaylistService.ts'
 
 export default Vue.extend({
   name: "add-view",
@@ -75,8 +68,7 @@ export default Vue.extend({
       ],
       defaultThumbnail: require("@/assets/images/defaultCover.png"),
       search: "",
-      youTubeSearch: true,
-      youTubeImgPath: ""
+      songsInPlaylist: [],
     };
   },
   components: {
@@ -84,80 +76,81 @@ export default Vue.extend({
     Vuetify
   },
   created() {
-    this.youTubeImgPath = this.imagePaths[6];
     this.searchInputChanged();
     search:"";
   },
   methods: {
     addSong(item) {
-      item.iconPath = this.imagePaths[3];
-      if(this.isSearchOnYouTubeOn()){
-        YouTubeService.downloadVideo(item).then(result =>{
-          item.iconPath = this.imagePaths[3];
-          console.log("Youtubedownload start")
-        })
+      if(item.iconPath.includes('Grey')){
+        item.iconPath = this.imagePaths[1];
+        this.pushToLocalStorage(item.id);
+        PlaylistService.addVote(item.id).then(x => {});
       }
-      else {
+      else if(item.iconPath.includes('heart')) {
+        item.iconPath = this.imagePaths[0];
+        this.removeFromLocalStorage(item.id);
+        PlaylistService.removeVote(item.id).then(x => {});
+      }
+      else{
         SongService.addSong(item.id).then(result => {
-          console.log("Song added to Playlist");
         });
-      }
-    },
-    turnYouTubeSearch() {
-      if (this.isSearchOnYouTubeOn()) {
-        // YouTubeSearch is off turn on
-        this.youTubeImgPath = this.imagePaths[6];
-      } else {
-        this.youTubeImgPath = this.imagePaths[5];
-      }
-      this.searchInputChanged();
-    },
-    isSearchOnYouTubeOn() {
-      if (!this.youTubeImgPath.includes("Grey")) {
-        return true;
-      } else {
-        return false;
-      }
+      }     
     },
     searchInputChanged() {
-      if (this.isSearchOnYouTubeOn()) {
-        YouTubeService.search(this.search).then((data) => {
-          console.log(data);
-          this.songs = data;
-          this.songs.forEach(x => x.iconPath = this.getIconPath(x));
-        });
-      }
-      else {
-        this.fetchLocalSongs();
-      }
+      this.fetchLocalSongs();
     },
     fetchLocalSongs(){
-      SongService.getAll().then(result => {
+      SongService.find(this.search).then(result => {
         this.songs = result;
         this.songs.forEach(song => {
-          song.videoId = song.id;
-          if (!("thumbNail" in song) || song.thumbNail === "default") {
-            song.thumbNail = this.defaultThumbnail;
-          }
-          song.iconPath = this.getIconPath();
+          song = this.prepareSong(song);
         });
-
-        console.log(result);
       });
     },
-    getIconPath(item) {
-      if (item === undefined || item.status === undefined) {
-        return this.imagePaths[4];
+
+    prepareSong(song){
+     song.videoId = song.id;
+      if (!("thumbNail" in song) || song.thumbNail === "default") {
+        song.thumbNail = this.defaultThumbnail;
       }
-      switch (item.status) {
-        case 'AVAILABLE':
-        case 'DOWNLOADABLE':
-          return this.imagePaths[4];
-        case 'DOWNLOADING':
-          return this.imagePaths[3];
-        case 'NOT_AVAILABLE':
-          return this.imagePaths[2];
+      let tmp = JSON.parse(localStorage.getItem("votes"));
+      if(tmp != null && tmp.indexOf(song.id) >= 0) {
+        song.iconPath = this.imagePaths[1];
       }
+      else if(this.songsInPlaylist.indexOf(song.id) >= 0){
+        song.iconPath = this.imagePaths[0];
+      }
+      else{
+        song.iconPath = this.imagePaths[4];
+      }
+      return song;
+    },
+
+    playlistChanged(tmp){
+      this.songsInPlaylist = tmp;
+      this.songs.forEach(song => {
+          song = this.prepareSong(song);
+        });
+        this.songs.splice(0,0);
+    },
+    pushToLocalStorage(id){
+      var votes = JSON.parse(localStorage.getItem("votes"));
+      if(votes == null)
+        votes = [];
+      votes.push(id);
+      localStorage.setItem("votes", JSON.stringify(votes));
+    },
+    removeFromLocalStorage(id){
+      var votes = JSON.parse(localStorage.getItem("votes"));
+      votes.splice(votes.indexOf(id), 1);
+      localStorage.setItem("votes", JSON.stringify(votes));
+    },
+    refreshLocalStorage(){
+      var votes = JSON.parse(localStorage.getItem("votes"));
+      let intersection = null;
+      if(votes)
+        intersection = votes.filter(x => this.songsInPlaylist.indexOf(x)>= 0)
+      localStorage.setItem("votes", JSON.stringify(intersection));
     }
   }
 });

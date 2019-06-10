@@ -5,8 +5,8 @@
     <v-flex xs5>
         <v-card dark color="primary">
         <v-img
-            :src="this.thumbNail"
-            :lazy-src="this.thumbNail"
+            :src="defaultThumbnail"
+            :lazy-src="defaultThumbnail"
             aspect-ratio="1"
             class="grey lighten-2"
         >
@@ -41,7 +41,6 @@ export default Vue.extend({
   data() {
     return {
       defaultThumbnail: require("@/assets/images/defaultCover.png"),
-      thumbNail: this.defaultThumbnail,
       title: "Start",
       artist: "Der Admin muss noch starten"
     };
@@ -52,17 +51,16 @@ export default Vue.extend({
     PlaylistService
   },
   created() {
-      this.refresh();
-  },
-  methods: {
-    refresh(){
-        PlaylistService.peek().then( song => {
-            localStorage.removeItem(song.id);
-            this.thumbNail = (song.thumbNail == "default")? this.defaultThumbnail : song.thumbNail;
-            this.title = song.title;
+      this.$store.subscribe((mutation, store) => {
+        if(mutation.type === "setCurrentSong"){
+          const song = mutation.payload
+          if(song){
+            this.title = song.title
             this.artist = song.artist
-        });
-    }
+          }
+        }
+      })
+      this.$store.dispatch("peek")
   }
 });
 </script>

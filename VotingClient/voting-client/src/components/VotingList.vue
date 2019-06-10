@@ -1,10 +1,10 @@
 <template>
   <v-container grid-list-md text-xs-center>
     <transition-group name="list-complete" tag="p">
-    <v-layout row wrap align-center v-for="item in songs" v-bind:key="item.id" class="list-complete-item" >
+    <v-layout row wrap align-center v-for="item in $store.state.songs" v-bind:key="item.id" class="list-complete-item" >
       <v-flex xs4>
         <v-card dark color="primary">
-          <v-img :src="item.thumbNail" :lazy-src="item.thumbNail" aspect-ratio="1" class="grey lighten-2">
+          <v-img :src="defaultThumbnail" :lazy-src="defaultThumbnail" aspect-ratio="1" class="grey lighten-2">
              <span class="my-span" style="margin: auto">
               {{item.votes}} Votes
             </span>
@@ -40,7 +40,6 @@ export default {
   name: "voting-list",
   data() {
     return {
-      songs: [],
       imagePaths: [
         require("@/assets/images/heartGrey.png"),
         require("@/assets/images/heart.png"),
@@ -49,7 +48,6 @@ export default {
         require("@/assets/images/plus.png"),
       ],
       defaultThumbnail: require("@/assets/images/defaultCover.png"),
-      timestamp: 0,
     };
   },
   components: {
@@ -57,84 +55,41 @@ export default {
     Vuetify
   },
   created() {
+    this.$store.subscribe((mutation, state) => {
+      if(mutation.type === "setPlaylist"){
+        state.songs.forEach(song => {
+            song = this.prepareSong(song);
+        });
+        this.$store.commit("cleanUpVotes")
+      }
+    })
   },
   methods:{    
-    fetchPlaylist(){
-      
-    },
-    refreshIfNecessary(){
-      PlaylistService.getVersion().then(x => {
-          if(x != this.timestamp)
-            this.fetchPlaylist();
-        }); 
-    },
     handleVote(item){
-      if(item.iconPath.includes("Grey")){
-        item.iconPath = this.imagePaths[1];
-        this.pushToLocalStorage(item.id);
-        PlaylistService.addVote(item.id).then(x => {});
+      if(this.$store.state.votes.indexOf(item.id) >= 0){
+        this.removeVote(item.id);
+        PlaylistService.removeVote(item.id)
       }
       else{
-        item.iconPath = this.imagePaths[0];
-        this.removeFromLocalStorage(item.id);
-        PlaylistService.removeVote(item.id).then(x => {});
+         this.addVote(item.id);
+        PlaylistService.addVote(item.id)
       }
     },
     prepareSong(item){
-      if (!("thumbNail" in item) || item.thumbNail === "default") {
-        item.thumbNail = this.defaultThumbnail;
+      if(this.$store.state.votes && this.$store.state.votes.indexOf(item.id) >= 0){
+        this.$store.commit("changeIconPath", {songId: item.id, iconPath: this.imagePaths[1]})
       }
-      let tmp = JSON.parse(localStorage.getItem("votes"));
-      if(tmp != null && tmp.indexOf(item.id) >= 0) {
-        item.status = "LIKED"
-      }
-      item.iconPath = this.getIconPath(item);
+      else{
+        this.$store.commit("changeIconPath", {songId: item.id, iconPath: this.imagePaths[0]})
+      }      
       return item;
     },
-    getIconPath(item) {
-      if (item === undefined || item.status === undefined) {
-        return this.imagePaths[0];
-      }
-      if(item.status == 'LIKED')
-        return this.imagePaths[1];
-      else
-        return this.imagePaths[0];      
+    addVote(id){
+      this.$store.commit("addVote", id)
     },
-    refresh(data){
-      this.songs = data.songs;
-      this.timestamp = data.timestamp;
-      this.songs.forEach(song => {
-          song = this.prepareSong(song);
-      });
-      this.refreshLocalStorage();
+    removeVote(id){
+      this.$store.commit("removeVote", id)
     },
-    pushToLocalStorage(id){
-      var votes = JSON.parse(localStorage.getItem("votes"));
-      if(votes == null)
-        votes = [];
-      votes.push(id);
-      localStorage.setItem("votes", JSON.stringify(votes));
-    },
-    removeFromLocalStorage(id){
-      var votes = JSON.parse(localStorage.getItem("votes"));
-      votes.splice(votes.indexOf(id), 1);
-      localStorage.setItem("votes", JSON.stringify(votes));
-    },
-    refreshLocalStorage(){
-      var votes = JSON.parse(localStorage.getItem("votes"));
-      let intersection = null;
-      if(votes)
-        intersection = votes.filter(x => this.isInPlaylist(x))
-      localStorage.setItem("votes", JSON.stringify(intersection));
-    },
-    isInPlaylist(id){
-      for (const s of this.songs) {
-        if(s.id == id)
-          return true;
-      }
-      return false;
-    }
-
   }
 };
 </script>

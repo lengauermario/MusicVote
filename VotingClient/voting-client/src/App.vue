@@ -1,4 +1,4 @@
-npm<template>
+<template>
   <v-tabs fixed-tabs 
       color="white"
       slider-color="black" >
@@ -11,14 +11,14 @@ npm<template>
     <v-tab-item>
       <v-card flat>
           <v-card-text>
-            <song-preview ref="songpreview"/>
-            <voting-list ref="votinglist"/>
+            <song-preview/>
+            <voting-list/>
           </v-card-text>
         </v-card>
     </v-tab-item>
     <v-tab-item >
         <v-card flat>
-          <v-card-text><add-view ref="addview"/></v-card-text>
+          <v-card-text><add-view/></v-card-text>
         </v-card>
     </v-tab-item>
   </v-tabs>
@@ -41,35 +41,13 @@ export default Vue.extend({
     AddView,
     SongPreview
   },
-  data () {
-    return {
-      timestamp: 0
-    }
-  },
   methods: {
     refresh(){
-      if(this.$refs.votinglist)
-        this.$refs.votinglist.refreshIfNecessary();  
-      if(this.$refs.songpreview)
-        this.$refs.songpreview.refresh(); 
+      this.$store.dispatch("refreshIfNecessary")
     }
   },
   created(){
-    //window.addEventListener('resume', () => {this.abc += "resume"});
     window.addEventListener('focus', () => this.refresh());
-    /* window.addEventListener('blur', () => this.abc += "blur");
-    window.addEventListener('visibilitychange', () => this.abc += "visibilitychange");
-    window.addEventListener('freeze', () => this.abc += "freeze");
-    window.addEventListener('beforeunload', () => this.abc += "beforeunload");
-    window.addEventListener('pagehide', () => this.abc += "pagehide");
-    window.addEventListener('unload', () => this.abc += "unload");
-    window.addEventListener('pagehide', () => this.abc += "pagehide");
-    window.addEventListener('pageshow', () => this.abc += "pageshow");
-    window.addEventListener("beforeunload", function(e){
-      this.abc += "called\n"
-      this.shouldReload = true
-    }, false); */
-    
   },
   destroyed() {
     window.removeEventListener('visibilitychange',  this.refresh);
@@ -79,17 +57,12 @@ export default Vue.extend({
       process.env.VUE_APP_API_URL + "/playlist/connect"
     );
     eventSource.addEventListener("change", e => {
-      let tmp = JSON.parse(e.data);
-      this.$refs.votinglist.refresh(tmp);
-      this.$refs.addview.playlistChanged(tmp.songs.map(s => s.id));
+      this.$store.commit("setPlaylist", JSON.parse(e.data))
     });
     eventSource.addEventListener("song_started", e => {
-      this.$refs.songpreview.refresh();
+      this.$store.dispatch("peek")
     });
-    PlaylistService.getAll().then(result => {
-      this.$refs.votinglist.refresh(result);
-      this.$refs.addview.playlistChanged(result.songs.map(s => s.id));
-    });
+    this.$store.dispatch("fetchPlaylist")
   }
 });
 </script>

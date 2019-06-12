@@ -5,8 +5,8 @@ Repository für MusicVoting v1 (Einschränkung auf lokale Mp3-Files)
 ## :bookmark_tabs: Inhaltsverzeichnis
 - [Einleitung](#arrow_forward-einleitung)
 - [Verwendung](#rocket-verwendung)
-- [System Architektur](#ferris_wheel-system-architektur)
 - [Aktueller Stand](#hammer-aktueller-stand)
+- [Dokumente](#closed_book-dokumente)
 - [Entwickler](#guardsman-entwickler)
 - [Technologien](#wrench-technologien)
 - [Lizenz](#lock-lizenz)
@@ -45,21 +45,19 @@ password=<PASSWORT FÜR ADMIN>
 startFolder=<ORDNER IN DEM MP3 FILES LIEGEN>
 ```
 
-
 - Builden und Starten des Docker-Netzwerks
 ```
 docker-compose build
 docker-compose up
 ```
 
-
-## :ferris_wheel: System Architektur
-![sysarch](/img/systemarchitektur.png)
-
 ## :hammer: Aktueller Stand
 
 Version v1.0.0 von MusicVoting (Einschränkung auf lokale Mp3-Files) ist bereit für den Einsatz beim Grillfest der HTL Leonding!
 
+##  :closed_book: Dokumente:	
+- [Systemarchitektur](/docs/Systemarchitektur.pdf)
+- [UseCase-Diagramm](/docs/usecase.pdf)
 
 ## :guardsman: Entwickler:
 - [Leon Kuchinka](https://github.com/leonkuchinka)

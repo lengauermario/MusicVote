@@ -1,5 +1,7 @@
 # MusicVoting :notes:
 
+Repository für MusicVoting v1 (Einschränkung auf lokale Mp3-Files)
+
 ## :bookmark_tabs: Inhaltsverzeichnis
 - [Einleitung](#arrow_forward-einleitung)
 - [Verwendung](#rocket-verwendung)

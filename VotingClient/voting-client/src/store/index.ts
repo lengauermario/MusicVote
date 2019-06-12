@@ -3,6 +3,7 @@ import Vue from "vue"
 import Song from "@/model/Song"
 import VuexPersist from "vuex-persist"
 import PlaylistService from '@/services/PlaylistService';
+import createMutationsSharer from "vuex-shared-mutations";
 
 Vue.use(Vuex)
 
@@ -63,14 +64,15 @@ const store = new Vuex.Store<RootState>({
                 commit("setPlaylist", result)
             })
         },
-        refreshIfNecessary({ state, dispatch }) {
+        refreshIfNecessary({ state, dispatch, commit }) {
             PlaylistService.getVersion().then(x => {
                 if (x != state.timestamp)
                     dispatch("fetchPlaylist")
+                commit("cleanUpVotes")
             });
         }
     },
-    plugins: [persistenceStrategy.plugin]
+    plugins: [persistenceStrategy.plugin, createMutationsSharer({ predicate: ["setPlaylist", "addVote", "removeVote","cleanUpVotes","changeIconPath", "setCurrentSong"] })]
 })
 
 export default store;

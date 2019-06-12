@@ -5,15 +5,13 @@
 - [Verwendung](#rocket-verwendung)
 - [System Architektur](#ferris_wheel-system-architektur)
 - [Aktueller Stand](#hammer-aktueller-stand)
-  - [GUI](#iphone-gui)
-  - [Server](#computer-server)
-- [Dokumente](#closed_book-dokumente)
 - [Entwickler](#guardsman-entwickler)
 - [Technologien](#wrench-technologien)
 - [Lizenz](#lock-lizenz)
 
 ## :arrow_forward: Einleitung
-Was ist nerviger als schlechte Musik auf einer Party? Weil wir finden, dass es nichts Schlimmeres gibt, entwickeln wir MusicVoting. MusicVoting ermöglicht jedem Partygast ganz einfach mittels Smartphone mitzubestimmen welche Musik gespielt werden soll.
+Was ist nerviger als schlechte Musik auf einer Party? 
+Weil wir finden, dass es nichts Schlimmeres gibt, entwickeln wir MusicVoting. MusicVoting ermöglicht jedem Partygast ganz einfach mittels Smartphone mitzubestimmen welche Musik gespielt werden soll.
 
 ## :rocket: Verwendung
 Folgende Tools müssen installiert sein:
@@ -58,23 +56,7 @@ docker-compose up
 
 ## :hammer: Aktueller Stand
 
-### :iphone: GUI
-#### 🛠 Status: In Arbeit
-Die GUI befindet sich momentan noch in Entwicklung. Alles zum aktuellen Stand finden Sie [hier](/AbspielClient/musicclient).
-
-### <strike> :musical_note: Youtube-Einbindung
-#### 🛠 Status: Fertig
-Die Einbinding von Youtube funktioniert bereits in vollem Umfang. User können nach Youtube Videos suchen und herunterladen und zur Playlist hinzufügen.</strike>
-
-### :computer: Server
-#### 🛠 Status: Fertig
-Der Server wurde bereits fertig implementiert!
-
-##  :closed_book: Dokumente:
-
-- [Projektantrag](docs/Projektantrag.pdf)
-- [Projektspezifikation](docs/projektspezifikation.md)
-- [Systemarchitektur](/img/systemarchitektur.png)
+Version v1.0.0 von MusicVoting (Einschränkung auf lokale Mp3-Files) ist bereit für den Einsatz beim Grillfest der HTL Leonding!
 
 
 ## :guardsman: Entwickler:
@@ -90,6 +72,7 @@ Der Server wurde bereits fertig implementiert!
 - CSS
 - JavaScript
 - VueJS
+- Docker
 
 
 ## :lock: Lizenz:

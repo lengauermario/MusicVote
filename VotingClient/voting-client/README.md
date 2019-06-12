@@ -1,34 +1,7 @@
-# voting-client
+# Mobile-Client
 
-## Project setup
-```
-npm install
-```
+Mit diesem VueJs Projekt wird es allen Gästen der Veranstaltung ermöglicht für die gewünschte Musik abzustimmen. Für das Voting ist keinerlei Authentifizierung notwendig, die Beschränkung, nur einmal für einen Song abstimmen zu können, ist somit nur clientseitig vorhanden. In erster Instanz wird damit in Kauf genommen, dass mögliche "Betrüger" leichtes Spiel haben.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Entwickler
+- Mario Lengauer
+- Leon Kuchinka

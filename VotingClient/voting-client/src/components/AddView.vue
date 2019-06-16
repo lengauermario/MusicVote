@@ -2,7 +2,7 @@
   <v-container grid-list-md text-xs-center>
     <v-layout rpw wrap align-center>
       <v-flex xs12>
-        <v-text-field v-model="search" label="Suche..." @input="searchInputChanged()"></v-text-field>
+        <v-text-field v-model="search" label="Suche" @input="searchInputChanged()"></v-text-field>
       </v-flex>
     </v-layout>
     <v-layout style="border-bottom: 1px solid #CCC" row wrap align-center v-for="item in songs" v-bind:key="item.video">
@@ -91,13 +91,18 @@ export default Vue.extend({
       }
       else if(mutation.type === "changeIconPath"){
         let tmp = this.songs.find(s => s.id === mutation.payload.songId)
-        this.prepareSong(tmp);
-        this.songs.splice(0,0);
+        if(tmp){
+          this.prepareSong(tmp);
+          this.songs.splice(0,0);
+        }         
       }
       else if(mutation.type === "removeSong"){
         let tmp = this.songs.find(s => s.id === mutation.payload.id)
-        this.prepareSong(tmp);
-        this.songs.splice(0,0);
+        if(tmp){
+          this.prepareSong(tmp);
+          this.songs.splice(0,0);
+        }
+        
       }
     })
     
@@ -139,6 +144,7 @@ export default Vue.extend({
       this.$store.dispatch("removeUserVote", id)
     },
     prepareSong(item){
+      console.log("prepareSong", item)
       if(this.$store.state.songs.map(s => s.id).indexOf(item.id) >= 0){
         item.iconIndex = this.$store.state.songs.find(s => s.id == item.id).iconIndex
       }
@@ -158,6 +164,9 @@ export default Vue.extend({
 </script>
 <style>
 i[icon$="favorite"]{
+  color: #F20643 !important;
+}
+i[icon$="add"]{
   color: #F20643 !important;
 }
 </style>

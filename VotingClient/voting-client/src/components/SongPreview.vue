@@ -1,23 +1,15 @@
 <template>
   <v-container grid-list-md text-xs-center>
       <v-layout row wrap>
-    <v-flex xs5>
-        <v-card dark color="primary">
-        <v-img
+    <v-flex xs4>
+      <v-img
             :src="defaultThumbnail"
             :lazy-src="defaultThumbnail"
             aspect-ratio="1"
-            class="grey lighten-2"
-        >
-            <template v-slot:placeholder>
-            <v-layout fill-height align-center justify-center ma-0>
-                <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-            </v-layout>
-            </template>
-        </v-img>
-        </v-card>
+        />
+        
     </v-flex>
-    <v-flex xs7 height="100%">
+    <v-flex xs8 height="100%">
         <div style="width: 100%;height:100%">
             <span style="width: 100%;font-weight: bold;float:left;overflow-wrap: break-word;text-align: left;padding-top: 5px;font-size: large">{{this.title}}</span>
             <br/>

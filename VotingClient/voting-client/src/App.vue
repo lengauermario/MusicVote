@@ -1,24 +1,22 @@
 <template>
   <v-tabs fixed-tabs 
-      color="white"
-      slider-color="black" >
-    <v-tab style=" border-bottom: 2px solid lightgrey;">
+      color="#f4f4f4"
+      slider-color="#F20643" >
+    <v-tab active-class="active" style=" border-bottom: 2px solid lightgrey;">
       Playlist
     </v-tab>
-    <v-tab style=" border-bottom: 2px solid lightgrey;">
+    <v-tab active-class="active" style=" border-bottom: 2px solid lightgrey;">
       Hinzufügen
     </v-tab>
     <v-tab-item>
       <v-card flat>
-          <v-card-text>
-            <song-preview/>
-            <voting-list/>
-          </v-card-text>
+            <song-preview class="content"/>
+            <voting-list class="content" fill-height="100%"/>
         </v-card>
     </v-tab-item>
     <v-tab-item >
         <v-card flat>
-          <v-card-text><add-view/></v-card-text>
+          <add-view class="content"/>
         </v-card>
     </v-tab-item>
   </v-tabs>
@@ -50,6 +48,7 @@ export default Vue.extend({
   methods: {
     refresh(){
       this.$store.dispatch("refreshIfNecessary")
+      this.$store.dispatch("peek")
     }
   },
   created(){

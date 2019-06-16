@@ -9,6 +9,7 @@ import './registerServiceWorker'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.config.productionTip = false
+Vue.config.devtools = true
 
 Vue.use(Vuetify, {
   iconfont: 'md' // 'md' || 'mdi' || 'fa' || 'fa4'

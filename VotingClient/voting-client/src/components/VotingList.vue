@@ -3,8 +3,8 @@
     <transition-group name="list-complete" tag="p">
     <v-layout style="border-top: 1px solid #CCC" row wrap align-center v-for="item in $store.state.songs" v-bind:key="item.id" class="list-complete-item" >
       <v-flex xs2>
-        <div style="backgroundColor: #141517; height: 50px; width: 50px">
-          <div style="line-height: 50px;white-space: nowrap;color: white;font-weight: bold;font-size: 20px">{{item.votes}}</div>
+        <div style="background-color: #141517 !important; height: 50px; width: 50px">
+          <div style="line-height: 50px;white-space: nowrap;color: #f4f4f4;font-weight: bold;font-size: 20px">{{item.votes}}</div>
         </div>
       </v-flex>
       <v-flex xs9 height="100%">
@@ -18,7 +18,7 @@
       </v-flex>
     </v-layout>
     </transition-group>
-    <v-snackbar v-model="snackbar" :timeout="timeout" bottom>Playlist wird neu geladen</v-snackbar>
+    <v-snackbar v-model="snackbar" :style="'background-color:red'" :timeout="timeout" bottom>Playlist wird neu geladen</v-snackbar>
   </v-container>
   
 </template>
@@ -57,6 +57,8 @@ export default {
   },
   methods:{    
     handleClick(item){
+      console.log("click received")
+      console.log("item: ", item)
       if(this.$store.state.votes.indexOf(item.id) >= 0){
         this.removeVote(item.id);
         PlaylistService.removeVote(item.id)

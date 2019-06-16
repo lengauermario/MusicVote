@@ -10,7 +10,9 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.config.productionTip = false
 
-Vue.use(Vuetify)
+Vue.use(Vuetify, {
+  iconfont: 'md' // 'md' || 'mdi' || 'fa' || 'fa4'
+});
 
 new Vue({
   router,

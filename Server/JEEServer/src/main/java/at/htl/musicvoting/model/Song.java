@@ -27,7 +27,7 @@ public class Song implements Comparable<Song> {
     @XmlTransient
     @JsonbTransient
     @Transient
-    private LocalDateTime addedToPlaylist;
+    private Long addedToPlaylist;
 
     //region Constructors
     public Song(String path,String artist, String title) {
@@ -48,11 +48,11 @@ public class Song implements Comparable<Song> {
 
     //region Getter and Setter
 
-    public LocalDateTime getAddedToPlaylist() {
+    public Long getAddedToPlaylist() {
         return addedToPlaylist;
     }
 
-    public void setAddedToPlaylist(LocalDateTime addedToPlaylist) {
+    public void setAddedToPlaylist(Long addedToPlaylist) {
         this.addedToPlaylist = addedToPlaylist;
     }
 

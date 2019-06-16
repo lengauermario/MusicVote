@@ -13,9 +13,9 @@ public class ObjectPlaylistSong {
     private String thumbNail;
     private int votes;
     @XmlJavaTypeAdapter(LocalDateTimeXmlAdapter.class)
-    private LocalDateTime time;
+    private Long time;
 
-    public ObjectPlaylistSong(Long id, String title, String artist, String thumbNail, int votes, LocalDateTime time) {
+    public ObjectPlaylistSong(Long id, String title, String artist, String thumbNail, int votes, Long time) {
         this.id = id;
         this.title = title;
         this.artist = artist;
@@ -64,11 +64,11 @@ public class ObjectPlaylistSong {
         this.votes = votes;
     }
 
-    public LocalDateTime getTime() {
+    public Long getTime() {
         return time;
     }
 
-    public void setTime(LocalDateTime time) {
+    public void setTime(Long time) {
         this.time = time;
     }
 }

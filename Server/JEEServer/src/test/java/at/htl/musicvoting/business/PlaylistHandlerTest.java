@@ -150,11 +150,9 @@ public class PlaylistHandlerTest {
 
     @Test
     public void test060_TimeOfInsert(){
-        LocalDateTime time = LocalDateTime.now();
         Song song = dao.getByID(1);
         playlistHandler.addSong(song);
-        Duration duration = Duration.between(time, song.getAddedToPlaylist());
-        Long millis = duration.toMillis();
+        Long millis = System.currentTimeMillis() - song.getAddedToPlaylist();
         assertThat(millis, lessThan(1000l));
     }
 

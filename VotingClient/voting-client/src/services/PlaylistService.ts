@@ -3,7 +3,7 @@ let url = process.env.VUE_APP_API_URL + '/playlist/';
 export default{
 
   async getVersion(){
-    let response = await Axios.get(url + "timestamp")
+    let response = await Axios.get(url + "version")
     return response.data;
   },
   async getAll() {

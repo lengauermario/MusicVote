@@ -23,6 +23,7 @@ public class PlaylistHolder {
     }
 
     public void updatePlaylist(List<Song> songs){
+        playlist.increaseUpdateId();
         playlist.setTimestamp(getTimestamp());
         playlist.setSongs(songs);
     }

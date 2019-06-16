@@ -1,7 +1,6 @@
 <template>
   <v-container grid-list-md text-xs-center>
-      <v-layout row wrap align-center>
-
+      <v-layout row wrap>
     <v-flex xs5>
         <v-card dark color="primary">
         <v-img
@@ -19,13 +18,11 @@
         </v-card>
     </v-flex>
     <v-flex xs7 height="100%">
-        <v-card color="primary">
-        <v-card-text fillheight class="px-0">
-            <span style="font-weight: bold">{{this.title}}</span>
-            <br>
-            {{this.artist}}
-        </v-card-text>
-        </v-card>
+        <div style="width: 100%;height:100%">
+            <span style="font-weight: bold;float:left;overflow-wrap: break-word;text-align: left;padding-top: 5px;font-size: large">{{this.title}}</span>
+            <br/>
+            <span style="text-align: left;float:left">{{this.artist}}</span>
+          </div>
     </v-flex>
       </v-layout>
   </v-container>
@@ -41,8 +38,8 @@ export default Vue.extend({
   data() {
     return {
       defaultThumbnail: require("@/assets/images/defaultCover.png"),
-      title: "Start",
-      artist: "Der Admin muss noch starten"
+      title: "Es wird noch kein Titel gespielt",
+      artist: "Wiedergabe muss erst gestartet werden"
     };
   },
   components: {

@@ -15,7 +15,7 @@ public class SongAdapter {
         json.add("id", song.getId());
         json.add("title", song.getTitle());
         json.add("artist", song.getArtist());
-        json.add("addedToPlaylist", song.getAddedToPlaylist().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+        json.add("addedToPlaylist", song.getAddedToPlaylist());
         json.add("votes", song.getVotes());
         return json.build();
     }

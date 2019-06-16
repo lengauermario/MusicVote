@@ -49,9 +49,6 @@ export default {
     this.$store.subscribe((mutation, state) => {
       if(mutation.type === "setPlaylist"){
         this.snackbar = true
-        state.songs.forEach(song => {
-            song = this.prepareSong(song);
-        });
         this.$store.commit("cleanUpVotes")
       }
       if(mutation.type == "setPlaylist" || mutation.type == "removeVote" || mutation.type == "addVote"|| mutation.type == "addSong"|| mutation.type == "removeSong")
@@ -68,15 +65,6 @@ export default {
         this.addVote(item.id);
         PlaylistService.addVote(item.id)
       }
-    },
-    prepareSong(item){
-      if(this.$store.state.votes && this.$store.state.votes.indexOf(item.id) >= 0){
-        this.$store.commit("changeIconPath", {songId: item.id, iconIndex: 1})
-      }
-      else{
-        this.$store.commit("changeIconPath", {songId: item.id, iconIndex: 0})
-      }      
-      return item;
     },
     addVote(id){
       this.$store.dispatch("addUserVote", id)

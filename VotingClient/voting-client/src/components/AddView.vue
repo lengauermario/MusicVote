@@ -83,6 +83,9 @@ export default Vue.extend({
     this.searchInputChanged();
     this.$store.subscribe((mutation, state) => {
       if(mutation.type === "setPlaylist"){
+        this.songs.forEach(song => {
+          song = this.prepareSong(song)
+        })
         this.$store.commit("cleanUpVotes")
         this.songs.splice(0,0);
       }
@@ -101,6 +104,7 @@ export default Vue.extend({
   },
   methods: {
     handleClick(item) {
+      
       if(this.$store.state.votes && this.$store.state.votes.indexOf(item.id) >= 0){
         this.removeVote(item.id)
         PlaylistService.removeVote(item.id)

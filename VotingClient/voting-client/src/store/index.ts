@@ -78,6 +78,11 @@ const store = new Vuex.Store<RootState>({
         fetchPlaylist({ state, commit }) {
             console.log("fetch playlist")
             PlaylistService.getAll().then(result => {
+                result.songs.forEach(element => {
+                    let tmp = state.votes.indexOf(element.id) >= 0 ? 1 : 0;
+                    element.iconIndex = tmp;
+                });
+                console.log(result);
                 commit("setPlaylist", result)
             })
         },

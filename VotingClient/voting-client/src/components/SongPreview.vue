@@ -19,9 +19,9 @@
     </v-flex>
     <v-flex xs7 height="100%">
         <div style="width: 100%;height:100%">
-            <span style="font-weight: bold;float:left;overflow-wrap: break-word;text-align: left;padding-top: 5px;font-size: large">{{this.title}}</span>
+            <span style="width: 100%;font-weight: bold;float:left;overflow-wrap: break-word;text-align: left;padding-top: 5px;font-size: large">{{this.title}}</span>
             <br/>
-            <span style="text-align: left;float:left">{{this.artist}}</span>
+            <span style="width: 100%;text-align: left;float:left;white-space: pre-line">{{this.artist}}</span>
           </div>
     </v-flex>
       </v-layout>

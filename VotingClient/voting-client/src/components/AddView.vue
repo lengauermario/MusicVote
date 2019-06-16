@@ -88,8 +88,12 @@ export default Vue.extend({
       }
       else if(mutation.type === "changeIconPath"){
         let tmp = this.songs.find(s => s.id === mutation.payload.songId)
-        if(tmp)
-          tmp.iconIndex = mutation.payload.iconIndex;
+        this.prepareSong(tmp);
+        this.songs.splice(0,0);
+      }
+      else if(mutation.type === "removeSong"){
+        let tmp = this.songs.find(s => s.id === mutation.payload.id)
+        this.prepareSong(tmp);
         this.songs.splice(0,0);
       }
     })

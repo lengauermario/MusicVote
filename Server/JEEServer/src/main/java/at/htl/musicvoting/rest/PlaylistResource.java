@@ -167,6 +167,7 @@ public class PlaylistResource {
                         .add("id", song.getId())
                         .build())
                 .build();
+            sseBroadcaster.broadcast(event);
         }
         broadcastNextSong(song);
         return Response.ok(song).build();

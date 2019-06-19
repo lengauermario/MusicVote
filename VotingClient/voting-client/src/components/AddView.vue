@@ -5,7 +5,8 @@
         <v-text-field v-model="search" label="Suche" @input="searchInputChanged()"></v-text-field>
       </v-flex>
     </v-layout>
-    <v-layout style="border-bottom: 1px solid #CCC" row wrap align-center v-for="item in songs" v-bind:key="item.video">
+    
+      <v-layout style="border-bottom: 1px solid #CCC" row wrap align-center v-for="item in songs" v-bind:key="item.video">
       <template>
         <v-flex xs2>
         <div style="backgroundColor: #141517; height: 50px; width: 50px">
@@ -22,22 +23,6 @@
             </v-img>
         </div>
       </v-flex>
-        <!-- <v-flex xs4>
-          <v-card dark color="primary">
-            <v-img
-              :src="defaultThumbnail"
-              :lazy-src="defaultThumbnail"
-              aspect-ratio="1"
-              class="grey lighten-2"
-            >
-              <template v-slot:placeholder>
-                <v-layout fill-height align-center justify-center ma-0>
-                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                </v-layout>
-              </template>
-            </v-img>
-          </v-card>
-        </v-flex> -->
          <v-flex xs9 height="100%">
           <div style="width: 100%">
             <span style="font-weight: bold; white-space: nowrap; display: block; overflow: hidden;text-overflow: ellipsis">{{item.title}}</span> 
@@ -50,6 +35,9 @@
       </v-flex>
       </template>
     </v-layout>
+    <scroll-loader :loader-method="fetchLocalSongs" :loader-enable="loadMore">
+    </scroll-loader>
+    
   </v-container>
 </template>
 
@@ -57,8 +45,11 @@
 import Vue from "vue";
 import Vuetify from "vuetify";
 import SongService from "@/services/SongService.ts";
+import ScrollLoader from 'vue-scroll-loader'
 
 import PlaylistService from '@/services/PlaylistService.ts'
+
+Vue.use(ScrollLoader)
 
 export default Vue.extend({
   name: "add-view",
@@ -73,6 +64,9 @@ export default Vue.extend({
       defaultThumbnail: require("@/assets/images/defaultCover.png"),
       search: "",
       songsInPlaylist: [],
+      page: 1,
+      size: 15,
+      loadMore: true
     };
   },
   components: {
@@ -126,14 +120,21 @@ export default Vue.extend({
       }     
     },
     searchInputChanged() {
+      this.page = 1
+      this.songs = []
+      this.loadMore = true
       this.fetchLocalSongs();
     },
     fetchLocalSongs(){
-      SongService.find(this.search).then(result => {
-        this.songs = result
+      console.log('fetchsongs called')
+      SongService.find(this.search, this.page++, this.size).then(result => {
+        //console.log(result.length)
+        result.length < this.size && (this.loadMore = false)
+        this.songs.push(...result)
         this.songs.forEach(song => {
           song = this.prepareSong(song)
         })
+             
       })
     },
     addVote(id){
@@ -143,7 +144,6 @@ export default Vue.extend({
       this.$store.dispatch("removeUserVote", id)
     },
     prepareSong(item){
-      console.log("prepareSong", item)
       if(this.$store.state.songs.map(s => s.id).indexOf(item.id) >= 0){
         item.iconIndex = this.$store.state.songs.find(s => s.id == item.id).iconIndex
       }

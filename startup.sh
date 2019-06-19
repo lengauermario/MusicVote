@@ -20,5 +20,5 @@ cd Server/JEEServer/
 mvn install -DskipTests
 cd ../..
 
-#docker-compose build
-#docker-compose up
+docker-compose build
+docker-compose up

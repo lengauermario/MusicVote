@@ -19,7 +19,7 @@
                 <h1 style="text-align: center" class="display-1">MusicVoting</h1>
                 <h5 style="text-align: center" class="display-5">Zugang zum Voting</h5>
                   <img id='barcode' 
-                        src="https://api.qrserver.com/v1/create-qr-code/?data=http://%%%HOST%%%&amp;size=500x500" 
+                        src="https://api.qrserver.com/v1/create-qr-code/?data=http://%%%HOST%%%:8081&amp;size=500x500" 
                         alt="" 
                         title="MusicVoting" 
                         width="300"

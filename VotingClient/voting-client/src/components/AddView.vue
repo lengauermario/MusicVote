@@ -107,18 +107,21 @@ export default Vue.extend({
   methods: {
     handleClick(item) {
       
-      if(this.$store.state.votes && this.$store.state.votes.indexOf(item.id) >= 0){
+      if(this.$store.state.votes.find(v => v.id == item.id && this.$store.state.songs.find(s => s.id == item.id).addedToPlaylist)){
         this.removeVote(item.id)
         PlaylistService.removeVote(item.id)
       }
       else if(this.$store.state.songs && this.$store.state.songs.map(s => s.id).indexOf(item.id) >= 0){
-         this.addVote(item.id)
+         this.addVote(item.id, this.$store.state.songs.find(s => s.id == item.id).addedToPlaylist)
          PlaylistService.addVote(item.id)
       }
       else{
         SongService.addSong(item.id).then(result => {
-          this.addVote(item.id)
-          PlaylistService.addVote(item.id)
+          let tmp = this.$store.state.songs.find(s => s.id == item.id)
+          if(tmp){
+            this.addVote(tmp.id, tmp.addedToPlaylist)
+            PlaylistService.addVote(tmp.id)
+          }          
         })
       }     
     },
@@ -141,10 +144,10 @@ export default Vue.extend({
         })
       })
     },
-    addVote(id){
-      this.$store.dispatch("addUserVote", id)
+    addVote(id, timestamp){
+      this.$store.dispatch("addUserVote", {id, timestamp})
     },
-    removeVote(id){
+    removeVote(id, timestamp){
       this.$store.dispatch("removeUserVote", id)
     },
     prepareSong(item){

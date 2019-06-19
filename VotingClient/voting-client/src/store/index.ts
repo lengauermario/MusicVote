@@ -9,8 +9,8 @@ Vue.use(Vuex)
 
 export interface RootState {
     updateId: number
-    votes: number[]
-    songs: Song[]
+    votes: any[]
+    songs: any[]
     currentSong: Song | null
 }
 
@@ -30,17 +30,15 @@ const store = new Vuex.Store<RootState>({
             state.songs = songs
             state.updateId = updateId
         },
-        addLocalVote(state, id){
-            state.votes.push(id)
+        addLocalVote(state, {id, timestamp}){
+            state.votes.push({id, timestamp})
         },
         removeLocalVote(state, id){
-            state.votes.splice(state.votes.indexOf(id), 1)
+            state.votes.splice(state.votes.indexOf(state.votes.find(v => v.id == id)), 1)
         },
         cleanUpVotes(state) {
             state.votes = state.votes
-                .filter(x => state.songs
-                    .map(y => y.id)
-                    .indexOf(x) >= 0
+                .filter(x => state.songs.find(s => s.id == x.id && s.addedToPlaylist == x.timestamp)
                 )
         },
         changeIconPath(state, {songId, iconIndex}){
@@ -76,13 +74,11 @@ const store = new Vuex.Store<RootState>({
             });
         },
         fetchPlaylist({ state, commit }) {
-            console.log("fetch playlist")
             PlaylistService.getAll().then(result => {
                 result.songs.forEach(element => {
                     let tmp = state.votes.indexOf(element.id) >= 0 ? 1 : 0;
                     element.iconIndex = tmp;
                 });
-                console.log(result);
                 commit("setPlaylist", result)
             })
         },
@@ -123,8 +119,8 @@ const store = new Vuex.Store<RootState>({
             commit("removeLocalVote", id)
             commit("changeIconPath", {songId: id, iconIndex: 0})
         },
-        addUserVote({state, commit}, id){
-            commit("addLocalVote", id)
+        addUserVote({state, commit}, {id, timestamp}){
+            commit("addLocalVote", {id, timestamp})
             commit("changeIconPath", {songId: id, iconIndex: 1})
         }
     },

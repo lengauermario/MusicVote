@@ -59,19 +59,19 @@ export default {
     handleClick(item){
       console.log("click received")
       console.log("item: ", item)
-      if(this.$store.state.votes.indexOf(item.id) >= 0){
-        this.removeVote(item.id);
+      if(this.$store.state.votes.find(v => v.id == item.id && v.timestamp == item.addedToPlaylist)){
+        this.removeVote(item.id, item.addedToPlaylist);
         PlaylistService.removeVote(item.id)
       }
       else{
-        this.addVote(item.id);
+        this.addVote(item.id, item.addedToPlaylist);
         PlaylistService.addVote(item.id)
       }
     },
-    addVote(id){
-      this.$store.dispatch("addUserVote", id)
+    addVote(id, timestamp){
+      this.$store.dispatch("addUserVote", {id, timestamp})
     },
-    removeVote(id){
+    removeVote(id, timestamp){
       this.$store.dispatch("removeUserVote", id)
     },
     sort(){	

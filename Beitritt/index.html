@@ -4,27 +4,102 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <style>
-        img {
-            position:absolute;
-            top:0;
-            left:0;
-            right:0;
-            bottom:0;
-            margin:auto;
-        }
+            img{
+                position: absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            body{
+                background-color: #f4f4f4
+            }  
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+  /*Basic Phone styling*/
+  
+  .phone {
+    border: 40px solid black;
+    border-width: 55px 7px;
+    border-radius: 40px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  
+  .phone iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #wrapper{
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
+  .phone.view_3 {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    box-shadow: 0px 3px 0 black, 0px 4px 0 black, 0px 5px 0 black, 0px 7px 0 black, 0px 10px 20px black;
+  }
+
+
+            
         </style>
     </head>
     <body>
         <div class="container">
-                <h1 style="text-align: center" class="display-1">MusicVoting</h1>
-                <h5 style="text-align: center" class="display-5">Zugang zum Voting</h5>
-                  <img id='barcode' 
-                        src="https://api.qrserver.com/v1/create-qr-code/?data=http://172.18.72.218:8081&amp;size=500x500" 
-                        alt="" 
-                        title="MusicVoting" 
-                        width="300"
-                        height="300" />
-                </body>
+                <div class="row">
+                    <h1 class="col-md-12 display-1" style="text-align: center">MusicVoting</h1>
+                </div>
+                <div class="row">                        
+                        <div class="col shadow-lg p-3 bg-white mb-5 rounded" style="height: 80vh;margin: 10px">
+                            <div class="row" style="height: 10%">
+                                    <h3 style="text-align: center" class="col-md-12 display-5">Mit WLAN verbinden</h3>
+                            </div>
+                            <div class="row" style="height: 80%">
+                                <img id='barcode' 
+                                    src="https://api.qrserver.com/v1/create-qr-code/?data=WIFI:S:NAOAPTP3;T:WPA;P:softNAO19Samstag;;&amp;size=500x500" 
+                                    alt="" 
+                                    title="MusicVoting" 
+                                    width="300"
+                                    height="300" />
+                            </div>
+                            <div class="row" style="height: 10%">
+                                    <p style=" position: absolute;bottom: 0;">SSID: NAOAPTP3 <br/> Passwort: softNAO19Samstag</p>
+                                </div>
+                            </div>
+                    <div class="col shadow-lg p-3 bg-white mb-5 rounded" style="height: 80vh;margin: 10px">
+                        <div class="row" style="height: 10%">
+                                <h3 style="text-align: center" class="col-md-12 display-5">Website aufrufen</h3>
+                        </div>
+                        <div class="row" style="height: 80%">
+                            <img id='barcode' 
+                                src="https://api.qrserver.com/v1/create-qr-code/?data=http://172.18.72.218:8081&amp;size=500x500" 
+                                alt="" 
+                                title="MusicVoting" 
+                                width="300"
+                                height="300" />                            
+                        </div>
+                        <div class="row" style="height: 10%">
+                            <p style=" position: absolute;bottom: 0;">http://172.18.72.218:8081</p>
+                        </div>
+                    </div>
+                    <div class="col shadow-lg p-3 bg-white mb-5 rounded" style="height: 80vh;margin: 10px">
+                        <div class="row">
+                                <h3 style="text-align: center" class="col-md-12 display-5">Abstimmen</h3>
+                        </div>
+                        <div class="row" style="height: 75%">
+                                <div id="wrapper">
+                                        <div class="phone view_3" id="phone_1">
+                                          <iframe src="http://localhost:8081" id="frame_1"></iframe>
+                                        </div>
+                                      </div>
+                        </div>
+                    </div>
+                </div> 
         </div>
-   
+    </body>
 </html>

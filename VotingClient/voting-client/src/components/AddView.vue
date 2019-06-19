@@ -73,8 +73,11 @@ export default Vue.extend({
     Vue,
     Vuetify
   },
-  created() {
+  mounted(){
     this.searchInputChanged();
+  },
+  created() {
+    
     this.$store.subscribe((mutation, state) => {
       if(mutation.type === "setPlaylist"){
         this.songs.forEach(song => {
@@ -123,18 +126,19 @@ export default Vue.extend({
       this.page = 1
       this.songs = []
       this.loadMore = true
-      this.fetchLocalSongs();
+      this.fetchLocalSongs(true)
     },
-    fetchLocalSongs(){
+    fetchLocalSongs(reset = false){
       console.log('fetchsongs called')
       SongService.find(this.search, this.page++, this.size).then(result => {
         //console.log(result.length)
+        if(reset)
+          this.songs = []
         result.length < this.size && (this.loadMore = false)
         this.songs.push(...result)
         this.songs.forEach(song => {
           song = this.prepareSong(song)
         })
-             
       })
     },
     addVote(id){

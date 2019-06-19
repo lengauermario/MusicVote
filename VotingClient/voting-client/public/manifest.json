@@ -1,6 +1,6 @@
 {
-  "name": "voting-client",
-  "short_name": "voting-client",
+  "name": "MusicVoting",
+  "short_name": "MusicVoting",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

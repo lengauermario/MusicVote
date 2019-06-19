@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>MusicVoting Zugang</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+        img {
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+                <h1 style="text-align: center" class="display-1">MusicVoting</h1>
+                <h5 style="text-align: center" class="display-5">Zugang zum Voting</h5>
+                  <img id='barcode' 
+                        src="https://api.qrserver.com/v1/create-qr-code/?data=http://%%%HOST%%%&amp;size=500x500" 
+                        alt="" 
+                        title="MusicVoting" 
+                        width="300"
+                        height="300" />
+                </body>
+        </div>
+   
+</html>

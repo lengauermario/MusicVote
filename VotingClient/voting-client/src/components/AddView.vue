@@ -121,9 +121,8 @@ export default Vue.extend({
       else{
         SongService.addSong(item.id).then(result => {
           this.addVote(item.id)
-         PlaylistService.addVote(item.id)
+          PlaylistService.addVote(item.id)
         })
-        
       }     
     },
     searchInputChanged() {

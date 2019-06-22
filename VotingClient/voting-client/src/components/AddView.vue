@@ -25,8 +25,8 @@
       </v-flex>
          <v-flex xs9 height="100%">
           <div style="width: 100%">
-            <span style="font-weight: bold; white-space: nowrap; display: block; overflow: hidden;text-overflow: ellipsis">{{item.title}}</span> 
-            <span style="">{{item.artist}}</span>
+            <span style="text-align: left;font-weight: bold; white-space: nowrap; display: block; overflow: hidden;text-overflow: ellipsis">{{item.title}}</span> 
+            <span style="text-align: left;width: 100%;display:block">{{item.artist}}</span>
 
           </div>
          </v-flex>
@@ -105,8 +105,7 @@ export default Vue.extend({
     
   },
   methods: {
-    handleClick(item) {
-      
+    handleClick(item) {      
       if(this.$store.state.votes.find(v => v.id == item.id && this.$store.state.songs.find(s => s.id == item.id).addedToPlaylist)){
         this.removeVote(item.id)
         PlaylistService.removeVote(item.id)

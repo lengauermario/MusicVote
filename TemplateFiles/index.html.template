@@ -44,6 +44,10 @@
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     box-shadow: 0px 3px 0 black, 0px 4px 0 black, 0px 5px 0 black, 0px 7px 0 black, 0px 10px 20px black;
   }
+  h3::first-letter { 
+  font-size: 120%;
+  color: #F20643;
+}
 
 
             
@@ -94,7 +98,7 @@
                         <div class="row" style="height: 75%">
                                 <div id="wrapper">
                                         <div class="phone view_3" id="phone_1">
-                                          <iframe src="http://localhost:8081" id="frame_1"></iframe>
+                                          <iframe src="http://%%%HOST%%%:8081" id="frame_1"></iframe>
                                         </div>
                                       </div>
                         </div>

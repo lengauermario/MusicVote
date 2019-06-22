@@ -1,21 +1,27 @@
 <template>
   <v-container grid-list-md text-xs-center>
       <v-layout row wrap>
-    <v-flex xs4>
-      <v-img
-            :src="defaultThumbnail"
-            :lazy-src="defaultThumbnail"
-            aspect-ratio="1"
-        />
-        
-    </v-flex>
-    <v-flex xs8 height="100%">
-        <div style="width: 100%;height:100%">
-            <span style="width: 100%;font-weight: bold;float:left;overflow-wrap: break-word;text-align: left;padding-top: 5px;font-size: large">{{this.title}}</span>
-            <br/>
-            <span style="width: 100%;text-align: left;float:left;white-space: pre-line">{{this.artist}}</span>
-          </div>
-    </v-flex>
+        <v-flex xs4>
+          <v-img
+                :src="defaultThumbnail"
+                :lazy-src="defaultThumbnail"
+                aspect-ratio="1"
+            />
+            
+        </v-flex>
+        <v-flex xs8 height="100%">
+            <div style="width: 100%;height:100%;position: relative">
+                <span style="width: 100%;font-weight: bold;float:left;overflow-wrap: break-word;text-align: left;padding-top: 5px;font-size: large">{{this.title}}</span>
+                <br/>
+                <span style="width: 100%;text-align: left;float:left;white-space: pre-line">{{this.artist}}</span>
+                <div style="position: absolute;
+                    bottom: 0;
+                    right: 0;">
+                </div>
+                
+              </div>
+              
+        </v-flex>
       </v-layout>
   </v-container>
 </template>

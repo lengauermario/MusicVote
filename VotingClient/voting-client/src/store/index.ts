@@ -124,7 +124,7 @@ const store = new Vuex.Store<RootState>({
             commit("changeIconPath", {songId: id, iconIndex: 1})
         }
     },
-    plugins: [persistenceStrategy.plugin, createMutationsSharer({ predicate: ["setPlaylist", "addLocalVote", "removeLocalVote","cleanUpVotes","changeIconPath", "setCurrentSong"] })]
+    plugins: [persistenceStrategy.plugin, createMutationsSharer({ predicate: ["addLocalVote", "removeLocalVote", "cleanUpVotes", "changeIconPath"] })]
 })
 
 export default store;

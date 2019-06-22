@@ -44,7 +44,10 @@
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     box-shadow: 0px 3px 0 black, 0px 4px 0 black, 0px 5px 0 black, 0px 7px 0 black, 0px 10px 20px black;
   }
-
+  h3::first-letter { 
+  font-size: 120%;
+  color: #F20643;
+}
 
             
         </style>
@@ -57,39 +60,39 @@
                 <div class="row">                        
                         <div class="col shadow-lg p-3 bg-white mb-5 rounded" style="height: 80vh;margin: 10px">
                             <div class="row" style="height: 10%">
-                                    <h3 style="text-align: center" class="col-md-12 display-5">Mit WLAN verbinden</h3>
+                                    <h3 style="text-align: center" class="col-md-11 display-5">1. Mit WLAN verbinden</h3>
                             </div>
                             <div class="row" style="height: 80%">
                                 <img id='barcode' 
-                                    src="https://api.qrserver.com/v1/create-qr-code/?data=WIFI:S:NAOAPTP3;T:WPA;P:softNAO19Samstag;;&amp;size=500x500" 
+                                    src="https://api.qrserver.com/v1/create-qr-code/?data=WIFI:S:3HuiGate_5G_4EA9;T:WPA;P:D77CC6EE;;&amp;size=500x500" 
                                     alt="" 
                                     title="MusicVoting" 
                                     width="300"
                                     height="300" />
                             </div>
                             <div class="row" style="height: 10%">
-                                    <p style=" position: absolute;bottom: 0;">SSID: NAOAPTP3 <br/> Passwort: softNAO19Samstag</p>
+                                    <p style=" position: absolute;bottom: 0;">SSID: 3HuiGate_5G_4EA9 <br/> Passwort: D77CC6EE</p>
                                 </div>
                             </div>
                     <div class="col shadow-lg p-3 bg-white mb-5 rounded" style="height: 80vh;margin: 10px">
                         <div class="row" style="height: 10%">
-                                <h3 style="text-align: center" class="col-md-12 display-5">Website aufrufen</h3>
+                                <h3 style="text-align: center" class="col-md-12 display-5">2. Website aufrufen</h3>
                         </div>
                         <div class="row" style="height: 80%">
                             <img id='barcode' 
-                                src="https://api.qrserver.com/v1/create-qr-code/?data=http://172.18.72.218:8081&amp;size=500x500" 
+                                src="https://api.qrserver.com/v1/create-qr-code/?data=http://192.168.1.108:8081&amp;size=500x500" 
                                 alt="" 
                                 title="MusicVoting" 
                                 width="300"
                                 height="300" />                            
                         </div>
                         <div class="row" style="height: 10%">
-                            <p style=" position: absolute;bottom: 0;">http://172.18.72.218:8081</p>
+                            <p style=" position: absolute;bottom: 0;">http://192.168.1.108:8081</p>
                         </div>
                     </div>
                     <div class="col shadow-lg p-3 bg-white mb-5 rounded" style="height: 80vh;margin: 10px">
                         <div class="row">
-                                <h3 style="text-align: center" class="col-md-12 display-5">Abstimmen</h3>
+                                <h3 style="text-align: center" class="col-md-12 display-5">3. Abstimmen</h3>
                         </div>
                         <div class="row" style="height: 75%">
                                 <div id="wrapper">

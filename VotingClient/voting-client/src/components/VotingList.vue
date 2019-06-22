@@ -9,8 +9,8 @@
       </v-flex>
       <v-flex xs9 height="100%">
           <div style="width: 100%">
-            <span style="font-weight: bold; white-space: nowrap; display: block; overflow: hidden;text-overflow: ellipsis">{{item.title}}</span> 
-            <span style="">{{item.artist}}</span>
+            <span style="text-align: left;font-weight: bold; white-space: nowrap; display: block; overflow: hidden;text-overflow: ellipsis">{{item.title}}</span> 
+            <span style="text-align: left;width: 100%;display:block">{{item.artist}}</span>
           </div>
       </v-flex>
       <v-flex xs1>
@@ -50,6 +50,10 @@ export default {
       if(mutation.type === "setPlaylist"){
         this.snackbar = true
         this.$store.commit("cleanUpVotes")
+        mutation.payload.songs.forEach(element => {
+          this.prepareSong(element);
+        });
+        this.$store.state.songs.splice(0,0);
       }
       if(mutation.type == "setPlaylist" || mutation.type == "removeVote" || mutation.type == "addVote"|| mutation.type == "addSong"|| mutation.type == "removeSong")
         this.sort();
@@ -66,6 +70,11 @@ export default {
       else{
         this.addVote(item.id, item.addedToPlaylist);
         PlaylistService.addVote(item.id)
+      }
+    },
+    prepareSong(item){
+      if(this.$store.state.votes.find(v => v.id == item.id && v.timestamp == item.addedToPlaylist)){
+        this.$store.commit("changeIconPath", {songId: item.id, iconIndex: 1});
       }
     },
     addVote(id, timestamp){

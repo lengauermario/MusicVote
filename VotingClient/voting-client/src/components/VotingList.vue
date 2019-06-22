@@ -50,10 +50,10 @@ export default {
       if(mutation.type === "setPlaylist"){
         this.snackbar = true
         this.$store.commit("cleanUpVotes")
-        mutation.payload.songs.forEach(element => {
+        /*mutation.payload.songs.forEach(element => {
           this.prepareSong(element);
         });
-        this.$store.state.songs.splice(0,0);
+        this.$store.state.songs.splice(0,0);*/
       }
       if(mutation.type == "setPlaylist" || mutation.type == "removeVote" || mutation.type == "addVote"|| mutation.type == "addSong"|| mutation.type == "removeSong")
         this.sort();

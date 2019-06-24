@@ -17,7 +17,7 @@ public class InitDatabase {
 
     public void initialize() {
         try{
-            File folder = new File(ResourceBundle.getBundle("config").getString("startFolder"));
+            File folder = new File(ResourceBundle.getBundle("config").getString("youtubeFolder"));
             if(folder.exists() && folder.isDirectory()){
                 File arr[] = folder.listFiles();
                 recursiveRead(arr,0);
@@ -51,7 +51,7 @@ public class InitDatabase {
             Song newSong;
             if (mp3file.getId3v2Tag().getArtist() == null || mp3file.getId3v2Tag().getTitle() == null){
                 String songTitle = getSongTitle(path);
-                newSong = new Song(path,"Unbekannt",songTitle);
+                newSong = new Song(path,"Various Artist",songTitle);
             }
             else{
                 newSong = new Song(path,mp3file.getId3v2Tag().getArtist(),mp3file.getId3v2Tag().getTitle());

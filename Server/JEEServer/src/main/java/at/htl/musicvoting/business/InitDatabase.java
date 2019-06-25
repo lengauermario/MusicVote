@@ -17,9 +17,10 @@ public class InitDatabase {
 
     public void initialize() {
         try{
-            File folder = new File(ResourceBundle.getBundle("config").getString("youtubeFolder"));
+            File folder = new File(ResourceBundle.getBundle("config").getString("startFolder"));
             if(folder.exists() && folder.isDirectory()){
                 File arr[] = folder.listFiles();
+		System.out.println("Found " + arr.length + " files in folder");
                 recursiveRead(arr,0);
             }
         }catch (Exception ex){

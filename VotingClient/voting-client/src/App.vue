@@ -1,5 +1,5 @@
 <template>
-  <v-tabs fixed-tabs 
+  <v-tabs fixed-tabs class="app"
       color="#f4f4f4"
       slider-color="#F20643" >
     <v-tab active-class="active" style=" border-bottom: 2px solid lightgrey;">
@@ -87,7 +87,7 @@ export default Vue.extend({
 </script>
 
 <style>
-  * {
+  .app {
     font-family: sans-serif;
   }
   .v-tabs__wrapper{

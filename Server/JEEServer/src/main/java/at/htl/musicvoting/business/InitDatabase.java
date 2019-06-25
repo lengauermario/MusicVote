@@ -20,6 +20,7 @@ public class InitDatabase {
             File folder = new File(ResourceBundle.getBundle("config").getString("startFolder"));
             if(folder.exists() && folder.isDirectory()){
                 File arr[] = folder.listFiles();
+		System.out.println("Found " + arr.length + " files in folder");
                 recursiveRead(arr,0);
             }
         }catch (Exception ex){
@@ -48,14 +49,11 @@ public class InitDatabase {
     private void readMp3File(String path) {
         try{
             Mp3File mp3file = new Mp3File(path);
-            Song newSong;
-            if (mp3file.getId3v2Tag().getArtist() == null || mp3file.getId3v2Tag().getTitle() == null){
-                String songTitle = getSongTitle(path);
-                newSong = new Song(path,"Unbekannt",songTitle);
-            }
-            else{
-                newSong = new Song(path,mp3file.getId3v2Tag().getArtist(),mp3file.getId3v2Tag().getTitle());
-            }
+
+            String artist = mp3file.getId3v2Tag().getArtist() == null ? "Various Artist" : mp3file.getId3v2Tag().getArtist();
+            String title = mp3file.getId3v2Tag().getTitle() == null ? getSongTitle(path) : mp3file.getId3v2Tag().getTitle();
+
+            Song newSong = new Song(path,artist, title);
             dao.persist(newSong);
         }catch (Exception ex){
             System.out.println("ERROR: Could not read File");

@@ -8,6 +8,7 @@
         @ended="playNextSong"
         crossorigin="anonymous"
         controls
+        @error="playNextSong"
       ></audio>
     </v-flex>
     <v-flex xs2>
@@ -36,7 +37,9 @@ export default {
         }
       }).then(
         async function(response) {
+          
           let tmp = await response.json();
+          console.log('song ', tmp)
           let audio = document.getElementById("audio");
           audio.src = process.env.VUE_APP_API_URL + "/song/getmp3?id=" + tmp.id;
           audio.play();

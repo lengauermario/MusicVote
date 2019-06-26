@@ -29,6 +29,7 @@ public class PlaylistHandler {
         return currentSong;
     }
 
+
     public Playlist getPlaylist(){
         //playlist.sort(comparator);
         return playlistHolder.getPlaylist();
@@ -41,7 +42,7 @@ public class PlaylistHandler {
 
     public synchronized void addSong(Song song){
         if(get(song.getId()) == null){
-            song.setAddedToPlaylist(LocalDateTime.now());
+            song.setAddedToPlaylist(System.currentTimeMillis());
             song.resetVotes();
             playlist.add(song);
         }

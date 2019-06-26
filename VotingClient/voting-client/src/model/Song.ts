@@ -1,7 +1,7 @@
 export default interface Song {
     id: number,
     title: string,
-    iconPath: string,
+    iconIndex: number,
     artist: string,
     thumbNail: string,
     votes: number,

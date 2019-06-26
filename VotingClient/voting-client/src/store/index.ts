@@ -8,9 +8,9 @@ import createMutationsSharer from "vuex-shared-mutations";
 Vue.use(Vuex)
 
 export interface RootState {
-    timestamp: number
-    votes: number[]
-    songs: Song[]
+    updateId: number
+    votes: any[]
+    songs: any[]
     currentSong: Song | null
 }
 
@@ -23,34 +23,48 @@ const store = new Vuex.Store<RootState>({
         votes: [],
         songs: [],
         currentSong: null,
-        timestamp: 0
+        updateId: 0
     },
     mutations: {
-        setPlaylist(state, { songs, timestamp }) {
+        setPlaylist(state, { songs, updateId }) {
             state.songs = songs
-            state.timestamp = timestamp
+            state.updateId = updateId
         },
-        addVote(state, id){
-            state.votes.push(id)
+        addLocalVote(state, {id, timestamp}){
+            state.votes.push({id, timestamp})
         },
-        removeVote(state, id){
-            state.votes.splice(state.votes.indexOf(id), 1)
+        removeLocalVote(state, id){
+            state.votes.splice(state.votes.indexOf(state.votes.find(v => v.id == id)), 1)
         },
         cleanUpVotes(state) {
             state.votes = state.votes
-                .filter(x => state.songs
-                    .map(y => y.id)
-                    .indexOf(x) >= 0
+                .filter(x => state.songs.find(s => s.id == x.id && s.addedToPlaylist == x.timestamp)
                 )
         },
-        changeIconPath(state, {songId, iconPath}){
+        changeIconPath(state, {songId, iconIndex}){
             const song = state.songs.find(song => song.id == songId)
             if(song){
-                song.iconPath = iconPath;
+                song.iconIndex = iconIndex;
             }
         },
         setCurrentSong(state, {song}){
             state.currentSong = song;
+        },
+        addVote(state, {updateId, id}){
+            state.updateId = updateId;
+            state.songs.find(s => s.id == id)!.votes++;
+        },
+        removeVote(state, {updateId, id}){
+            state.updateId = updateId;
+            state.songs.find(s => s.id == id)!.votes--;
+        },
+        addSong(state, {updateId, song}){
+            state.songs.push(song);
+            state.updateId = updateId;
+        },
+        removeSong(state, {updateId, id}){
+            state.songs.splice(state.songs.indexOf(state.songs.find(s => s.id == id)!), 1)
+            state.updateId = updateId;
         }
     },
     actions: {
@@ -61,18 +75,56 @@ const store = new Vuex.Store<RootState>({
         },
         fetchPlaylist({ state, commit }) {
             PlaylistService.getAll().then(result => {
+                result.songs.forEach(element => {
+                    let tmp = state.votes.find(v => v.id == element.id && v.timestamp == element.addedToPlaylist) ? 1 : 0;
+                    element.iconIndex = tmp;
+                });
                 commit("setPlaylist", result)
             })
         },
         refreshIfNecessary({ state, dispatch, commit }) {
             PlaylistService.getVersion().then(x => {
-                if (x != state.timestamp)
+                if (x != state.updateId)
                     dispatch("fetchPlaylist")
                 commit("cleanUpVotes")
             });
+        },
+        handleVote({state, dispatch, commit}, {updateId, id}){
+            if(state.updateId != updateId - 1)
+                dispatch("fetchPlaylist")
+            else
+                commit("addVote", {updateId, id})
+        },
+        handleVoteRemovement({state, dispatch, commit}, {updateId, id}){
+            if(state.updateId != updateId - 1)
+                dispatch("fetchPlaylist")
+            else
+                commit("removeVote", {updateId, id})
+        },
+        handleSong({state, dispatch, commit}, {updateId, song}){
+            if(state.updateId != updateId - 1)
+                dispatch("fetchPlaylist")
+            else{
+                commit("addSong", {updateId, song})
+                commit("changeIconPath", {songId: song.id, iconIndex: 0})
+            }
+        },
+        handleSongRemovement({state, dispatch, commit}, {updateId, id}){
+            if(state.updateId != updateId - 1)
+                dispatch("fetchPlaylist")
+            else
+                commit("removeSong", {updateId, id})
+        },
+        removeUserVote({state, commit}, id){
+            commit("removeLocalVote", id)
+            commit("changeIconPath", {songId: id, iconIndex: 0})
+        },
+        addUserVote({state, commit}, {id, timestamp}){
+            commit("addLocalVote", {id, timestamp})
+            commit("changeIconPath", {songId: id, iconIndex: 1})
         }
     },
-    plugins: [persistenceStrategy.plugin, createMutationsSharer({ predicate: ["setPlaylist", "addVote", "removeVote","cleanUpVotes","changeIconPath", "setCurrentSong"] })]
+    plugins: [persistenceStrategy.plugin, createMutationsSharer({ predicate: ["addLocalVote", "removeLocalVote", "cleanUpVotes", "changeIconPath"] })]
 })
 
 export default store;

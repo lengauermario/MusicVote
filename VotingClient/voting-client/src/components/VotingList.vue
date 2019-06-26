@@ -1,34 +1,26 @@
 <template>
   <v-container grid-list-md text-xs-center>
     <transition-group name="list-complete" tag="p">
-    <v-layout row wrap align-center v-for="item in $store.state.songs" v-bind:key="item.id" class="list-complete-item" >
-      <v-flex xs4>
-        <v-card dark color="primary">
-          <v-img :src="defaultThumbnail" :lazy-src="defaultThumbnail" aspect-ratio="1" class="grey lighten-2">
-             <span class="my-span" style="margin: auto">
-              {{item.votes}} Votes
-            </span>
-            <template v-slot:placeholder>
-              <v-layout fill-height align-center justify-center ma-0>
-                <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-              </v-layout>
-            </template>
-          </v-img>
-        </v-card>
-      </v-flex>
-      <v-flex xs6 height="100%">
-        <v-card color="primary">
-          <v-card-text fillheight class="px-0">
-            <span style="font-weight: bold">{{item.title}}</span> <br>{{item.artist}}
-          </v-card-text>
-        </v-card>
-      </v-flex>
+    <v-layout style="border-top: 1px solid #CCC" row wrap align-center v-for="item in $store.state.songs" v-bind:key="item.id" class="list-complete-item" >
       <v-flex xs2>
-        <v-img style="margin: auto auto" :src="item.iconPath" :lazy-src="item.iconPath" aspect-ratio="1" @click="handleVote(item)"/>
+        <div style="background-color: #141517 !important; height: 50px; width: 50px">
+          <div style="line-height: 50px;white-space: nowrap;color: #f4f4f4;font-weight: bold;font-size: 20px">{{item.votes}}</div>
+        </div>
+      </v-flex>
+      <v-flex xs9 height="100%">
+          <div style="width: 100%">
+            <span style="text-align: left;font-weight: bold; white-space: nowrap; display: block; overflow: hidden;text-overflow: ellipsis">{{item.title}}</span> 
+            <span style="text-align: left;width: 100%;display:block">{{item.artist}}</span>
+          </div>
+      </v-flex>
+      <v-flex xs1>
+        <i class="material-icons" :icon="imagePaths[item.iconIndex]" @click="handleClick(item)" style="cursor: pointer;font-size: 27px !important;">{{imagePaths[item.iconIndex]}}</i>
       </v-flex>
     </v-layout>
     </transition-group>
+    <v-snackbar v-model="snackbar" :style="'background-color:red'" :timeout="timeout" bottom>Playlist wird neu geladen</v-snackbar>
   </v-container>
+  
 </template>
 
 <script>
@@ -40,12 +32,11 @@ export default {
   name: "voting-list",
   data() {
     return {
+      snackbar: false,
+      timeout: 1000,
       imagePaths: [
-        require("@/assets/images/heartGrey.png"),
-        require("@/assets/images/heart.png"),
-        require("@/assets/images/error.png"),
-        require("@/assets/images/loading.gif"),
-        require("@/assets/images/plus.png"),
+          "favorite_border",
+          "favorite"
       ],
       defaultThumbnail: require("@/assets/images/defaultCover.png"),
     };
@@ -57,38 +48,50 @@ export default {
   created() {
     this.$store.subscribe((mutation, state) => {
       if(mutation.type === "setPlaylist"){
-        state.songs.forEach(song => {
-            song = this.prepareSong(song);
-        });
+        this.snackbar = true
         this.$store.commit("cleanUpVotes")
+        /*mutation.payload.songs.forEach(element => {
+          this.prepareSong(element);
+        });
+        this.$store.state.songs.splice(0,0);*/
       }
+      if(mutation.type == "setPlaylist" || mutation.type == "removeVote" || mutation.type == "addVote"|| mutation.type == "addSong"|| mutation.type == "removeSong")
+        this.sort();
     })
   },
   methods:{    
-    handleVote(item){
-      if(this.$store.state.votes.indexOf(item.id) >= 0){
-        this.removeVote(item.id);
+    handleClick(item){
+      console.log("click received")
+      console.log("item: ", item)
+      if(this.$store.state.votes.find(v => v.id == item.id && v.timestamp == item.addedToPlaylist)){
+        this.removeVote(item.id, item.addedToPlaylist);
         PlaylistService.removeVote(item.id)
       }
       else{
-         this.addVote(item.id);
+        this.addVote(item.id, item.addedToPlaylist);
         PlaylistService.addVote(item.id)
       }
     },
     prepareSong(item){
-      if(this.$store.state.votes && this.$store.state.votes.indexOf(item.id) >= 0){
-        this.$store.commit("changeIconPath", {songId: item.id, iconPath: this.imagePaths[1]})
+      if(this.$store.state.votes.find(v => v.id == item.id && v.timestamp == item.addedToPlaylist)){
+        this.$store.commit("changeIconPath", {songId: item.id, iconIndex: 1});
       }
-      else{
-        this.$store.commit("changeIconPath", {songId: item.id, iconPath: this.imagePaths[0]})
-      }      
-      return item;
     },
-    addVote(id){
-      this.$store.commit("addVote", id)
+    addVote(id, timestamp){
+      this.$store.dispatch("addUserVote", {id, timestamp})
     },
-    removeVote(id){
-      this.$store.commit("removeVote", id)
+    removeVote(id, timestamp){
+      this.$store.dispatch("removeUserVote", id)
+    },
+    sort(){	
+      this.$store.state.songs.sort((a,b) => {	
+        if(a.votes > b.votes) return -1;	
+        else if(a.votes < b.votes) return 1;	
+        else{	
+          if(a.addedToPlaylist >= b.addedToPlaylist) return 1;	
+          else return -1;	
+        }	
+      });	
     },
   }
 };
@@ -105,5 +108,8 @@ export default {
 }
 .list-complete-leave-active {
   position: absolute;
+}
+i[icon$="favorite"]{
+  color: #F20643 !important;
 }
 </style>

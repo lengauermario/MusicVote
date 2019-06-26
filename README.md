@@ -5,8 +5,8 @@ Repository für MusicVoting v1 (Einschränkung auf lokale Mp3-Files)
 ## :bookmark_tabs: Inhaltsverzeichnis
 - [Einleitung](#arrow_forward-einleitung)
 - [Verwendung](#rocket-verwendung)
-- [System Architektur](#ferris_wheel-system-architektur)
 - [Aktueller Stand](#hammer-aktueller-stand)
+- [Dokumente](#closed_book-dokumente)
 - [Entwickler](#guardsman-entwickler)
 - [Technologien](#wrench-technologien)
 - [Lizenz](#lock-lizenz)
@@ -23,43 +23,37 @@ Folgende Tools müssen installiert sein:
 
 https://get.docker.com/ stellt ein Script zur Installation von Docker auf Linux zur Verfügung.
 
-Starten des Systems:
-- Builden des Servers:
+Für das Builden und Starten des Systems gibt es ein Shell-Script im Root des Repositories:
 ```
-cd /Server/JEEServer
-mvn install -DskipTests
+chmod +x startup.sh
+ ./startup.sh
 ```
-
-Konfiguration:
-- Setzen der richtigen IP-Adresse für die Clients (.env-Files in den Projektordnern des MobilClients und des Abspielclients):
+Folgende Inputs eingeben: 
+(z.B.:)
 ```
-VUE_APP_API_URL=http://<IP-Adresse>:8080/musicvoting/api
-```
-
-- Konfigurationsfile am Server:
-  - Erstellen des Files config.properties im Ordner Server\JEEServer\src\main\resources
-  - Inhalt:
-```
-init=true
-password=<PASSWORT FÜR ADMIN>
-startFolder=<ORDNER IN DEM MP3 FILES LIEGEN>
-```
-
-
-- Builden und Starten des Docker-Netzwerks
-```
-docker-compose build
-docker-compose up
+ip-address of Server
+192.168.1.100 
+init of database: (true/false)
+true
+password for admin:
+passme
+folder of mp3 files:
+/home/mp3
+WLAN SSID:
+MyWlan
+WLAN password:
+passme
 ```
 
-
-## :ferris_wheel: System Architektur
-![sysarch](/img/systemarchitektur.png)
+Nach diesen Eingaben wird eine Betrittseite (Port 8083), der AbspielClient (Port: 8082) und der Mobile Client (Port: 8081) sowie der Server gebuildet und gestartet. Ab diesem Zeitpunkt ist MusicVoting einsatzbereit. Die Beitrittseite auf Port 8083 kann auf einem Bildschirem für die Gäste angezeigt werden. Diese können sich dann per QR Code mit dem WLAN verbinden und auf die Mobile Client Seite gelangen.
 
 ## :hammer: Aktueller Stand
 
 Version v1.0.0 von MusicVoting (Einschränkung auf lokale Mp3-Files) ist bereit für den Einsatz beim Grillfest der HTL Leonding!
 
+##  :closed_book: Dokumente:	
+- [Systemarchitektur](/docs/Systemarchitektur.pdf)
+- [UseCase-Diagramm](/docs/usecase.pdf)
 
 ## :guardsman: Entwickler:
 - [Leon Kuchinka](https://github.com/leonkuchinka)

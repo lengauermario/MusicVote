@@ -7,12 +7,21 @@ import java.util.List;
 public class Playlist {
 
     Long timestamp;
+    Long updateId;
 
     List<Song> songs;
 
     public Playlist(Long timestamp, List<Song> songs) {
         this.timestamp = timestamp;
         this.songs = songs;
+        this.updateId = 0l;
+    }
+    public void increaseUpdateId(){
+        this.updateId++;
+    }
+
+    public Long getUpdateId() {
+        return updateId;
     }
 
     public void setTimestamp(Long timestamp) {

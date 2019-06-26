@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 public class PlaylistAdapter {
     public static JsonObject marshall(Playlist playlist){
         JsonObjectBuilder json = Json.createObjectBuilder();
-        json.add("timestamp", playlist.getTimestamp());
+        json.add("updateId", playlist.getUpdateId());
         JsonArrayBuilder arr = Json.createArrayBuilder();
         playlist.getSongs().forEach(s -> {
             arr.add(SongAdapter.marshall(s));

@@ -20,7 +20,7 @@ public class SongDao {
         return songs;
     }
 
-    public List<Song> find(String term){
+    public List<Song> find(String term, int page, int size){
         StringBuilder sql = new StringBuilder("select s from Song s");
         if (term != null && term.length() > 0) {
             String[] elements = term.split(" ");
@@ -33,7 +33,7 @@ public class SongDao {
         }
         sql.append(" order by s.title");
         TypedQuery query = em.createQuery(sql.toString(), Song.class);
-        return query.setMaxResults(100).getResultList();
+        return query.setFirstResult(Math.max((page-1)*size, 0)).setMaxResults(Math.max(size, 1)).getResultList();
     }
 
     public void persist(Song newSong) {

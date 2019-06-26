@@ -13,7 +13,7 @@
       <v-flex xs2></v-flex>
       <v-flex xs8>
         <div style="height:40vh">
-          <v-img v-bind:src="thumbNail" aspect-ratio="1" class="grey lighten-2" max-height="100%"></v-img>
+          <v-img v-bind:src="defaultThumbnail" aspect-ratio="1" class="grey lighten-2" max-height="100%"></v-img>
         </div>
       </v-flex>
       <v-flex xs2></v-flex>
@@ -26,7 +26,6 @@ export default {
   name: "PlayingSong",
   data() {
     return {
-      thumbNail: "",
       title: "",
       artist: "",
       text: "Playlist wurde noch nicht gestarted",
@@ -43,11 +42,9 @@ export default {
         credentials: "include"
       }).then(async function(res) {
         let tmp = await res.json();
-        var parser = new DOMParser;
         this.title = tmp.title;
         this.artist = tmp.artist;
-        this.thumbNail = tmp.thumbNail === "default" ? this.defaultThumbnail : tmp.thumbNail;
-        this.text = this.title + " von " + this.artist + " wird gerade gespielt";
+        this.text = this.title + " - " + this.artist;
       }.bind(this));
     }
   }

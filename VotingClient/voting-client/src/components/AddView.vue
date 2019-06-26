@@ -150,7 +150,6 @@ export default Vue.extend({
       this.fetchLocalSongs(null, true);
     },
     fetchLocalSongs($state, reset = false) {
-      console.log("fetchsongs called");
       SongService.find(this.search, this.page++, this.size).then(result => {
         if (reset) this.songs = [];
         this.songs.push(...result);
@@ -159,7 +158,7 @@ export default Vue.extend({
         });
         if ($state) {
           if (result.length > 0) $state.loaded();
-          $state.complete();
+          else $state.complete();
         }
       });
     },

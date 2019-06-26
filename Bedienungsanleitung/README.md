@@ -57,7 +57,7 @@ Nun wird der Server sowie die Client-Projekte gebuildet und in einem Docker-Netz
 
 Um den Gästen einen einfachen Zugang zu MusicVoting zu ermöglichen, steht eine Website unter dem Port 8083 zur Verfügung.
 
-
+![](./images/beitrittseite.png)
 
 
 
@@ -65,7 +65,7 @@ Um den Gästen einen einfachen Zugang zu MusicVoting zu ermöglichen, steht eine
 
 Auf dem Computer, mit dem die Musik abgespielt werden soll, muss die Website auf dem Port 8082 aufgerufen werden.
 
-
+![](./images/abspielseite.png)
 
 
 
@@ -73,7 +73,6 @@ Auf dem Computer, mit dem die Musik abgespielt werden soll, muss die Website auf
 
 Gäste können auf der Website unter dem Port 8081 für die Musik abstimmen. Auf diese Seite gelangen sie auch mithilfe eines QR-Codes auf der Betrittseite!
 
-
-
+<img src="./images/mobileclient.png" width="250px">
 
 

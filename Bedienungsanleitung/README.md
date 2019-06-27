@@ -9,7 +9,7 @@ Falls das Repository noch nicht gecloned wurde:
 git clone https://github.com/lengauermario/MusicVote.git
 ```
 
-Auf dem Schul-PC ist das Repository zu finden ```/home/leonie/Desktop/musicvoting/MusicVote```
+Auf dem Schul-PC ist das Repository zu finden unter ```/home/leonie/Desktop/musicvoting/MusicVote```
 
 
 ### 3. Docker-Netzwerk starten
@@ -40,7 +40,7 @@ Grillfest2019 (Passwort für die Abspielseite)
 
 ```
 folder of mp3 files:
-/home/leonie/mp3/playlist (Dieser Wert passt für diesen Computer)
+/home/leonie/mp3/playlist (Dieser Wert passt für den Schul-PC)
 ```
 
 ```
@@ -72,7 +72,7 @@ Um den Gästen einen einfachen Zugang zu MusicVoting zu ermöglichen, steht eine
 Auf dem Computer, mit dem die Musik abgespielt werden soll, muss die Website auf dem Port 8082 aufgerufen werden.
 
 **Hinweis:**
-Unter Firefox kann es Probleme mit dem Abspielen der mp3-Files geben! Mit **Chrome** beispielsweise gibt es keine Probleme
+Unter Firefox kann es Probleme mit dem Abspielen der mp3-Files geben! Mit **Chrome** beispielsweise gibt es keine Probleme.
 
 ![](./images/abspielseite.png)
 

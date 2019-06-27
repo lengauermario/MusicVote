@@ -1,12 +1,18 @@
 # MusicVoting - Bedienungsanleitung
 
-### 1. Repository clonen
+### 1. Schul-PC ohne Internet booten!
 
+### 2. Repository öffnen
+
+Falls das Repository noch nicht gecloned wurde:
 ```bash
 git clone https://github.com/lengauermario/MusicVote.git
 ```
 
-### 2. Docker-Netzwerk starten
+Auf dem Schul-PC ist das Repository zu finden ```/home/leonie/Desktop/musicvoting/MusicVote```
+
+
+### 3. Docker-Netzwerk starten
 
 Für diese Aufgabe existiert bereits ein Shell-Script!
 
@@ -51,7 +57,7 @@ Nun wird der Server sowie die Client-Projekte gebuildet und in einem Docker-Netz
 
 
 
-### 3. Webseiten aufrufen
+### 4. Webseiten aufrufen
 
 ###### Beitrittseite
 
@@ -64,6 +70,9 @@ Um den Gästen einen einfachen Zugang zu MusicVoting zu ermöglichen, steht eine
 ###### Abspielseite
 
 Auf dem Computer, mit dem die Musik abgespielt werden soll, muss die Website auf dem Port 8082 aufgerufen werden.
+
+**Hinweis:**
+Unter Firefox kann es Probleme mit dem Abspielen der mp3-Files geben! Mit **Chrome** beispielsweise gibt es keine Probleme
 
 ![](./images/abspielseite.png)
 

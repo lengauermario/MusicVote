@@ -1,0 +1,40 @@
+[plantuml]
+----
+rectangle "VueJS App" as app {
+
+    rectangle "VueX Store" as store {
+        [playlist] as playlist
+        [versionId] as versionId
+        [currentSong] as currentSong
+        [votes] as votes
+    }
+    
+    rectangle "View" {
+        
+        rectangle "Abstimmen View" {
+            [Anzeige aktueller Song] as comp1
+            [Anzeige aktuelle Playlist] as comp2
+        }
+        
+        rectangle "Hinzufügen View" {
+            [Anzeige gesuchte Songs] as comp3
+        }
+        
+    }
+    
+    comp1 --> currentSong
+    comp2 --> playlist
+    comp2 --> votes
+    comp3 --> playlist
+    comp3 --> votes
+    
+}
+
+rectangle "Server" as server {
+}
+
+server --> store : Server Sent Events bei Änderung der Daten
+
+
+
+----

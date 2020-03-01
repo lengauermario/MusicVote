@@ -1,0 +1,54 @@
+[plantuml]
+----
+
+rectangle "Docker" {
+
+    database database [
+        DerbyDB
+    ]
+
+    node server [
+    Jakrata EE
+    ===
+    Backend
+    ]
+    
+    node server2 [
+    Webserver
+    ===
+    VueJS Mobile Client
+    ]
+    
+    node server3 [
+    Webserver
+    ===
+    VueJS Laptop Client
+    ]
+    
+    server2 == server
+    server3 == server
+    
+    server == database
+    
+}
+
+
+cloud internet [
+    WLAN
+]
+
+node mobile [
+    Mobile Client
+]
+
+node laptop [
+    Abspiel Client
+]
+
+
+internet == server2
+internet == server3
+internet == mobile
+internet == laptop
+
+----

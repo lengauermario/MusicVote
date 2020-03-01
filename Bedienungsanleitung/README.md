@@ -1,6 +1,7 @@
 # MusicVoting - Bedienungsanleitung
 
-### 1. Schul-PC ohne Internet booten!
+### 1. Schul-PC booten
+Troubleshoot: MusicVoting PC in der Schule muss möglicherweise ohne Internet gebootet werden!
 
 ### 2. Repository öffnen
 

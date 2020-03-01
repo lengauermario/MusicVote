@@ -8,7 +8,7 @@ rectangle "Docker" {
     ]
 
     node server [
-    Jakrata EE
+    Jarkata EE
     ===
     Backend
     ]

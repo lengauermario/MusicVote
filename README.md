@@ -15,6 +15,9 @@ Repository für MusicVoting v1 (Einschränkung auf lokale Mp3-Files)
 Was ist nerviger als schlechte Musik auf einer Party? 
 Weil wir finden, dass es nichts Schlimmeres gibt, entwickeln wir MusicVoting. MusicVoting ermöglicht jedem Partygast ganz einfach mittels Smartphone mitzubestimmen welche Musik gespielt werden soll.
 
+## :ferris_wheel: Systemarchitektur
+![](/docs/depl_diagram.png)
+
 ## :rocket: Verwendung
 Folgende Tools müssen installiert sein:
 - maven
